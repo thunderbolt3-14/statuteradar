@@ -1,0 +1,42 @@
+[
+  {
+    "query": "How soon must a GDPR controller notify the supervisory authority about a personal data breach?",
+    "relevant_ids": ["gdpr:art33:p1"]
+  },
+  {
+    "query": "What information must a Data Fiduciary send to the Board after discovering a personal data breach?",
+    "relevant_ids": ["dpdp_rules:r7:p2", "dpdp:s8:p6"]
+  },
+  {
+    "query": "Can a California consumer ask a business to delete personal information it collected?",
+    "relevant_ids": ["ccpa:s1798.105:pa"]
+  },
+  {
+    "query": "What does India's DPDP Act say about processing a child's personal data and parental consent?",
+    "relevant_ids": ["dpdp:s9:p1", "dpdp:s9:p2"]
+  },
+  {
+    "query": "Can personal data be transferred outside India under the DPDP Rules?",
+    "relevant_ids": ["dpdp_rules:r15"]
+  },
+  {
+    "query": "When does the GDPR apply to an organisation established outside the European Union?",
+    "relevant_ids": ["gdpr:art3:p2"]
+  },
+  {
+    "query": "How does California define personal information, including data that identifies a consumer?",
+    "relevant_ids": ["ccpa:s1798.140:pv:pt1:w1", "ccpa:s1798.140:pv:pt1:w2", "ccpa:s1798.140:pv:pt1:w3"]
+  },
+  {
+    "query": "What is the GDPR right to erasure when a person asks for personal data to be deleted?",
+    "relevant_ids": ["gdpr:art17:p1:pta", "gdpr:art17:p1:ptb", "gdpr:art17:p1:ptc", "gdpr:art17:p1:ptd", "gdpr:art17:p1:pte", "gdpr:art17:p1:ptf"]
+  },
+  {
+    "query": "What deadline applies to notifying the Board of a breach under India's data protection rules?",
+    "relevant_ids": ["dpdp_rules:r7:p2"]
+  },
+  {
+    "query": "Under California law, when may a business refuse a consumer's deletion request?",
+    "relevant_ids": ["ccpa:s1798.105:pd:pt1", "ccpa:s1798.105:pd:pt2", "ccpa:s1798.105:pd:pt3", "ccpa:s1798.105:pd:pt4", "ccpa:s1798.105:pd:pt5", "ccpa:s1798.105:pd:pt6", "ccpa:s1798.105:pd:pt7", "ccpa:s1798.105:pd:pt8"]
+  }
+]
