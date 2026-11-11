@@ -13,3 +13,4 @@ frontend/dist/
 .vscode/
 # raw HTML sources stay local too; provenance goes in SOURCES.md
 data/raw/**/*.html
+.python/
