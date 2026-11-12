@@ -63,3 +63,42 @@ def test_reranker_sorts_by_cross_encoder_scores():
     ranked = reranker.rerank("question", [hit("lower"), hit("higher")])
     assert [h.chunk_id for h in ranked] == ["higher", "lower"]
     assert [h.rank for h in ranked] == [1, 2]
+
+
+def test_embedder_windows_long_text_and_preserves_all_tokens():
+    import numpy as np
+
+    from statuteradar.retrieval.embedder import SentenceTransformerEmbedder
+
+    class FakeTokenizer:
+        @staticmethod
+        def num_special_tokens_to_add(pair=False):
+            return 2
+
+        @staticmethod
+        def encode(text, add_special_tokens=False):
+            return text.split()
+
+        @staticmethod
+        def decode(tokens, skip_special_tokens=True):
+            return " ".join(tokens)
+
+    class FakeModel:
+        tokenizer = FakeTokenizer()
+
+        def encode(self, texts, **kwargs):
+            self.windows = [text.split() for text in texts]
+            vectors = [[float(len(window)), 1.0] for window in self.windows]
+            return np.asarray(vectors, dtype="float32")
+
+    embedder = object.__new__(SentenceTransformerEmbedder)
+    embedder.name = "fake"
+    embedder.max_seq_length = 16
+    embedder.model = FakeModel()
+
+    vector = embedder.encode([" ".join(f"w{i}" for i in range(30))])[0]
+    windows = embedder.model.windows
+    assert all(len(window) <= 14 for window in windows)
+    assert set().union(*(set(window) for window in windows)) == {f"w{i}" for i in range(30)}
+    assert any(set(left) & set(right) for left, right in zip(windows, windows[1:]))
+    assert np.isclose(np.linalg.norm(vector), 1.0)

@@ -19,4 +19,4 @@ CHROMA_DIR = _chroma if _chroma.is_absolute() else ROOT / _chroma   # relative t
 
 EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 RERANKER_MODEL = os.environ.get("RERANKER_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
-COLLECTION = "statute_chunks"
+COLLECTION = "statute_chunks_windowed"
