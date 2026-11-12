@@ -1,26 +1,27 @@
 [
   {
     "conflict_id": "CONF_001",
+    "review_status": "candidate_needs_independent_review",
     "jurisdictions": ["DPDP", "GDPR"],
-    "domain": "Cross-Border Data Transfer & Localization",
-    "description": "DPDP/sectoral restrictions or government notifications restricting transfer to certain territories vs. GDPR Chapter V free flow with adequacy/safeguards.",
+    "domain": "Cross-Border Data Transfer",
+    "description": "Unverified scenario hypothesis involving a hypothetical DPDP destination restriction and a GDPR transfer mechanism.",
     "obligation_a": {
       "jurisdiction": "DPDP",
       "clause_ref": "Section 16",
       "predicate_type": "RESTRICTION",
       "target": "Cross-border transfer of personal data",
-      "condition": "Central Government notifies restricted countries/territories",
-      "enforced": true
+      "condition": "A valid government restriction applies to the destination",
+      "enforced": null
     },
     "obligation_b": {
       "jurisdiction": "GDPR",
-      "clause_ref": "Article 44-49",
-      "predicate_type": "PERMISSIVE_WITH_CONDITIONS",
-      "target": "Transfer of personal data outside EU",
-      "condition": "Subject to adequacy decision, standard contractual clauses (SCCs), or binding corporate rules",
-      "enforced": true
+      "clause_ref": "Articles 44-49",
+      "predicate_type": "TRANSFER_RULES",
+      "target": "Transfer of personal data outside the EU",
+      "condition": "A transfer mechanism may permit transfer subject to conditions",
+      "enforced": null
     },
-    "is_jointly_unsatisfiable": true,
-    "explanation": "If the Central Government under DPDP restricts transfers to a specific geography where an EU adequacy-approved server resides, an organization operating in both jurisdictions faces contradictory compliance mandates."
+    "is_jointly_unsatisfiable": null,
+    "explanation": "Candidate only; not a gold conflict. A restriction in one instrument and a permission subject to conditions in another do not by themselves establish contradictory mandates. Verify the exact profile, applicability, current legal text, transfer mechanism, and whether any obligation actually requires the same transfer. Obtain independent annotations and adjudication before assigning a label."
   }
 ]
