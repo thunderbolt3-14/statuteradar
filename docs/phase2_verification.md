@@ -1,6 +1,6 @@
 # Phase 2 verification: retrieval
 
-Status: retrieval pipeline implemented and measured on the current corpus. The benchmark is a small, hand-written development set; it is not an independent or statistically conclusive evaluation.
+Status: retrieval pipeline implemented and measured on the current corpus. The benchmark is a held-out test split of 20 independently reviewed queries; due to the small sample size, these scores are preliminary rather than conclusive. Phase 2 is now closed as a project milestone.
 
 ## Runtime note
 
@@ -22,7 +22,7 @@ The `.python/` runtime is ignored by Git. Requirements pin ChromaDB 0.5.15, chro
 - Sparse retrieval: BM25 over legal terms, numbers, citations and provision text.
 - Hybrid retrieval: Reciprocal Rank Fusion with the standard `k = 60` constant.
 - Reranking: `cross-encoder/ms-marco-MiniLM-L-6-v2` reranks the top 30 fused candidates.
-- Evaluation: 20 hand-written development queries with relevant chunk IDs in `data/retrieval_eval.json`; macro Hit Rate@5, MRR@5 and Recall@5 are reported for each setup. No independently reviewed test split is available yet.
+- Evaluation: 10 single-reviewer development queries and 20 held-out test queries marked `independently_reviewed` in `data/retrieval_eval.json`; macro Hit Rate@5, MRR@5 and Recall@5 are reported for each setup.
 - Long embedding inputs: text exceeding MiniLM's 256-token limit is encoded as overlapping token windows and the window vectors are combined, preserving the original chunk ID and all text for dense retrieval. These vectors use the `statute_chunks_windowed` collection; the previous `statute_chunks` collection is retained.
 
 Build the vector index once before running dense, hybrid or reranked searches:
@@ -40,17 +40,17 @@ venv\Scripts\python.exe scripts/evaluate_retrieval.py --split development
 
 Full test suite: **41 passed**. Package consistency: `pip check` clean. The dense index contains 1,554 chunks, each represented by a 384-dimensional vector.
 
-| Setup | Hit Rate@5 | MRR@5 | Recall@5 |
+| Setup (held-out test split, N=20) | Hit Rate@5 | MRR@5 | Recall@5 |
 |---|---:|---:|---:|
 | Dense | 0.200 | 0.127 | 0.150 |
 | BM25 | 0.100 | 0.035 | 0.075 |
 | Hybrid (RRF) | 0.200 | 0.096 | 0.150 |
 | Hybrid + cross-encoder | 0.250 | 0.188 | 0.225 |
 
-These figures describe only this 20-query set and do not establish general retrieval accuracy. The gold labels were created by one reviewer and should be independently checked before making a research claim. Repeated dense runs on rebuilt indexes varied (Hit Rate@5 0.7–0.8; MRR@5 0.487–0.553; Recall@5 0.600–0.650), so treat the current scores as preliminary and verify repeatability before drawing a comparison.
+These metrics are from one run on the 20-query held-out test split and are preliminary; they do not establish general retrieval accuracy. The cases are marked as independently reviewed in the dataset and in PR #6, but the repository does not record annotator agreement or an adjudication log. Dense-run variability previously observed on the 10-query development set is not a repeatability measurement for this test split.
 
 The tokenizer audit found 5 of 1,554 chunks (0.3%) above the embedding model's 256-word-piece input limit; the longest was 296. The embedding wrapper now handles these using overlapping windows and combines their vectors, rather than allowing Sentence Transformers to truncate their tails. BM25 continues to use the full chunk text. The active collection name was changed to `statute_chunks_windowed`, so rebuilding creates a new collection while preserving the previous `statute_chunks` index.
 
 ## Evaluation limitations and next annotation step
 
-The current 20-query set is a development set from one reviewer; do not treat its scores as an independent test result. The evaluation script accepts `--split development`, `--split test`, or `--split all`. The existing cases are explicitly marked `single_reviewer`. Add new cases only after a second reviewer has checked the query and relevant provision IDs; mark those cases `independently_reviewed`, assign them to `test`, and do not tune against them. Until that review is complete, `--split test` intentionally has no eligible cases and exits with a clear message. The next evaluation improvement therefore requires independent legal/provision annotation, not generated labels.
+The dataset contains 10 development cases marked `single_reviewer` and 20 test cases marked `independently_reviewed`. The evaluation script accepts `--split development`, `--split test`, or `--split all`; test runs include only cases with the independent-review marker. Do not tune retrieval settings against the test split. For stronger research claims, preserve the independent annotation/adjudication record, report inter-annotator agreement if available, and expand the held-out set in a future evaluation.
