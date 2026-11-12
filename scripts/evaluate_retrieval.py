@@ -1,5 +1,6 @@
 """Compare dense, BM25, hybrid, and hybrid-plus-cross-encoder retrieval."""
 import json
+import argparse
 import sys
 from pathlib import Path
 
@@ -17,7 +18,16 @@ from statuteradar.retrieval.search import hybrid_search, hybrid_reranked_search 
 
 K = 5
 CANDIDATES = 30
-cases = json.loads((ROOT / "data" / "retrieval_eval.json").read_text(encoding="utf-8"))
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--split", choices=("development", "test", "all"), default="development",
+                    help="Evaluate only human-verified cases from this split (default: development).")
+args = parser.parse_args()
+all_cases = json.loads((ROOT / "data" / "retrieval_eval.json").read_text(encoding="utf-8"))
+cases = [case for case in all_cases if args.split == "all" or case.get("split") == args.split]
+if args.split == "test":
+    cases = [case for case in cases if case.get("review_status") == "independently_reviewed"]
+if not cases:
+    raise SystemExit(f"no eligible {args.split} cases in data/retrieval_eval.json; add independently reviewed labels first")
 chunks = load_chunks()
 known_ids = {chunk.chunk_id for chunk in chunks}
 unknown = {chunk_id for case in cases for chunk_id in case["relevant_ids"]} - known_ids
@@ -39,8 +49,9 @@ for case in cases:
         query, embedder, bm25, reranker, k=K, candidate_k=CANDIDATES))
     gold.append(relevant)
 
-print(f"queries: {len(cases)} | Hit Rate / MRR / Recall at {K} | "
+print(f"split: {args.split} | queries: {len(cases)} | Hit Rate / MRR / Recall at {K} | "
       f"candidates before reranking: {CANDIDATES}")
+print("review status: " + ", ".join(sorted({case.get('review_status', 'unspecified') for case in cases})))
 print(f"{'setup':<20}{'Hit Rate':>11}{'MRR':>10}{'Recall':>11}")
 for name, rankings in runs.items():
     metrics = aggregate_metrics(rankings, gold, k=K)

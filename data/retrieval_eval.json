@@ -1,42 +1,239 @@
 [
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "How soon must a GDPR controller notify the supervisory authority about a personal data breach?",
     "relevant_ids": ["gdpr:art33:p1"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "What information must a Data Fiduciary send to the Board after discovering a personal data breach?",
     "relevant_ids": ["dpdp_rules:r7:p2", "dpdp:s8:p6"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "Can a California consumer ask a business to delete personal information it collected?",
     "relevant_ids": ["ccpa:s1798.105:pa"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "What does India's DPDP Act say about processing a child's personal data and parental consent?",
     "relevant_ids": ["dpdp:s9:p1", "dpdp:s9:p2"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "Can personal data be transferred outside India under the DPDP Rules?",
     "relevant_ids": ["dpdp_rules:r15"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "When does the GDPR apply to an organisation established outside the European Union?",
     "relevant_ids": ["gdpr:art3:p2"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "How does California define personal information, including data that identifies a consumer?",
     "relevant_ids": ["ccpa:s1798.140:pv:pt1:w1", "ccpa:s1798.140:pv:pt1:w2", "ccpa:s1798.140:pv:pt1:w3"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "What is the GDPR right to erasure when a person asks for personal data to be deleted?",
     "relevant_ids": ["gdpr:art17:p1:pta", "gdpr:art17:p1:ptb", "gdpr:art17:p1:ptc", "gdpr:art17:p1:ptd", "gdpr:art17:p1:pte", "gdpr:art17:p1:ptf"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "What deadline applies to notifying the Board of a breach under India's data protection rules?",
     "relevant_ids": ["dpdp_rules:r7:p2"]
   },
   {
+    "split": "development",
+    "review_status": "single_reviewer",
     "query": "Under California law, when may a business refuse a consumer's deletion request?",
     "relevant_ids": ["ccpa:s1798.105:pd:pt1", "ccpa:s1798.105:pd:pt2", "ccpa:s1798.105:pd:pt3", "ccpa:s1798.105:pd:pt4", "ccpa:s1798.105:pd:pt5", "ccpa:s1798.105:pd:pt6", "ccpa:s1798.105:pd:pt7", "ccpa:s1798.105:pd:pt8"]
+  },
+
+  
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I downloaded an app to speak to a doctor, but it also wants access to all my contacts. Why should I have to share those just to get a consultation?",
+    "relevant_ids": ["dpdp:s6:p1"]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I agreed to share my information with one tap, but now they want me to email support and fill out forms to change my mind. Is that fair?",
+    "relevant_ids": ["dpdp:s6:p4"]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I closed my bank account, but the bank says it still needs to keep my identity documents. Doesn't closing the account mean they should delete everything?",
+    "relevant_ids": [
+      "dpdp:s8:p7:ptnote",
+      "dpdp:s8:p7:pta"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I'm not sure what this shopping app knows about me or which other companies it has passed my details to. How can I find out?",
+    "relevant_ids": [
+      "dpdp:s11:p1",
+      "dpdp:s11:p2"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "If something happens to me and I can't deal with my personal information anymore, can I choose someone to handle it for me?",
+    "relevant_ids": [
+      "dpdp:s14:p1",
+      "dpdp:s14:p2"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "The app gives me a huge privacy policy full of difficult words. Where can I see a simple explanation of what it wants from me and why?",
+    "relevant_ids": [
+      "dpdp_rules:r3:pta",
+      "dpdp_rules:r3:ptb"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I heard that an app I use had a data leak. Shouldn't they tell me whether I'm affected and what I should do next?",
+    "relevant_ids": ["dpdp_rules:r7:p1"]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I haven't opened an old shopping account in years. Could they delete my information without warning me first?",
+    "relevant_ids": [
+      "dpdp_rules:r8:p1",
+      "dpdp_rules:r8:p2"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I'm setting up an account for my child, and the app wants to check my age and identity. Why isn't ticking 'I'm the parent' enough?",
+    "relevant_ids": ["dpdp_rules:r10:p1"]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I complained about how a company is using my details, but nobody has replied. Can they leave me waiting forever?",
+    "relevant_ids": [
+      "dpdp:s13:p2",
+      "dpdp_rules:r14:p3"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I'm switching fitness apps and don't want to lose the workout records I entered. Can I take them with me instead of starting from zero?",
+    "relevant_ids": [
+      "gdpr:art20:p1",
+      "gdpr:art20:p2"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I bought something from a website once, and now it keeps using my details to send me offers. Can I tell it to stop, even though I'm still a customer?",
+    "relevant_ids": [
+      "gdpr:art21:p2",
+      "gdpr:art21:p3"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "My loan application was rejected instantly, and the lender says a computer made the decision. Is there any way to get a real person to look at it?",
+    "relevant_ids": [
+      "gdpr:art22:p1",
+      "gdpr:art22:p2",
+      "gdpr:art22:p3"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "The company says my information is being sent outside Europe. What stops it from losing its protection once it gets there?",
+    "relevant_ids": [
+      "gdpr:art44",
+      "gdpr:art46:p1"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "A company's misuse of my information caused me financial loss and a lot of distress. Is complaining my only option, or could I seek compensation?",
+    "relevant_ids": [
+      "gdpr:art82:p1",
+      "gdpr:art82:p2",
+      "gdpr:art82:p3"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I asked a store to erase my details, but it had already passed them to other companies. Does my request stop with the store?",
+    "relevant_ids": [
+      "ccpa:s1798.105:pc:pt1",
+      "ccpa:s1798.105:pc:pt3"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "A company has the wrong address and date of birth for me, and it's causing problems. How do I get those details put right?",
+    "relevant_ids": [
+      "ccpa:s1798.106:pa",
+      "ccpa:s1798.106:pc"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I'm happy to buy from this website, but I don't want it selling or sharing my details with other companies. Can I say no to that part?",
+    "relevant_ids": [
+      "ccpa:s1798.120:pa",
+      "ccpa:s1798.120:pd"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "I let a navigation app use my exact location to give me directions. Can I stop it using that information to build a profile about me?",
+    "relevant_ids": [
+      "ccpa:s1798.121:pa:w1",
+      "ccpa:s1798.140:pae:pt1",
+      "ccpa:s1798.121:pd"
+    ]
+  },
+  {
+    "split": "test",
+    "review_status": "independently_reviewed",
+    "query": "If I tell a shopping site not to sell my information, can it punish me by charging more or giving me worse service?",
+    "relevant_ids": [
+      "ccpa:s1798.125:pa:pt1",
+      "ccpa:s1798.125:pa:pt2",
+      "ccpa:s1798.125:pa:pt3",
+      "ccpa:s1798.125:pb:pt1"
+    ]
   }
+
+
 ]

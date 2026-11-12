@@ -63,5 +63,5 @@ def test_token_report_flags_chunks_over_the_model_limit():
     short = mk("a:1", "GDPR", "one two three", "GDPR Art. 1(1)")
     long_ = mk("a:2", "GDPR", " ".join(["word"] * 40), "GDPR Art. 2(1)")
     report = token_report([short, long_], Fake())
-    assert "over the limit (truncated): 1 (50.0%)" in report
+    assert "requiring overlapping-window embedding: 1 (50.0%)" in report
     assert "GDPR Art. 2(1)" in report
