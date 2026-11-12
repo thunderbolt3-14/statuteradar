@@ -42,12 +42,12 @@ Full test suite: **41 passed**. Package consistency: `pip check` clean. The dens
 
 | Setup (held-out test split, N=20) | Hit Rate@5 | MRR@5 | Recall@5 |
 |---|---:|---:|---:|
-| Dense | 0.200 | 0.127 | 0.150 |
+| Dense (current local rerun) | 0.150 | 0.077 | 0.100 |
 | BM25 | 0.100 | 0.035 | 0.075 |
 | Hybrid (RRF) | 0.200 | 0.096 | 0.150 |
 | Hybrid + cross-encoder | 0.250 | 0.188 | 0.225 |
 
-These metrics are from one run on the 20-query held-out test split and are preliminary; they do not establish general retrieval accuracy. The cases are marked as independently reviewed in the dataset and in PR #6, but the repository does not record annotator agreement or an adjudication log. Dense-run variability previously observed on the 10-query development set is not a repeatability measurement for this test split.
+These metrics are from the 20-query held-out test split and are preliminary; they do not establish general retrieval accuracy. Two runs against the current local index both produced the dense result shown above. The original run recorded in PR #6 reported Dense Hit Rate@5 0.200, MRR@5 0.127 and Recall@5 0.150; the difference should be investigated before comparing systems or making a research claim. The cases are marked as independently reviewed in the dataset and in PR #6, but the repository does not record annotator agreement or an adjudication log.
 
 The tokenizer audit found 5 of 1,554 chunks (0.3%) above the embedding model's 256-word-piece input limit; the longest was 296. The embedding wrapper now handles these using overlapping windows and combines their vectors, rather than allowing Sentence Transformers to truncate their tails. BM25 continues to use the full chunk text. The active collection name was changed to `statute_chunks_windowed`, so rebuilding creates a new collection while preserving the previous `statute_chunks` index.
 
