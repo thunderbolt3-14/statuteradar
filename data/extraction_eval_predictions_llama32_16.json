@@ -1,0 +1,1697 @@
+[
+  {
+    "chunk_id": "gdpr:art17:p3",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "no data category specified",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraphs 1 and 2 shall not apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "NonOperativeEffectError",
+    "error": "obligation 1 treats a carve-out as a prohibition in gdpr:art17:p3"
+  },
+  {
+    "chunk_id": "gdpr:art46:p1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "transfer personal data",
+          "data_category": "personal data",
+          "condition": "enforceable data subject rights and effective legal remedies for data subjects are available",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "may transfer personal data to a third country or an international organisation",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "provide appropriate safeguards",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "only if the controller or processor has provided appropriate safeguards",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "on condition that enforceable data subject rights and effective legal remedies for data subjects are available",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "on condition that enforceable data subject rights and effective legal remedies for data subjects are available",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "transfer personal data to a third country or an international organisation",
+          "data_category": "personal data",
+          "condition": "enforceable data subject rights and effective legal remedies for data subjects are available",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "may transfer personal data to a third country or an international organisation",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "provide appropriate safeguards",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "only if the controller or processor has provided appropriate safeguards",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "on condition that enforceable data subject rights and effective legal remedies for data subjects are available",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "on condition that enforceable data subject rights and effective legal remedies for data subjects are available",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "ModalityGroundingError",
+    "error": "obligation 1 modality MUST conflicts with nearby operative wording (may) in gdpr:art46:p1"
+  },
+  {
+    "chunk_id": "gdpr:art6:p4:pta",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "take into account",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the controller shall, in order to ascertain whether processing for another purpose is compatible with the purpose for which the personal data are initially collected, take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing;",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the controller shall, in order to ascertain whether processing for another purpose is compatible with the purpose for which the personal data are initially collected, take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing;",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art6:p4:pta",
+      "citation": "GDPR Art. 6(4)(a)",
+      "instrument": "GDPR",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the controller shall, in order to ascertain whether processing for another purpose is compatible with the purpose for which the personal data are initially collected, take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing;",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art6:p4:pta:obl:1",
+          "source_chunk_id": "gdpr:art6:p4:pta",
+          "citation": "GDPR Art. 6(4)(a)",
+          "instrument": "GDPR"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp:s8:p7:pta",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase",
+          "data_category": "personal data",
+          "condition": "unless retention is necessary for compliance with any law for the time being in force",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "erase personal data",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase personal data",
+          "data_category": "personal data",
+          "condition": "unless retention is necessary for compliance with any law for the time being in force",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "erase personal data",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s8:p7:pta",
+      "citation": "DPDP s.8(7)(a)",
+      "instrument": "DPDP",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase personal data",
+          "data_category": "personal data",
+          "condition": "unless retention is necessary for compliance with any law for the time being in force",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "erase personal data",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp:s8:p7:pta:obl:1",
+          "source_chunk_id": "dpdp:s8:p7:pta",
+          "citation": "DPDP s.8(7)(a)",
+          "instrument": "DPDP"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp:s6:p7",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "give, manage, review or withdraw her consent",
+          "data_category": "consent",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The Data Principal may give, manage, review or withdraw her consent",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "give, manage, review or withdraw her consent",
+          "data_category": "consent",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The Data Principal may give, manage, review or withdraw her consent",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "ModalityGroundingError",
+    "error": "obligation 1 modality MUST conflicts with nearby operative wording (may) in dpdp:s6:p7"
+  },
+  {
+    "chunk_id": "dpdp_rules:r8:p1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary, who is of such class and is processing personal data for such corresponding purposes as are specified in Third Schedule, shall erase such personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "approach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "exercise",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "approach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "exercise",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "approach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "exercise",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase such personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary, who is of such class and is processing personal data for such corresponding purposes as are specified in Third Schedule, shall erase such personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "approach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "exercises her rights in relation to such processing",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "approach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "exercise",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "exercises her rights in relation to such processing",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r8:p1",
+      "citation": "DPDP-Rules r.8(1)",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase such personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary, who is of such class and is processing personal data for such corresponding purposes as are specified in Third Schedule, shall erase such personal data",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:1",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "approach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:2",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "exercises her rights in relation to such processing",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:3",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "approach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:4",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "exercise",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:5",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:6",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "exercises her rights in relation to such processing",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:7",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.105:pc:pt1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "delete the consumer’s personal information from its records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "delete the consumer’s personal information from its records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "business",
+          "action": "delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "delete the consumer’s personal information from its records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "delete the consumer’s personal information from its records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "business",
+          "action": "delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "ccpa:s1798.105:pc:pt1",
+      "citation": "CCPA §1798.105(c)(1)",
+      "instrument": "CCPA",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "delete the consumer’s personal information from its records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "delete the consumer’s personal information from its records",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.105:pc:pt1:obl:1",
+          "source_chunk_id": "ccpa:s1798.105:pc:pt1",
+          "citation": "CCPA §1798.105(c)(1)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.105:pc:pt1:obl:2",
+          "source_chunk_id": "ccpa:s1798.105:pc:pt1",
+          "citation": "CCPA §1798.105(c)(1)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.105:pc:pt1:obl:3",
+          "source_chunk_id": "ccpa:s1798.105:pc:pt1",
+          "citation": "CCPA §1798.105(c)(1)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MAY",
+          "actor": "business",
+          "action": "delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.105:pc:pt1:obl:4",
+          "source_chunk_id": "ccpa:s1798.105:pc:pt1",
+          "citation": "CCPA §1798.105(c)(1)",
+          "instrument": "CCPA"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.120:pc",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "business",
+          "action": "sell or share",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "a business shall not sell or share the personal information of consumers",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "consumer (13-15 years old) or parent/guardian",
+          "action": "authorize the sale or sharing of personal information",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the consumer, in the case of consumers at least 13 years of age and less than 16 years of age, or the consumer’s parent or guardian, in the case of consumers who are less than 13 years of age, has affirmatively authorized",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "have actual knowledge of the consumer’s age",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "a business that willfully disregards the consumer’s age shall be deemed to have had actual knowledge of the consumer’s age",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "business",
+          "action": "sell or share the personal information of consumers",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "a business shall not sell or share the personal information of consumers",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "consumer (13-15 years old) or parent/guardian",
+          "action": "authorize the sale or sharing of personal information",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the consumer, in the case of consumers at least 13 years of age and less than 16 years of age, or the consumer’s parent or guardian, in the case of consumers who are less than 13 years of age, has affirmatively authorized",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "have actual knowledge of the consumer’s age",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "a business that willfully disregards the consumer’s age shall be deemed to have had actual knowledge of the consumer’s age",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "UngroundedEvidenceError",
+    "error": "obligation 3 evidence quote is not present in ccpa:s1798.120:pc"
+  },
+  {
+    "chunk_id": "gdpr:art33:p1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "notify the personal data breach to the supervisory authority",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Clause 1: In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "make a notification within 72 hours",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Clause 1: In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "accompany the notification with reasons for the delay",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Clause 2: Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "notify the personal data breach to the supervisory authority",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Clause 1: In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "make a notification within 72 hours",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Clause 1: In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "accompany the notification with reasons for the delay",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Clause 2: Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": false,
+    "status": "rejected",
+    "error_type": "UngroundedEvidenceError",
+    "error": "obligation 1 evidence quote is not present in gdpr:art33:p1"
+  },
+  {
+    "chunk_id": "gdpr:art5:p1:pta",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "process",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Personal data shall be: processed lawfully, fairly and in a transparent manner in relation to the data subject (‘lawfulness, fairness and transparency’);",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "processed lawfully, fairly and in a transparent manner in relation to the data subject (‘lawfulness, fairness and transparency’)",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Personal data shall be: processed lawfully, fairly and in a transparent manner in relation to the data subject (‘lawfulness, fairness and transparency’);",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art5:p1:pta",
+      "citation": "GDPR Art. 5(1)(a)",
+      "instrument": "GDPR",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "processed lawfully, fairly and in a transparent manner in relation to the data subject (‘lawfulness, fairness and transparency’)",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Personal data shall be: processed lawfully, fairly and in a transparent manner in relation to the data subject (‘lawfulness, fairness and transparency’);",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art5:p1:pta:obl:1",
+          "source_chunk_id": "gdpr:art5:p1:pta",
+          "citation": "GDPR Art. 5(1)(a)",
+          "instrument": "GDPR"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp:s6:p4",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "withdraw her consent",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Where consent given by the Data Principal is the basis of processing of personal data, such Data Principal shall have the right to withdraw her consent at any time, with the ease of doing so being comparable to the ease with which such consent was given.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "withdraw her consent at any time, with the ease of doing so being comparable to the ease with which such consent was given.",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Where consent given by the Data Principal is the basis of processing of personal data, such Data Principal shall have the right to withdraw her consent at any time, with the ease of doing so being comparable to the ease with which such consent was given.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "ModalityGroundingError",
+    "error": "obligation 1 modality MUST conflicts with nearby operative wording (have the right to) in dpdp:s6:p4"
+  },
+  {
+    "chunk_id": "dpdp:s12:p3",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "make a request",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Principal shall make a request in such manner as may be prescribed to the Data Fiduciary for erasure of her personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the Data Fiduciary shall erase her personal data unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Fiduciary",
+          "action": "retain her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "make a request in such manner as may be prescribed to the Data Fiduciary for erasure of her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Principal shall make a request in such manner as may be prescribed to the Data Fiduciary for erasure of her personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the Data Fiduciary shall erase her personal data unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Fiduciary",
+          "action": "retain her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s12:p3",
+      "citation": "DPDP s.12(3)",
+      "instrument": "DPDP",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "make a request in such manner as may be prescribed to the Data Fiduciary for erasure of her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Principal shall make a request in such manner as may be prescribed to the Data Fiduciary for erasure of her personal data",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp:s12:p3:obl:1",
+          "source_chunk_id": "dpdp:s12:p3",
+          "citation": "DPDP s.12(3)",
+          "instrument": "DPDP"
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "the Data Fiduciary shall erase her personal data unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp:s12:p3:obl:2",
+          "source_chunk_id": "dpdp:s12:p3",
+          "citation": "DPDP s.12(3)",
+          "instrument": "DPDP"
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Fiduciary",
+          "action": "retain her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp:s12:p3:obl:3",
+          "source_chunk_id": "dpdp:s12:p3",
+          "citation": "DPDP s.12(3)",
+          "instrument": "DPDP"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r6:p1:pta",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "protect personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary shall protect personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "take reasonable security safeguards",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "by taking reasonable security safeguards",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "prevent personal data breach",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "to prevent personal data breach",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "include, at the minimum, — appropriate data security measures",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "which shall include, at the minimum, — appropriate data security measures",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "protect personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary shall protect personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "take reasonable security safeguards",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "by taking reasonable security safeguards",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "prevent personal data breach",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "to prevent personal data breach",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "include, at the minimum, — appropriate data security measures",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "which shall include, at the minimum, — appropriate data security measures",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r6:p1:pta",
+      "citation": "DPDP-Rules r.6(1)(a)",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "protect personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary shall protect personal data",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r6:p1:pta:obl:1",
+          "source_chunk_id": "dpdp_rules:r6:p1:pta",
+          "citation": "DPDP-Rules r.6(1)(a)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "take reasonable security safeguards",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "by taking reasonable security safeguards",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r6:p1:pta:obl:2",
+          "source_chunk_id": "dpdp_rules:r6:p1:pta",
+          "citation": "DPDP-Rules r.6(1)(a)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "prevent personal data breach",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "to prevent personal data breach",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r6:p1:pta:obl:3",
+          "source_chunk_id": "dpdp_rules:r6:p1:pta",
+          "citation": "DPDP-Rules r.6(1)(a)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "include, at the minimum, — appropriate data security measures",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "which shall include, at the minimum, — appropriate data security measures",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r6:p1:pta:obl:4",
+          "source_chunk_id": "dpdp_rules:r6:p1:pta",
+          "citation": "DPDP-Rules r.6(1)(a)",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r8:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "inform",
+          "data_category": "personal data",
+          "condition": "unless she logs into her user account or otherwise initiates contact with the Data Fiduciary for the performance of the specified purpose or exercises her rights in relation to the processing of such personal data",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "At least forty-eight hours before completion of the time period for erasure of personal data under this rule, the Data Fiduciary shall inform the Data Principal that such personal data shall be erased upon completion of such period",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "inform the Data Principal that such personal data shall be erased",
+          "data_category": "personal data",
+          "condition": "unless she logs into her user account or otherwise initiates contact with the Data Fiduciary for the performance of the specified purpose or exercises her rights in relation to the processing of such personal data",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "At least forty-eight hours before completion of the time period for erasure of personal data under this rule, the Data Fiduciary shall inform the Data Principal that such personal data shall be erased upon completion of such period",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r8:p2",
+      "citation": "DPDP-Rules r.8(2)",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "inform the Data Principal that such personal data shall be erased",
+          "data_category": "personal data",
+          "condition": "unless she logs into her user account or otherwise initiates contact with the Data Fiduciary for the performance of the specified purpose or exercises her rights in relation to the processing of such personal data",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "At least forty-eight hours before completion of the time period for erasure of personal data under this rule, the Data Fiduciary shall inform the Data Principal that such personal data shall be erased upon completion of such period",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p2:obl:1",
+          "source_chunk_id": "dpdp_rules:r8:p2",
+          "citation": "DPDP-Rules r.8(2)",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.100:pe",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "implement",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "protect",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "from unauthorized or illegal access, destruction, use, modification, or disclosure",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "implement",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "protect",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "from unauthorized or illegal access, destruction, use, modification, or disclosure",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "ccpa:s1798.100:pe",
+      "citation": "CCPA §1798.100(e)",
+      "instrument": "CCPA",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "implement",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.100:pe:obl:1",
+          "source_chunk_id": "ccpa:s1798.100:pe",
+          "citation": "CCPA §1798.100(e)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "protect",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "from unauthorized or illegal access, destruction, use, modification, or disclosure",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.100:pe:obl:2",
+          "source_chunk_id": "ccpa:s1798.100:pe",
+          "citation": "CCPA §1798.100(e)",
+          "instrument": "CCPA"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.120:pa",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "consumer",
+          "action": "direct a business not to sell or share personal information",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A consumer shall have the right, at any time, to direct a business that sells or shares personal information about the consumer to third parties not to sell or share the consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business to which another business transfers personal information",
+          "action": "comply with a consumer’s direction to the transferor made pursuant to this subdivision",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business to which another business transfers the personal information of a consumer as an asset that is part of a merger, acquisition, bankruptcy, or other transaction in which the transferee assumes control of all of, or part of, the transferor shall comply with a consumer’s direction to the transferor made pursuant to this subdivision.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "consumer",
+          "action": "direct a business not to sell or share personal information",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A consumer shall have the right, at any time, to direct a business that sells or shares personal information about the consumer to third parties not to sell or share the consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business to which another business transfers personal information",
+          "action": "comply with a consumer’s direction to the transferor made pursuant to this subdivision.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business to which another business transfers the personal information of a consumer as an asset that is part of a merger, acquisition, bankruptcy, or other transaction in which the transferee assumes control of all of, or part of, the transferor shall comply with a consumer’s direction to the transferor made pursuant to this subdivision.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "MissingExplicitActorError",
+    "error": "obligation 2 actor does not match the named actor in ccpa:s1798.120:pa: 'business to which another business transfers personal information'"
+  }
+]
