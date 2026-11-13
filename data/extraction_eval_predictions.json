@@ -1,0 +1,461 @@
+[
+  {
+    "chunk_id": "gdpr:art17:p3",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "no_obligation_reason": "Paragraphs 1 and 2 shall not apply to the extent that processing is necessary"
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art17:p3",
+      "citation": "GDPR Art. 17(3)",
+      "instrument": "GDPR",
+      "obligations": [],
+      "no_obligation_reason": "Paragraphs 1 and 2 shall not apply to the extent that processing is necessary"
+    },
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "no_obligation_reason": "Paragraphs 1 and 2 shall not apply to the extent that processing is necessary"
+    }
+  },
+  {
+    "chunk_id": "gdpr:art46:p1",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller or processor",
+          "action": "transfer personal data to a third country or an international organisation",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "In the absence of a decision pursuant to Article 45(3), a controller or processor may transfer personal data to a third country or an international organisation only if the controller or processor has provided appropriate safeguards, and on condition that enforceable data subject rights and effective legal remedies for data subjects are available.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller or processor",
+          "action": "transfer",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "In the absence of a decision pursuant to Article 45(3), a controller or processor may transfer personal data to a third country or an international organisation only if the controller or processor has provided appropriate safeguards, and on condition that enforceable data subject rights and effective legal remedies for data subjects are available.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "error_type": "ModalityGroundingError",
+    "error": "obligation 1 modality MUST_NOT conflicts with nearby operative wording (may) in gdpr:art46:p1"
+  },
+  {
+    "chunk_id": "gdpr:art6:p4:pta",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Where the processing for a purpose other than that for which the personal data have been collected is not based on the data subject's consent or on a Union or Member State law which constitutes a necessary and proportionate measure in a democratic society to safeguard the objectives referred to in Article 23(1), the controller shall, in order to ascertain whether processing for another purpose is compatible with the purpose for which the personal data are initially collected, take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing;",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art6:p4:pta",
+      "citation": "GDPR Art. 6(4)(a)",
+      "instrument": "GDPR",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Where the processing for a purpose other than that for which the personal data have been collected is not based on the data subject's consent or on a Union or Member State law which constitutes a necessary and proportionate measure in a democratic society to safeguard the objectives referred to in Article 23(1), the controller shall, in order to ascertain whether processing for another purpose is compatible with the purpose for which the personal data are initially collected, take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing;",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art6:p4:pta:obl:1",
+          "source_chunk_id": "gdpr:art6:p4:pta",
+          "citation": "GDPR Art. 6(4)(a)",
+          "instrument": "GDPR"
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "take into account",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Where the processing for a purpose other than that for which the personal data have been collected is not based on the data subject's consent or on a Union or Member State law which constitutes a necessary and proportionate measure in a democratic society to safeguard the objectives referred to in Article 23(1), the controller shall, in order to ascertain whether processing for another purpose is compatible with the purpose for which the personal data are initially collected, take into account, inter alia: any link between the purposes for which the personal data have been collected and the purposes of the intended further processing;",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp:s8:p7:pta",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s8:p7:pta",
+      "citation": "DPDP s.8(7)(a)",
+      "instrument": "DPDP",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp:s8:p7:pta:obl:1",
+          "source_chunk_id": "dpdp:s8:p7:pta",
+          "citation": "DPDP s.8(7)(a)",
+          "instrument": "DPDP"
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase personal data",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary shall, unless retention is necessary for compliance with any law for the time being in force,— erase personal data, upon the Data Principal withdrawing her consent or as soon as it is reasonable to assume that the specified purpose is no longer being served, whichever is earlier; and",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp:s6:p7",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "no_obligation_reason": "The Data Principal has the right to give, manage, review or withdraw her consent, but no explicit duty, prohibition, or permission/right is stated in the provided text."
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "no_obligation_reason": "The Data Principal has the right to give, manage, review or withdraw her consent, but no explicit duty, prohibition, or permission/right is stated in the provided text."
+    },
+    "error_type": "MissedOperativeEffectError",
+    "error": "no-obligation result omits an explicit operative clause in dpdp:s6:p7: data principal"
+  },
+  {
+    "chunk_id": "dpdp_rules:r8:p1",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Data Fiduciary",
+          "action": "erase such personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary, who is of such class and is processing personal data for such corresponding purposes as are specified in Third Schedule, shall erase such personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "A Data Fiduciary",
+          "action": "retain",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force, or, for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r8:p1",
+      "citation": "DPDP-Rules r.8(1)",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Data Fiduciary",
+          "action": "erase such personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary, who is of such class and is processing personal data for such corresponding purposes as are specified in Third Schedule, shall erase such personal data",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:1",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "A Data Fiduciary",
+          "action": "retain",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force, or, for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r8:p1:obl:2",
+          "source_chunk_id": "dpdp_rules:r8:p1",
+          "citation": "DPDP-Rules r.8(1)",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Data Fiduciary",
+          "action": "erase",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary, who is of such class and is processing personal data for such corresponding purposes as are specified in Third Schedule, shall erase such personal data",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "A Data Fiduciary",
+          "action": "retain",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force, or, for the corresponding time period specified in the Third Schedule, if the Data Principal neither approaches such Data Fiduciary for the performance of the specified purpose nor exercises her rights in relation to such processing",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.105:pc:pt1",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business that receives a verifiable consumer request",
+          "action": "delete the consumer’s personal information from its records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that receives a verifiable consumer request from a consumer to delete the consumer’s personal information pursuant to subdivision (a) of this section shall delete the consumer’s personal information from its records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "A business that receives a verifiable consumer request",
+          "action": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that receives a verifiable consumer request from a consumer to delete the consumer’s personal information pursuant to subdivision (a) of this section shall delete the consumer’s personal information from its records, notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "A business that receives a verifiable consumer request",
+          "action": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that receives a verifiable consumer request from a consumer to delete the consumer’s personal information pursuant to subdivision (a) of this section shall delete the consumer’s personal information from its records, notify any service providers or contractors to delete the consumer’s personal information from their records, and notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information to delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": false,
+    "status": "rejected",
+    "error_type": "UngroundedEvidenceError",
+    "error": "obligation 3 evidence quote is not present in ccpa:s1798.105:pc:pt1",
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business that receives a verifiable consumer request",
+          "action": "delete the consumer’s personal information from its records",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that receives a verifiable consumer request from a consumer to delete the consumer’s personal information pursuant to subdivision (a) of this section shall delete the consumer’s personal information from its records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "A business that receives a verifiable consumer request",
+          "action": "notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that receives a verifiable consumer request from a consumer to delete the consumer’s personal information pursuant to subdivision (a) of this section shall delete the consumer’s personal information from its records, notify any service providers or contractors to delete the consumer’s personal information from their records",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "A business that receives a verifiable consumer request",
+          "action": "notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that receives a verifiable consumer request from a consumer to delete the consumer’s personal information pursuant to subdivision (a) of this section shall delete the consumer’s personal information from its records, notify any service providers or contractors to delete the consumer’s personal information from their records, and notify all third parties to whom the business has sold or shared the personal information to delete the consumer’s personal information to delete the consumer’s personal information unless this proves impossible or involves disproportionate effort",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.120:pc",
+    "schema_valid": true,
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "a business",
+          "action": "sell or share the personal information of consumers",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Notwithstanding subdivision (a), a business shall not sell or share the personal information of consumers if the business has actual knowledge that the consumer is less than 16 years of age, unless the consumer, in the case of consumers at least 13 years of age and less than 16 years of age, or the consumer’s parent or guardian, in the case of consumers who are less than 13 years of age, has affirmatively authorized the sale or sharing of the consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "a business",
+          "action": "disregards the consumer’s age shall be deemed to have had actual knowledge of the consumer’s age.",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that willfully disregards the consumer’s age shall be deemed to have had actual knowledge of the consumer’s age.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "a business",
+          "action": "shall not sell or share",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Notwithstanding subdivision (a), a business shall not sell or share the personal information of consumers if the business has actual knowledge that the consumer is less than 16 years of age, unless the consumer, in the case of consumers at least 13 years of age and less than 16 years of age, or the consumer’s parent or guardian, in the case of consumers who are less than 13 years of age, has affirmatively authorized the sale or sharing of the consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "a business",
+          "action": "shall not disregard",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that willfully disregards the consumer’s age shall be deemed to have had actual knowledge of the consumer’s age.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "error_type": "NonOperativeEffectError",
+    "error": "obligation 2 is based on a deeming clause, not an operative duty in ccpa:s1798.120:pc"
+  }
+]

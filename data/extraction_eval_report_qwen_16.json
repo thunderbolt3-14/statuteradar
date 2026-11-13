@@ -1,0 +1,775 @@
+{
+  "overall": {
+    "sample_size": 16,
+    "annotator_count": 1,
+    "schema_valid_rate": 1.0,
+    "evidence_grounding_rate_among_schema_valid": 0.8125,
+    "pipeline_acceptance_rate": 0.4375,
+    "outcome_accuracy_among_schema_valid": 0.75,
+    "exact_obligation_prf": {
+      "tp": 2,
+      "fp": 25,
+      "fn": 18,
+      "precision": 0.0741,
+      "recall": 0.1,
+      "f1": 0.0851
+    },
+    "field_exact_value_prf": {
+      "modality": {
+        "tp": 14,
+        "fp": 13,
+        "fn": 6,
+        "precision": 0.5185,
+        "recall": 0.7,
+        "f1": 0.5957
+      },
+      "actor": {
+        "tp": 15,
+        "fp": 12,
+        "fn": 4,
+        "precision": 0.5556,
+        "recall": 0.7895,
+        "f1": 0.6522
+      },
+      "action": {
+        "tp": 3,
+        "fp": 24,
+        "fn": 17,
+        "precision": 0.1111,
+        "recall": 0.15,
+        "f1": 0.1277
+      },
+      "data_category": {
+        "tp": 13,
+        "fp": 2,
+        "fn": 5,
+        "precision": 0.8667,
+        "recall": 0.7222,
+        "f1": 0.7879
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 16,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "constraint": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "exceptions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_kind": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_text": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_applies_to": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "field_token_overlap_prf": {
+      "action": {
+        "tp_tokens": 148,
+        "fp_tokens": 136,
+        "fn_tokens": 59,
+        "precision": 0.5211,
+        "recall": 0.715,
+        "f1": 0.6029
+      },
+      "condition": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 193,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "constraint": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "exceptions": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 104,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_text": {
+        "tp_tokens": 0,
+        "fp_tokens": 93,
+        "fn_tokens": 19,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_applies_to": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_condition": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "rejections": {
+      "UngroundedEvidenceError": 3,
+      "ModalityGroundingError": 2,
+      "MissedOperativeEffectError": 3,
+      "MissingExplicitActorError": 1
+    },
+    "per_chunk": [
+      {
+        "chunk_id": "gdpr:art17:p3",
+        "split": "dev",
+        "gold_outcome": "no_obligation",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 2 evidence quote is not present in gdpr:art17:p3"
+      },
+      {
+        "chunk_id": "gdpr:art46:p1",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 1 modality MUST_NOT conflicts with nearby operative wording (may) in gdpr:art46:p1"
+      },
+      {
+        "chunk_id": "gdpr:art6:p4:pta",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s8:p7:pta",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s6:p7",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "no_obligation",
+        "error": "no-obligation result omits an explicit operative clause in dpdp:s6:p7: data principal"
+      },
+      {
+        "chunk_id": "dpdp_rules:r8:p1",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "ccpa:s1798.105:pc:pt1",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 2 evidence quote is not present in ccpa:s1798.105:pc:pt1"
+      },
+      {
+        "chunk_id": "ccpa:s1798.120:pc",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "gdpr:art33:p1",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 2 actor does not match the named actor in gdpr:art33:p1: 'controller'"
+      },
+      {
+        "chunk_id": "gdpr:art5:p1:pta",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s6:p4",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "no_obligation",
+        "error": "no-obligation result omits an explicit operative clause in dpdp:s6:p4: data principal"
+      },
+      {
+        "chunk_id": "dpdp:s12:p3",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp_rules:r6:p1:pta",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 3 evidence quote is not present in dpdp_rules:r6:p1:pta"
+      },
+      {
+        "chunk_id": "dpdp_rules:r8:p2",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "ccpa:s1798.100:pe",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "no_obligation",
+        "error": "no-obligation result omits an explicit operative clause in ccpa:s1798.100:pe: business"
+      },
+      {
+        "chunk_id": "ccpa:s1798.120:pa",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 2 modality MAY conflicts with nearby operative wording (shall) in ccpa:s1798.120:pa"
+      }
+    ]
+  },
+  "splits": {
+    "dev": {
+      "sample_size": 8,
+      "annotator_count": 1,
+      "schema_valid_rate": 1.0,
+      "evidence_grounding_rate_among_schema_valid": 0.75,
+      "pipeline_acceptance_rate": 0.5,
+      "outcome_accuracy_among_schema_valid": 0.75,
+      "exact_obligation_prf": {
+        "tp": 2,
+        "fp": 13,
+        "fn": 7,
+        "precision": 0.1333,
+        "recall": 0.2222,
+        "f1": 0.1667
+      },
+      "field_exact_value_prf": {
+        "modality": {
+          "tp": 7,
+          "fp": 8,
+          "fn": 2,
+          "precision": 0.4667,
+          "recall": 0.7778,
+          "f1": 0.5833
+        },
+        "actor": {
+          "tp": 8,
+          "fp": 7,
+          "fn": 1,
+          "precision": 0.5333,
+          "recall": 0.8889,
+          "f1": 0.6667
+        },
+        "action": {
+          "tp": 3,
+          "fp": 12,
+          "fn": 6,
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25
+        },
+        "data_category": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571
+        },
+        "condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_kind": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_text": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_applies_to": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "field_token_overlap_prf": {
+        "action": {
+          "tp_tokens": 80,
+          "fp_tokens": 59,
+          "fn_tokens": 12,
+          "precision": 0.5755,
+          "recall": 0.8696,
+          "f1": 0.6926
+        },
+        "condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 109,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 25,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 57,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_text": {
+          "tp_tokens": 0,
+          "fp_tokens": 80,
+          "fn_tokens": 19,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_applies_to": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "rejections": {
+        "UngroundedEvidenceError": 2,
+        "ModalityGroundingError": 1,
+        "MissedOperativeEffectError": 1
+      },
+      "per_chunk": [
+        {
+          "chunk_id": "gdpr:art17:p3",
+          "split": "dev",
+          "gold_outcome": "no_obligation",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 2 evidence quote is not present in gdpr:art17:p3"
+        },
+        {
+          "chunk_id": "gdpr:art46:p1",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 1 modality MUST_NOT conflicts with nearby operative wording (may) in gdpr:art46:p1"
+        },
+        {
+          "chunk_id": "gdpr:art6:p4:pta",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s8:p7:pta",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s6:p7",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "no_obligation",
+          "error": "no-obligation result omits an explicit operative clause in dpdp:s6:p7: data principal"
+        },
+        {
+          "chunk_id": "dpdp_rules:r8:p1",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "ccpa:s1798.105:pc:pt1",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 2 evidence quote is not present in ccpa:s1798.105:pc:pt1"
+        },
+        {
+          "chunk_id": "ccpa:s1798.120:pc",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        }
+      ]
+    },
+    "test": {
+      "sample_size": 8,
+      "annotator_count": 1,
+      "schema_valid_rate": 1.0,
+      "evidence_grounding_rate_among_schema_valid": 0.875,
+      "pipeline_acceptance_rate": 0.375,
+      "outcome_accuracy_among_schema_valid": 0.75,
+      "exact_obligation_prf": {
+        "tp": 0,
+        "fp": 12,
+        "fn": 11,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "field_exact_value_prf": {
+        "modality": {
+          "tp": 7,
+          "fp": 5,
+          "fn": 4,
+          "precision": 0.5833,
+          "recall": 0.6364,
+          "f1": 0.6087
+        },
+        "actor": {
+          "tp": 7,
+          "fp": 5,
+          "fn": 3,
+          "precision": 0.5833,
+          "recall": 0.7,
+          "f1": 0.6364
+        },
+        "action": {
+          "tp": 0,
+          "fp": 12,
+          "fn": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "data_category": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.7778,
+          "recall": 0.7,
+          "f1": 0.7368
+        },
+        "condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_kind": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_text": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_applies_to": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "field_token_overlap_prf": {
+        "action": {
+          "tp_tokens": 68,
+          "fp_tokens": 77,
+          "fn_tokens": 47,
+          "precision": 0.469,
+          "recall": 0.5913,
+          "f1": 0.5231
+        },
+        "condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 84,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 44,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 47,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_text": {
+          "tp_tokens": 0,
+          "fp_tokens": 13,
+          "fn_tokens": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_applies_to": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "rejections": {
+        "MissingExplicitActorError": 1,
+        "MissedOperativeEffectError": 2,
+        "UngroundedEvidenceError": 1,
+        "ModalityGroundingError": 1
+      },
+      "per_chunk": [
+        {
+          "chunk_id": "gdpr:art33:p1",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 2 actor does not match the named actor in gdpr:art33:p1: 'controller'"
+        },
+        {
+          "chunk_id": "gdpr:art5:p1:pta",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s6:p4",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "no_obligation",
+          "error": "no-obligation result omits an explicit operative clause in dpdp:s6:p4: data principal"
+        },
+        {
+          "chunk_id": "dpdp:s12:p3",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp_rules:r6:p1:pta",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 3 evidence quote is not present in dpdp_rules:r6:p1:pta"
+        },
+        {
+          "chunk_id": "dpdp_rules:r8:p2",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "ccpa:s1798.100:pe",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "no_obligation",
+          "error": "no-obligation result omits an explicit operative clause in ccpa:s1798.100:pe: business"
+        },
+        {
+          "chunk_id": "ccpa:s1798.120:pa",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 2 modality MAY conflicts with nearby operative wording (shall) in ccpa:s1798.120:pa"
+        }
+      ]
+    }
+  }
+}
