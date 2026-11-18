@@ -14,3 +14,8 @@ frontend/dist/
 # raw HTML sources stay local too; provenance goes in SOURCES.md
 data/raw/**/*.html
 .python/
+# Keep individual annotator submissions and adjudication worksheets local.
+data/annotations/annotation_packet_filled_*.csv
+data/annotations/annotation_packet_rahul.csv
+data/annotations/annotation_adjudication.csv
+data/annotations/annotation_disagreements.csv

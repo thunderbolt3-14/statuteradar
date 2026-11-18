@@ -227,11 +227,21 @@ def prepare_pipeline_predictions(predictions: list[dict], chunks: dict) -> list[
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--gold", type=Path, default=GOLD_PATH,
+                        help="gold-label JSON file (defaults to data/extraction_eval.json)")
+    parser.add_argument("--split", choices=("dev", "test"),
+                        help="generate and score only this split; omit to process every case")
     parser.add_argument("--predictions", type=Path, default=DEFAULT_PREDICTIONS)
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
     parser.add_argument("--reuse", action="store_true", help="score an existing predictions file")
     args = parser.parse_args()
-    gold = json.loads(GOLD_PATH.read_text(encoding="utf-8"))
+    gold = json.loads(args.gold.read_text(encoding="utf-8"))
+    selected_cases = [
+        case for case in gold["cases"]
+        if args.split is None or case.get("split") == args.split
+    ]
+    if not selected_cases:
+        parser.error(f"gold file contains no cases for split {args.split!r}")
     chunks = {chunk.chunk_id: chunk for chunk in load_chunks()}
 
     if args.reuse:
@@ -239,7 +249,7 @@ def main() -> int:
     else:
         provider = make_provider()
         predictions = []
-        for case in gold["cases"]:
+        for case in selected_cases:
             chunk_id = case["chunk_id"]
             record = {"chunk_id": chunk_id, "schema_valid": False}
             try:
@@ -259,13 +269,21 @@ def main() -> int:
     predictions = prepare_pipeline_predictions(predictions, chunks)
     args.predictions.write_text(json.dumps(predictions, ensure_ascii=False, indent=2) + "\n",
                                 encoding="utf-8")
-    report = {
-        "overall": score(gold, predictions),
-        "splits": {
-            split: score(gold, predictions, split=split)
-            for split in ("dev", "test")
-        },
-    }
+    if args.split:
+        selected_metrics = score(gold, predictions, split=args.split)
+        report = {
+            "evaluated_split": args.split,
+            "overall": selected_metrics,
+            "splits": {args.split: selected_metrics},
+        }
+    else:
+        report = {
+            "overall": score(gold, predictions),
+            "splits": {
+                split: score(gold, predictions, split=split)
+                for split in ("dev", "test")
+            },
+        }
     report_text = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(report_text, encoding="utf-8")

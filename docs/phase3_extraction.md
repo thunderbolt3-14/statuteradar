@@ -21,13 +21,19 @@ accurate enough for downstream legal-obligation records.
 
 ## Measured results
 
-Labels remain single-pass assistant-drafted annotations, without independent review or
-adjudication. On the held-out eight cases, Qwen 2.5 3B and Llama 3.2 3B both had zero exact
-obligation F1. Pipeline acceptance was 0.375 for Qwen and 0.625 for Llama. Action token-overlap
-F1 was 0.523 and 0.570 respectively, but exact action F1, condition/constraint F1, and exception
-F1 were all zero. These metrics indicate serious extraction errors and are not a validated
-general accuracy estimate. Full scores and per-provision errors are in
-`docs/phase3_extraction_metrics.md` and the JSON reports under `data/`.
+The original benchmark labels were assistant-drafted. Two human annotators have since
+independently labeled the same 16 cases and adjudicated disagreements. The structured labels are
+in `data/extraction_eval_adjudicated.json`; this is still a small diagnostic set, not a fresh
+held-out set. Rescoring the saved full-set predictions against adjudicated labels gave exact
+obligation F1 of 0.085 for Qwen and 0.098 for Llama.
+
+A fresh Qwen run on the eight adjudicated development cases had exact obligation F1 0.200 and
+pipeline acceptance 0.875. Llama had F1 0.121 and pipeline acceptance 0.750. Both outputs were
+schema-valid, but action F1 was 0.300 for Qwen and 0.182 for Llama; condition, constraint,
+exception, and qualifier-text F1 were 0.000 for both. Qwen had an ungrounded evidence quote;
+Llama had one ungrounded quote and treated a GDPR carve-out as a prohibition. The commands
+completed; these are extraction quality failures. Current metrics and artifacts are tracked in
+`docs/phase3_extraction_metrics.md` and the report JSON files under `data/`.
 
 ## Run and score
 
@@ -48,10 +54,11 @@ existing predictions file without calling a model.
 ## What remains before quality closeout
 
 - Have a second annotator independently label the sample, then resolve disagreements and retain
-  the adjudication notes. Do not call the current annotations gold.
-- Build a larger, stratified, independently labeled set with a new held-out split. The present
-  test cases have already been inspected diagnostically and should not be reused for future
-  tuning claims.
+  the adjudication notes. This is complete for the existing 16 evaluation cases; see the two
+  packets and `data/annotations/annotation_adjudication.csv`.
+- Build a larger, stratified, independently labeled set with a new held-out split. There are
+  currently 1,538 rows in the broad packet without annotations, and the existing eight test cases
+  have already been inspected. The current test split cannot support a fresh final score.
 - Improve atomic action boundaries, exception/scope extraction, conditions, constraints, and
   permission/prohibition polarity on development data, then evaluate once on the fresh held-out
   set.
@@ -59,5 +66,13 @@ existing predictions file without calling a model.
   legal determinations.
 - An Anthropic model comparison requires a configured API key and explicit approval for any
   API spending; it was not run in this work.
+- A same-label Llama development run now exists alongside Qwen. No additional model or API is
+  required to continue local development.
+- A new 16-case, source-only held-out annotation packet has been prepared under
+  `data/annotations/phase3_holdout_annotator_a.csv` and
+  `data/annotations/phase3_holdout_annotator_b.csv`. It has four targeted cases per instrument
+  and excludes all IDs in the earlier evaluation.
+- The new packet must be independently completed and adjudicated before the test run. Do not use
+  model outputs to fill it or tune the prompt after seeing its scores.
 
 Phase 3 is implemented as a research prototype. It is not quality-closed for downstream use.

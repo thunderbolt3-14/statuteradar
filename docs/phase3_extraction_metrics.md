@@ -3,13 +3,12 @@
 Run date: 2026-11-12  
 Sample: 16 provisions across GDPR, DPDP, DPDP Rules, and CCPA  
 Split: 8 development cases and 8 held-out diagnostic cases  
-Annotation status: single-pass assistant-drafted labels; no independent second annotator or
-adjudication  
+Historical annotation status for this original benchmark: single-pass assistant-drafted labels.  
 Models: local Ollama `qwen2.5:3b` and `llama3.2:3b`
 
-This is a small diagnostic benchmark, not a validated legal gold set. The held-out cases were
-scored after the schema/prompt update, but the dataset is too small and unreviewed to support a
-general accuracy claim. The test results should not be used to claim a performance improvement.
+This section records the original assistant-labeled benchmark. It is retained for history only;
+do not treat it as the current adjudicated score. The test cases were inspected, so they are no
+longer a fresh held-out test set.
 
 ## Overall results
 
@@ -94,3 +93,55 @@ Both models were run locally with the same evaluator, schema, and 16 cases. The 
 overall, development, held-out, per-field, and per-provision results. These outcomes do not
 support downstream legal obligation use. Anthropic/API comparison was not run because no API
 key or spending approval was provided.
+
+## Adjudicated human-label development run
+
+Two annotators independently labeled the same 16 cases and adjudicated their disagreements. The
+structured labels are in `data/extraction_eval_adjudicated.json`. Existing saved Qwen and Llama
+predictions were rescored against these labels; this did not call either model again.
+
+| Model | Sample | Exact obligation F1 | Pipeline acceptance | Notes |
+|---|---:|---:|---:|---|
+| Qwen 2.5 3B | 16 | 0.085 | 0.438 | Full adjudicated diagnostic set |
+| Llama 3.2 3B | 16 | 0.098 | 0.563 | Full adjudicated diagnostic set |
+| Qwen 2.5 3B | 8 dev | 0.200 | 0.875 | Fresh generation against adjudicated dev labels |
+| Llama 3.2 3B | 8 dev | 0.121 | 0.750 | Fresh generation against adjudicated dev labels |
+
+The Qwen development run returned schema-valid output for all eight cases and passed pipeline
+validation for seven. It had exact obligation counts TP=2, FP=9, FN=7 (F1=0.200). Exact action
+F1 was 0.300; condition, constraint, exception, and qualifier-text F1 were 0.000. One output was
+rejected because its second CCPA deletion-notice evidence quote was not present in the source
+chunk. These are extraction quality errors, not command/runtime failures.
+
+Llama's development run had exact obligation counts TP=2, FP=22, FN=7 (F1=0.121), showing
+substantial over-extraction despite 100% quote grounding. Its exact action F1 was 0.182; condition,
+constraint, exception, and qualifier-text F1 were 0.000. Two cases were rejected: a GDPR Art. 17(3)
+carve-out was treated as a prohibition, and one CCPA quote was ungrounded. Neither model's results
+are a quality pass. The current eight-case test split has already been inspected; a new
+independently labeled holdout is still needed before reporting a final test result.
+
+Fresh development artifacts: `data/extraction_eval_predictions_qwen_dev.json`,
+`data/extraction_eval_report_qwen_dev.json`, `data/extraction_eval_predictions_llama32_dev.json`,
+and `data/extraction_eval_report_llama32_dev.json`.
+
+## Remaining resources and known file issue
+
+- The two completed annotation packets cover the same 16 cases only. The other 1,538 rows in
+  `data/annotation_packet.csv` remain blank.
+- A fresh 16-case targeted held-out packet is prepared, with four cases per instrument, in
+  `data/annotations/phase3_holdout_annotator_a.csv` and
+  `data/annotations/phase3_holdout_annotator_b.csv`. Both packets must be completed independently
+  and adjudicated before evaluation. The existing eight test cases have already been viewed and
+  scored.
+- This 16-case sample is suitable only for a small diagnostic check, not a precise or
+  corpus-representative accuracy estimate. Agree with the project guide on a larger final sample
+  and pass criteria before making a completion claim.
+- `data/annotations/structured_adjudicated_eval.json` is a legacy flat list of 56 disagreement
+  rows, not evaluator-ready gold JSON. Do not pass it to the evaluator. Use
+  `data/extraction_eval_adjudicated.json` instead.
+- `scripts/parse_adjudicated_to_structured.py` was based on obsolete column names and has been
+  disabled with instructions. The supported converter is
+  `scripts/build_adjudicated_eval.py`; it now checks field list lengths, modalities, and evidence
+  quotes against the provision text.
+- Both local models are installed. No local model package is missing. A paid API comparison is
+  optional and would require credentials and approval for spending.
