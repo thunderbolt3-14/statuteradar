@@ -1,9 +1,10 @@
 # Phase 3 extraction annotation guidelines
 
-These instructions define the target labels for `data/extraction_eval.json`. The current labels
-are assistant-drafted and require independent human review before they can be treated as gold.
-Annotators should use the cited source text, not model output or assumptions about what a law
-normally requires.
+These instructions define the target labels for the existing diagnostic cases and the fresh
+held-out packet. The original 16 cases have now been labeled independently by two annotators and
+adjudicated. For the fresh packet, each annotator must work independently before seeing the other
+packet or model output. Use the source text, not model suggestions or assumptions about what a
+law normally requires.
 
 ## Unit and record boundaries
 
