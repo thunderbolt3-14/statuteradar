@@ -1,8 +1,8 @@
 # Phase 3: obligation extraction
 
-Status: the extraction implementation and diagnostic evaluation are in place on
-`feat/phase3-extraction`. The measured quality gate remains open: neither tested local model is
-accurate enough for downstream legal-obligation records.
+Status: the extraction implementation and diagnostic evaluation are on `main`. The measured
+quality gate remains open: neither tested local model is accurate enough for downstream
+legal-obligation records.
 
 ## Implemented
 
@@ -68,11 +68,12 @@ existing predictions file without calling a model.
   API spending; it was not run in this work.
 - A same-label Llama development run now exists alongside Qwen. No additional model or API is
   required to continue local development.
-- A new 16-case, source-only held-out annotation packet has been prepared under
-  `data/annotations/phase3_holdout_annotator_a.csv` and
-  `data/annotations/phase3_holdout_annotator_b.csv`. It has four targeted cases per instrument
-  and excludes all IDs in the earlier evaluation.
-- The new packet must be independently completed and adjudicated before the test run. Do not use
-  model outputs to fill it or tune the prompt after seeing its scores.
+- The fresh 16-case targeted holdout has now been independently annotated in both packets.
+  The comparison found 44 field-level disagreements; outcomes and modalities matched in all
+  16 cases. See `data/annotations/phase3_holdout_agreement.json` and
+  `data/annotations/phase3_holdout_disagreements.csv`.
+- Human adjudication of those differences is still required before building the fresh gold file
+  or running either model. Do not use model outputs to fill the annotations or tune the prompt
+  after seeing fresh holdout scores.
 
 Phase 3 is implemented as a research prototype. It is not quality-closed for downstream use.

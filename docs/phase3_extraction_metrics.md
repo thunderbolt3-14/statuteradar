@@ -75,9 +75,9 @@ finding.
 ## Development/test discipline
 
 The split is fixed by provision and intentionally small. The development split can guide future
-prompt or validator work; changes made after reviewing the held-out results require a fresh,
-independently labeled held-out set before a new test score is reported. Current labels need
-independent review and adjudication first. Annotation instructions are in
+prompt or validator work; changes made after reviewing held-out results require a fresh,
+independently labeled held-out set before a new test score is reported. The original 16 labels
+have been independently annotated and adjudicated. Annotation instructions are in
 `docs/phase3_annotation_guidelines.md`.
 
 ## Artifacts and reproduction
@@ -124,15 +124,25 @@ Fresh development artifacts: `data/extraction_eval_predictions_qwen_dev.json`,
 `data/extraction_eval_report_qwen_dev.json`, `data/extraction_eval_predictions_llama32_dev.json`,
 and `data/extraction_eval_report_llama32_dev.json`.
 
+## Fresh holdout annotation status (2026-11-21)
+
+Both annotators completed all 16 targeted cases, and the packet IDs/source text matched the
+manifest and canonical source packet. Outcome and modality matched in all 16 cases. The
+comparison reported 44 field-level disagreements across actor, action, data category,
+condition/constraint/exception, scope qualifier, and evidence quote. These differences remain
+unadjudicated; no fresh holdout gold file or model score has been produced.
+
 ## Remaining resources and known file issue
 
 - The two completed annotation packets cover the same 16 cases only. The other 1,538 rows in
   `data/annotation_packet.csv` remain blank.
-- A fresh 16-case targeted held-out packet is prepared, with four cases per instrument, in
+- A fresh 16-case targeted holdout, four cases per instrument, is independently annotated in
   `data/annotations/phase3_holdout_annotator_a.csv` and
-  `data/annotations/phase3_holdout_annotator_b.csv`. Both packets must be completed independently
-  and adjudicated before evaluation. The existing eight test cases have already been viewed and
-  scored.
+  `data/annotations/phase3_holdout_annotator_b.csv`. The comparison found 44 field-level
+  disagreements. The adjudication worksheet is in
+  `data/annotations/phase3_holdout_adjudication.csv`; resolve every row before building gold
+  labels or running model evaluation. The existing eight test cases have already been viewed
+  and scored.
 - This 16-case sample is suitable only for a small diagnostic check, not a precise or
   corpus-representative accuracy estimate. Agree with the project guide on a larger final sample
   and pass criteria before making a completion claim.
