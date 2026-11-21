@@ -1,0 +1,104 @@
+{
+  "title": "StatuteRadar Phase 3 fresh held-out annotation sample",
+  "version": 1,
+  "sampling": "Targeted diagnostic sample, four operative provisions per instrument; not random or representative.",
+  "excludes_existing_evaluation_ids": true,
+  "cases": [
+    {
+      "chunk_id": "gdpr:art32:p4",
+      "split": "test",
+      "instrument": "GDPR",
+      "citation": "GDPR Art. 32(4)"
+    },
+    {
+      "chunk_id": "gdpr:art15:p2",
+      "split": "test",
+      "instrument": "GDPR",
+      "citation": "GDPR Art. 15(2)"
+    },
+    {
+      "chunk_id": "gdpr:art7:p2",
+      "split": "test",
+      "instrument": "GDPR",
+      "citation": "GDPR Art. 7(2)"
+    },
+    {
+      "chunk_id": "gdpr:art22:p2",
+      "split": "test",
+      "instrument": "GDPR",
+      "citation": "GDPR Art. 22(2)"
+    },
+    {
+      "chunk_id": "dpdp:s8:p2",
+      "split": "test",
+      "instrument": "DPDP",
+      "citation": "DPDP s.8(2)"
+    },
+    {
+      "chunk_id": "dpdp:s11:p1",
+      "split": "test",
+      "instrument": "DPDP",
+      "citation": "DPDP s.11(1)"
+    },
+    {
+      "chunk_id": "dpdp:s17:p1:ptc",
+      "split": "test",
+      "instrument": "DPDP",
+      "citation": "DPDP s.17(1)(c)"
+    },
+    {
+      "chunk_id": "dpdp:s3:pta",
+      "split": "test",
+      "instrument": "DPDP",
+      "citation": "DPDP s.3(a)"
+    },
+    {
+      "chunk_id": "dpdp_rules:r9",
+      "split": "test",
+      "instrument": "DPDP-Rules",
+      "citation": "DPDP-Rules r.9"
+    },
+    {
+      "chunk_id": "dpdp_rules:r15",
+      "split": "test",
+      "instrument": "DPDP-Rules",
+      "citation": "DPDP-Rules r.15"
+    },
+    {
+      "chunk_id": "dpdp_rules:r16",
+      "split": "test",
+      "instrument": "DPDP-Rules",
+      "citation": "DPDP-Rules r.16"
+    },
+    {
+      "chunk_id": "dpdp_rules:r13:p1",
+      "split": "test",
+      "instrument": "DPDP-Rules",
+      "citation": "DPDP-Rules r.13(1)"
+    },
+    {
+      "chunk_id": "ccpa:s1798.105:pa",
+      "split": "test",
+      "instrument": "CCPA",
+      "citation": "CCPA §1798.105(a)"
+    },
+    {
+      "chunk_id": "ccpa:s1798.100:pd:pt5",
+      "split": "test",
+      "instrument": "CCPA",
+      "citation": "CCPA §1798.100(d)(5)"
+    },
+    {
+      "chunk_id": "ccpa:s1798.135:pf",
+      "split": "test",
+      "instrument": "CCPA",
+      "citation": "CCPA §1798.135(f)"
+    },
+    {
+      "chunk_id": "ccpa:s1798.148:pa:pt3",
+      "split": "test",
+      "instrument": "CCPA",
+      "citation": "CCPA §1798.148(a)(3)"
+    }
+  ]
+}

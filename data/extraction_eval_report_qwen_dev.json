@@ -1,0 +1,471 @@
+{
+  "evaluated_split": "dev",
+  "overall": {
+    "sample_size": 8,
+    "annotator_count": 2,
+    "schema_valid_rate": 1.0,
+    "evidence_grounding_rate_among_schema_valid": 0.875,
+    "pipeline_acceptance_rate": 0.875,
+    "outcome_accuracy_among_schema_valid": 0.875,
+    "exact_obligation_prf": {
+      "tp": 2,
+      "fp": 9,
+      "fn": 7,
+      "precision": 0.1818,
+      "recall": 0.2222,
+      "f1": 0.2
+    },
+    "field_exact_value_prf": {
+      "modality": {
+        "tp": 7,
+        "fp": 4,
+        "fn": 2,
+        "precision": 0.6364,
+        "recall": 0.7778,
+        "f1": 0.7
+      },
+      "actor": {
+        "tp": 8,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.7273,
+        "recall": 0.8889,
+        "f1": 0.8
+      },
+      "action": {
+        "tp": 3,
+        "fp": 8,
+        "fn": 6,
+        "precision": 0.2727,
+        "recall": 0.3333,
+        "f1": 0.3
+      },
+      "data_category": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "constraint": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "exceptions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_kind": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 8,
+        "precision": 0.6667,
+        "recall": 0.2,
+        "f1": 0.3077
+      },
+      "qualifier_text": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 10,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_applies_to": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "field_token_overlap_prf": {
+      "action": {
+        "tp_tokens": 84,
+        "fp_tokens": 49,
+        "fn_tokens": 16,
+        "precision": 0.6316,
+        "recall": 0.84,
+        "f1": 0.721
+      },
+      "condition": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 151,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "constraint": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 29,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "exceptions": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 57,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_text": {
+        "tp_tokens": 14,
+        "fp_tokens": 66,
+        "fn_tokens": 143,
+        "precision": 0.175,
+        "recall": 0.0892,
+        "f1": 0.1181
+      },
+      "qualifier_applies_to": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 50,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_condition": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 131,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "rejections": {
+      "UngroundedEvidenceError": 1
+    },
+    "per_chunk": [
+      {
+        "chunk_id": "gdpr:art17:p3",
+        "split": "dev",
+        "gold_outcome": "no_obligation",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "gdpr:art46:p1",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "gdpr:art6:p4:pta",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s8:p7:pta",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s6:p7",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp_rules:r8:p1",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "ccpa:s1798.105:pc:pt1",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 2 evidence quote is not present in ccpa:s1798.105:pc:pt1"
+      },
+      {
+        "chunk_id": "ccpa:s1798.120:pc",
+        "split": "dev",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      }
+    ]
+  },
+  "splits": {
+    "dev": {
+      "sample_size": 8,
+      "annotator_count": 2,
+      "schema_valid_rate": 1.0,
+      "evidence_grounding_rate_among_schema_valid": 0.875,
+      "pipeline_acceptance_rate": 0.875,
+      "outcome_accuracy_among_schema_valid": 0.875,
+      "exact_obligation_prf": {
+        "tp": 2,
+        "fp": 9,
+        "fn": 7,
+        "precision": 0.1818,
+        "recall": 0.2222,
+        "f1": 0.2
+      },
+      "field_exact_value_prf": {
+        "modality": {
+          "tp": 7,
+          "fp": 4,
+          "fn": 2,
+          "precision": 0.6364,
+          "recall": 0.7778,
+          "f1": 0.7
+        },
+        "actor": {
+          "tp": 8,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.7273,
+          "recall": 0.8889,
+          "f1": 0.8
+        },
+        "action": {
+          "tp": 3,
+          "fp": 8,
+          "fn": 6,
+          "precision": 0.2727,
+          "recall": 0.3333,
+          "f1": 0.3
+        },
+        "data_category": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571
+        },
+        "condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_kind": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 8,
+          "precision": 0.6667,
+          "recall": 0.2,
+          "f1": 0.3077
+        },
+        "qualifier_text": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_applies_to": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "field_token_overlap_prf": {
+        "action": {
+          "tp_tokens": 84,
+          "fp_tokens": 49,
+          "fn_tokens": 16,
+          "precision": 0.6316,
+          "recall": 0.84,
+          "f1": 0.721
+        },
+        "condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 151,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 29,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 57,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_text": {
+          "tp_tokens": 14,
+          "fp_tokens": 66,
+          "fn_tokens": 143,
+          "precision": 0.175,
+          "recall": 0.0892,
+          "f1": 0.1181
+        },
+        "qualifier_applies_to": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 50,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 131,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "rejections": {
+        "UngroundedEvidenceError": 1
+      },
+      "per_chunk": [
+        {
+          "chunk_id": "gdpr:art17:p3",
+          "split": "dev",
+          "gold_outcome": "no_obligation",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "gdpr:art46:p1",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "gdpr:art6:p4:pta",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s8:p7:pta",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s6:p7",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp_rules:r8:p1",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "ccpa:s1798.105:pc:pt1",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 2 evidence quote is not present in ccpa:s1798.105:pc:pt1"
+        },
+        {
+          "chunk_id": "ccpa:s1798.120:pc",
+          "split": "dev",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        }
+      ]
+    }
+  }
+}
