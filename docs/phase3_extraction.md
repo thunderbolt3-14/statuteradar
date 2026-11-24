@@ -1,8 +1,8 @@
 # Phase 3: obligation extraction
 
-Status: the extraction implementation and diagnostic evaluation are on `main`. The measured
-quality gate remains open: neither tested local model is accurate enough for downstream
-legal-obligation records.
+Status: the extraction implementation and diagnostic evaluation are in place on
+`feat/phase3-extraction`. The measured quality gate remains open: neither tested local model is
+accurate enough for downstream legal-obligation records.
 
 ## Implemented
 
@@ -35,6 +35,20 @@ Llama had one ungrounded quote and treated a GDPR carve-out as a prohibition. Th
 completed; these are extraction quality failures. Current metrics and artifacts are tracked in
 `docs/phase3_extraction_metrics.md` and the report JSON files under `data/`.
 
+### Fresh held-out diagnostic
+
+Two annotators independently labeled and adjudicated a new targeted set of 16 cases, four per
+instrument, excluding the earlier evaluation cases. Both local models were run once against the
+same adjudicated labels. Schema validity was 1.000 and evidence grounding was 0.9375 for each,
+but exact obligation F1 was 0.000 for both. Qwen had pipeline acceptance 0.875 and outcome accuracy
+0.5625; Llama had pipeline acceptance 0.625 and outcome accuracy 0.8125. Exact condition,
+constraint, and exception F1 were 0.000 for both. The targeted sample is diagnostic, not
+representative of the corpus, and the results do not support downstream use.
+
+The adjudicated labels, predictions, and reports are saved as
+`data/extraction_eval_fresh_holdout.json` and the matching `*_fresh_test.json` files under
+`data/`.
+
 ## Run and score
 
 From Git Bash, run one model at a time:
@@ -56,24 +70,23 @@ existing predictions file without calling a model.
 - Have a second annotator independently label the sample, then resolve disagreements and retain
   the adjudication notes. This is complete for the existing 16 evaluation cases; see the two
   packets and `data/annotations/annotation_adjudication.csv`.
-- Build a larger, stratified, independently labeled set with a new held-out split. There are
-  currently 1,538 rows in the broad packet without annotations, and the existing eight test cases
-  have already been inspected. The current test split cannot support a fresh final score.
+- Build a larger, stratified, independently labeled set with a new held-out split. The fresh
+  16-case holdout has now been evaluated and must not be reused for tuning. Use development data
+  for prompt or validator changes, then collect a new independently labeled holdout before another
+  final evaluation.
 - Improve atomic action boundaries, exception/scope extraction, conditions, constraints, and
-  permission/prohibition polarity on development data, then evaluate once on the fresh held-out
-  set.
+  permission/prohibition polarity on development data; both models still have zero exact
+  obligation F1 on the fresh holdout.
 - Do not pass these model outputs into applicability or constraint decisions, or present them as
   legal determinations.
 - An Anthropic model comparison requires a configured API key and explicit approval for any
   API spending; it was not run in this work.
 - A same-label Llama development run now exists alongside Qwen. No additional model or API is
   required to continue local development.
-- The fresh 16-case targeted holdout has now been independently annotated in both packets.
-  The comparison found 44 field-level disagreements; outcomes and modalities matched in all
-  16 cases. See `data/annotations/phase3_holdout_agreement.json` and
-  `data/annotations/phase3_holdout_disagreements.csv`.
-- Human adjudication of those differences is still required before building the fresh gold file
-  or running either model. Do not use model outputs to fill the annotations or tune the prompt
-  after seeing fresh holdout scores.
+- The fresh 16-case packet has been independently completed and adjudicated, then evaluated once
+  per model. Preserve the raw annotation packets and adjudication worksheet locally; the
+  evaluator-ready adjudicated labels and aggregate reports are the shareable artifacts.
+- Since both models scored zero exact obligation F1, Phase 3 remains a research prototype and is
+  not quality-closed for downstream legal-obligation records.
 
 Phase 3 is implemented as a research prototype. It is not quality-closed for downstream use.

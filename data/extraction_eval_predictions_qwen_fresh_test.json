@@ -1,0 +1,963 @@
+[
+  {
+    "chunk_id": "gdpr:art32:p4",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "natural person acting under the authority of the controller or the processor",
+          "action": "process",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "natural person acting under the authority of the controller or the processor",
+          "action": "process",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "unless he or she is required to do so by Union or Member State law",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "natural person acting under the authority of the controller or the processor",
+          "action": "processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "natural person acting under the authority of the controller or the processor",
+          "action": "processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "unless he or she is required to do so by Union or Member State law",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art32:p4",
+      "citation": "GDPR Art. 32(4)",
+      "instrument": "GDPR",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "natural person acting under the authority of the controller or the processor",
+          "action": "processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art32:p4:obl:1",
+          "source_chunk_id": "gdpr:art32:p4",
+          "citation": "GDPR Art. 32(4)",
+          "instrument": "GDPR"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "natural person acting under the authority of the controller or the processor",
+          "action": "processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art32:p4:obl:2",
+          "source_chunk_id": "gdpr:art32:p4",
+          "citation": "GDPR Art. 32(4)",
+          "instrument": "GDPR"
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "unless he or she is required to do so by Union or Member State law",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller, unless he or she is required to do so by Union or Member State law.",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art32:p4:qualifier:1",
+          "source_chunk_id": "gdpr:art32:p4",
+          "citation": "GDPR Art. 32(4)",
+          "instrument": "GDPR"
+        }
+      ],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "gdpr:art15:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The chunk does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The chunk does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art15:p2",
+      "citation": "GDPR Art. 15(2)",
+      "instrument": "GDPR",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The chunk does not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "gdpr:art7:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clauses do not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clauses do not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art7:p2",
+      "citation": "GDPR Art. 7(2)",
+      "instrument": "GDPR",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clauses do not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "gdpr:art22:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The evidence quote does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The evidence quote does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art22:p2",
+      "citation": "GDPR Art. 22(2)",
+      "instrument": "GDPR",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The evidence quote does not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "dpdp:s8:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s8:p2",
+      "citation": "DPDP s.8(2)",
+      "instrument": "DPDP",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "dpdp:s11:p1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s11:p1",
+      "citation": "DPDP s.11(1)",
+      "instrument": "DPDP",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "dpdp:s17:p1:ptc",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause exempts certain provisions from applying where personal data is processed in the interest of prevention, detection, investigation, or prosecution of offences or contraventions of laws in force in India."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause exempts certain provisions from applying where personal data is processed in the interest of prevention, detection, investigation, or prosecution of offences or contraventions of laws in force in India."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s17:p1:ptc",
+      "citation": "DPDP s.17(1)(c)",
+      "instrument": "DPDP",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause exempts certain provisions from applying where personal data is processed in the interest of prevention, detection, investigation, or prosecution of offences or contraventions of laws in force in India."
+    }
+  },
+  {
+    "chunk_id": "dpdp:s3:pta",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s3:pta",
+      "citation": "DPDP s.3(a)",
+      "instrument": "DPDP",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r9",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r9",
+      "citation": "DPDP-Rules r.9",
+      "instrument": "DPDP-Rules",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r15",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "transfer",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Any personal data processed by a Data Fiduciary under the Act may be transferred outside the territory of India",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "make such personal data available",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "subject to the restriction that the Data Fiduciary shall meet such requirements as the Central Government may, by general or special order, specify in respect of making such personal data available to any foreign State",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "outside the territory of India",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "outside the territory of India",
+          "extraction_confidence": 100
+        },
+        {
+          "kind": "exception",
+          "text": "to any foreign State, or to any person or entity under the control of or any agency of such a State",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "to any foreign State, or to any person or entity under the control of or any agency of such a State",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "transferred outside the territory of India",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Any personal data processed by a Data Fiduciary under the Act may be transferred outside the territory of India",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "make such personal data available",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "subject to the restriction that the Data Fiduciary shall meet such requirements as the Central Government may, by general or special order, specify in respect of making such personal data available to any foreign State",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "outside the territory of India",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "outside the territory of India",
+          "extraction_confidence": 100
+        },
+        {
+          "kind": "exception",
+          "text": "to any foreign State, or to any person or entity under the control of or any agency of such a State",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "to any foreign State, or to any person or entity under the control of or any agency of such a State",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r15",
+      "citation": "DPDP-Rules r.15",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "Data Fiduciary",
+          "action": "transferred outside the territory of India",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Any personal data processed by a Data Fiduciary under the Act may be transferred outside the territory of India",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r15:obl:1",
+          "source_chunk_id": "dpdp_rules:r15",
+          "citation": "DPDP-Rules r.15",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "Data Fiduciary",
+          "action": "make such personal data available",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "subject to the restriction that the Data Fiduciary shall meet such requirements as the Central Government may, by general or special order, specify in respect of making such personal data available to any foreign State",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r15:obl:2",
+          "source_chunk_id": "dpdp_rules:r15",
+          "citation": "DPDP-Rules r.15",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "outside the territory of India",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "outside the territory of India",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r15:qualifier:1",
+          "source_chunk_id": "dpdp_rules:r15",
+          "citation": "DPDP-Rules r.15",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "kind": "exception",
+          "text": "to any foreign State, or to any person or entity under the control of or any agency of such a State",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "to any foreign State, or to any person or entity under the control of or any agency of such a State",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r15:qualifier:2",
+          "source_chunk_id": "dpdp_rules:r15",
+          "citation": "DPDP-Rules r.15",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r16",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause explicitly states that the provisions of the Act shall not apply under certain conditions, thus there are no explicit obligations present."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause explicitly states that the provisions of the Act shall not apply under certain conditions, thus there are no explicit obligations present."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r16",
+      "citation": "DPDP-Rules r.16",
+      "instrument": "DPDP-Rules",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause explicitly states that the provisions of the Act shall not apply under certain conditions, thus there are no explicit obligations present."
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r13:p1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r13:p1",
+      "citation": "DPDP-Rules r.13(1)",
+      "instrument": "DPDP-Rules",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The provided clause does not contain any explicit duty, prohibition, or permission/right."
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.105:pa",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business",
+          "action": "delete",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A consumer shall have the right to request that a business delete any personal information about the consumer which the business has collected from the consumer.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business",
+          "action": "delete any personal information about the consumer which the business has collected from the consumer.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A consumer shall have the right to request that a business delete any personal information about the consumer which the business has collected from the consumer.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "MissingExplicitActorError",
+    "error": "obligation 1 actor does not match the named actor in ccpa:s1798.105:pa: 'A business'"
+  },
+  {
+    "chunk_id": "ccpa:s1798.100:pd:pt5",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor",
+          "action": "enter into an agreement",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor, that: Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor",
+          "action": "take reasonable and appropriate steps",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "for a business purpose",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor, for a business purpose",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor",
+          "action": "enter into an agreement",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor, that: Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor",
+          "action": "take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "for a business purpose",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor, for a business purpose",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": false,
+    "status": "rejected",
+    "error_type": "UngroundedEvidenceError",
+    "error": "obligation 1 evidence quote is not present in ccpa:s1798.100:pd:pt5"
+  },
+  {
+    "chunk_id": "ccpa:s1798.135:pf",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "If a business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information, the person shall thereafter only use that consumer’s personal information for a business purpose specified by the business, or as otherwise permitted by this title, and shall be prohibited from: (1) Selling or sharing the personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "retain",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(2) Retaining, using, or disclosing that consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "disclose",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(2) Retaining, using, or disclosing that consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(A) For any purpose other than for the specific purpose of performing the services offered to the business.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "disclose",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(B) Outside of the direct business relationship between the person and the business.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(C) For a commercial purpose other than providing the services to the business.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use that consumer’s personal information for a business purpose specified by the business, or as otherwise permitted by this title, and shall be prohibited from: (1) Selling or sharing the personal information.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "If a business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information, the person shall thereafter only use that consumer’s personal information for a business purpose specified by the business, or as otherwise permitted by this title, and shall be prohibited from: (1) Selling or sharing the personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "Retaining, using, or disclosing that consumer’s personal information.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(2) Retaining, using, or disclosing that consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "disclose",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(2) Retaining, using, or disclosing that consumer’s personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(A) For any purpose other than for the specific purpose of performing the services offered to the business.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "disclose",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(B) Outside of the direct business relationship between the person and the business.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(C) For a commercial purpose other than providing the services to the business.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "ccpa:s1798.135:pf",
+      "citation": "CCPA §1798.135(f)",
+      "instrument": "CCPA",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use that consumer’s personal information for a business purpose specified by the business, or as otherwise permitted by this title, and shall be prohibited from: (1) Selling or sharing the personal information.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "If a business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information, the person shall thereafter only use that consumer’s personal information for a business purpose specified by the business, or as otherwise permitted by this title, and shall be prohibited from: (1) Selling or sharing the personal information.",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.135:pf:obl:1",
+          "source_chunk_id": "ccpa:s1798.135:pf",
+          "citation": "CCPA §1798.135(f)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "Retaining, using, or disclosing that consumer’s personal information.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(2) Retaining, using, or disclosing that consumer’s personal information.",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.135:pf:obl:2",
+          "source_chunk_id": "ccpa:s1798.135:pf",
+          "citation": "CCPA §1798.135(f)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "disclose",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(2) Retaining, using, or disclosing that consumer’s personal information.",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.135:pf:obl:3",
+          "source_chunk_id": "ccpa:s1798.135:pf",
+          "citation": "CCPA §1798.135(f)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(A) For any purpose other than for the specific purpose of performing the services offered to the business.",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.135:pf:obl:4",
+          "source_chunk_id": "ccpa:s1798.135:pf",
+          "citation": "CCPA §1798.135(f)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "disclose",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(B) Outside of the direct business relationship between the person and the business.",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.135:pf:obl:5",
+          "source_chunk_id": "ccpa:s1798.135:pf",
+          "citation": "CCPA §1798.135(f)",
+          "instrument": "CCPA"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "any person authorized by the business to collect personal information",
+          "action": "use",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "(C) For a commercial purpose other than providing the services to the business.",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.135:pf:obl:6",
+          "source_chunk_id": "ccpa:s1798.135:pf",
+          "citation": "CCPA §1798.135(f)",
+          "instrument": "CCPA"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.148:pa:pt3",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause does not contain any explicit duty, prohibition, or permission/right."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "ccpa:s1798.148:pa:pt3",
+      "citation": "CCPA §1798.148(a)(3)",
+      "instrument": "CCPA",
+      "obligations": [],
+      "qualifiers": [],
+      "no_obligation_reason": "The clause does not contain any explicit duty, prohibition, or permission/right."
+    }
+  }
+]
