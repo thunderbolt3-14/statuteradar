@@ -18,6 +18,7 @@ MASTER = ROOT / "data" / "annotation_packet.csv"
 DISAGREEMENTS = ROOT / "data" / "annotations" / "annotation_disagreements.csv"
 SUMMARY = ROOT / "data" / "annotations" / "annotation_comparison_summary.json"
 IDENTITY_COLUMNS = {"chunk_id", "source_text", "instrument", "citation", "title"}
+REQUIRED_COLUMNS = {"chunk_id", "source_text"}
 KAPPA_FIELDS = {"outcome"}
 NOTE_FIELD = "uncertainty_notes"
 
