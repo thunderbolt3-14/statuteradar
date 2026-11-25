@@ -89,4 +89,14 @@ existing predictions file without calling a model.
 - Since both models scored zero exact obligation F1, Phase 3 remains a research prototype and is
   not quality-closed for downstream legal-obligation records.
 
+### Quality holdout v2 status
+
+A provisional pass gate was agreed before selecting the next holdout: schema validity and evidence
+grounding must each be at least 0.95, exact obligation F1 must be at least 0.80, and every
+field-level exact-value F1 must be at least 0.75. A new targeted 16-case packet, balanced across
+GDPR, DPDP, DPDP Rules, and CCPA and excluding both prior evaluation sets, has been prepared.
+Its two annotation packets are blank; independent annotation, adjudication, and one run per model
+remain outstanding. No quality-gate result is available yet. See
+`docs/phase3_extraction_metrics.md` for the criteria and packet paths.
+
 Phase 3 is implemented as a research prototype. It is not quality-closed for downstream use.

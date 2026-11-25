@@ -34,6 +34,22 @@ text makes that link clear. If there are qualifiers but no standalone obligation
 Conditions and exceptions that are part of one operative obligation may also be attached to that
 obligation. Do not turn an exception into a prohibition or duplicate it as an obligation.
 
+Use these schematic examples to keep the records atomic:
+- “A member may request a copy only after identity is verified.” is one `MAY` record. Put the
+  identity verification trigger in condition/constraint; do not create a separate `MUST` for it.
+- “Paragraph 1 does not apply where retention is required by law.” is `no_obligation` with one
+  exception qualifier, not a `MUST_NOT` record.
+- “A provider shall delete a record and notify its recipient.” is two `MUST` records, one per
+  distinct action. Each record gets a short exact quote for its own action; do not emit a third
+  aggregate record covering both.
+- “A person may give, review, or withdraw consent through a consent manager.” is one `MAY` record
+  for the stated right, not `no_obligation` and not a duty.
+
+For each obligation, quote only the shortest continuous source span that supports that action
+and its actor. Do not join clauses, insert conjunctions, or quote neighboring obligations to make
+the evidence span longer. Preserve an exception in `exceptions`/`qualifiers`; never append it to
+the action text.
+
 Copy the grammatical actor phrase governing the operative verb (for example,
 “controller or processor” in “a controller or processor may transfer”). If the evidence quote
 contains an explicit legal actor governing shall, must, may, or has the right, actor must not be
@@ -96,6 +112,16 @@ _EXPLICIT_ACTOR = re.compile(
     r"(?:(?![.;:]).){0,180}?\b(?:shall|must|may|has\s+(?:the\s+)?right|"
     r"is\s+(?:obliged|required))\b"
 )
+_NON_OPERATIVE_MODAL_TAIL = re.compile(
+    r"(?i)^\s*(?:not\s+apply|be\s+deemed|not\s+be\s+binding|"
+    r"not\s+be\s+required|not\s+constitute)\b"
+)
+_COORDINATED_ACTION = re.compile(
+    r"(?i),?\s+and\s+(?="
+    r"(?:notify|inform|delete|erase|retain|store|provide|report|transfer|"
+    r"disclose|sell|share|process|publish|appoint|conduct|implement|take|"
+    r"destroy|restrict|communicate|collect|use|return|make)\b)"
+)
 
 
 def _normalize_actor(text: str) -> str:
@@ -105,6 +131,17 @@ def _normalize_actor(text: str) -> str:
 
 def _normalize_quote(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
+
+
+def _explicit_operative_actor_matches(text: str) -> list[re.Match[str]]:
+    """Find named actor plus modal cues, excluding common non-operative legal effects."""
+    operative = []
+    for match in _EXPLICIT_ACTOR.finditer(text):
+        tail = text[match.end():match.end() + 80]
+        if _NON_OPERATIVE_MODAL_TAIL.match(tail):
+            continue
+        operative.append(match)
+    return operative
 
 
 def _clause_views(text: str) -> list[str]:
@@ -142,10 +179,16 @@ def _expand_action(quote: str, action: str) -> str:
     if start < 0:
         return action
     end_candidates = [len(quote)]
-    for cue in ("unless", "upon", "only if", "on condition that", " if ", " where ", ";"):
+    for cue in (
+        "unless", "except", "upon", "only if", "on condition that", " if ",
+        " where ", ";",
+    ):
         position = quote.casefold().find(cue, start + len(action))
         if position >= 0:
             end_candidates.append(position)
+    coordinated = _COORDINATED_ACTION.search(quote, start + len(action))
+    if coordinated:
+        end_candidates.append(coordinated.start())
     end = min(end_candidates)
     expanded = quote[start:end].strip(" ,:—–-\t\r\n")
     return _normalize_quote(expanded) if expanded else action
@@ -233,13 +276,14 @@ def generate_payload(chunk: Chunk, provider: JsonProvider):
 def validate_payload(chunk: Chunk, payload) -> ExtractionBatch:
     """Ground the provider's schema-valid fields and attach trusted corpus provenance."""
     payload = enrich_explicit_fields(chunk, payload)
-    if not payload.obligations and not payload.qualifiers:
-        explicit_actors = {
-            _normalize_actor(match.group("actor"))
-            for match in _EXPLICIT_ACTOR.finditer(chunk.text)
-        }
-        if explicit_actors:
-           pass
+    if not payload.obligations:
+        missed = _explicit_operative_actor_matches(chunk.text)
+        if missed:
+            actors = sorted({_normalize_actor(match.group("actor")) for match in missed})
+            raise MissedOperativeEffectError(
+                "no_obligation result omits a possible explicit operative effect by "
+                f"{', '.join(actors)} in {chunk.chunk_id}"
+            )
     source = _normalize_quote(chunk.text)
     records = []
     qualifier_records = []

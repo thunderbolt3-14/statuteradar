@@ -28,14 +28,17 @@ def normalize(value: str | None) -> str:
     return re.sub(r"\s+", " ", (value or "").strip()).casefold()
 
 
-def load_packet(path: Path) -> tuple[list[str], dict[str, dict[str, str]]]:
+def load_packet(
+    path: Path, required_columns: set[str] = IDENTITY_COLUMNS
+) -> tuple[list[str], dict[str, dict[str, str]]]:
     if not path.is_file():
         raise FileNotFoundError(f"Required annotation file not found: {path}")
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         columns = reader.fieldnames or []
-        if not REQUIRED_COLUMNS.issubset(columns):
-            raise ValueError(f"{path.name} must include chunk_id and source_text columns")
+        missing = required_columns.difference(columns)
+        if missing:
+            raise ValueError(f"{path.name} is missing required columns: {sorted(missing)}")
         records: dict[str, dict[str, str]] = {}
         for line_number, row in enumerate(reader, start=2):
             chunk_id = (row.get("chunk_id") or "").strip()
@@ -77,7 +80,11 @@ def main() -> int:
     try:
         columns_a, annotator_a = load_packet(args.packet_a)
         columns_b, annotator_b = load_packet(args.packet_b)
-        master = load_packet(args.master)[1] if args.master else {}
+        master = (
+            load_packet(args.master, required_columns={"chunk_id", "source_text"})[1]
+            if args.master
+            else {}
+        )
 
         if set(annotator_a) != set(annotator_b):
             raise ValueError("Annotator files have different chunk_id sets")
