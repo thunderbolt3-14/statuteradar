@@ -1,0 +1,483 @@
+{
+  "title": "StatuteRadar Phase 3 adjudicated human annotations",
+  "version": 3,
+  "annotator_count": 2,
+  "annotator_note": "Two independent human annotation packets, with disagreements adjudicated. Fresh held-out diagnostic set; no model predictions were used for adjudication.",
+  "cases": [
+    {
+      "chunk_id": "gdpr:art12:p3",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the controller",
+          "action": "provide the data subject information on action taken on a request under Articles 15 to 22",
+          "data_category": null,
+          "condition": "a request under Articles 15 to 22 is received",
+          "constraint": "without undue delay and in any event within one month of receipt",
+          "exceptions": []
+        },
+        {
+          "modality": "MAY",
+          "actor": null,
+          "action": "extend the response period by up to two further months",
+          "data_category": null,
+          "condition": "extension is necessary, taking into account the complexity and number of requests",
+          "constraint": "by two further months",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "the controller",
+          "action": "inform the data subject of the extension and reasons for delay",
+          "data_category": null,
+          "condition": "the period is extended",
+          "constraint": "within one month of receipt of the request, together with reasons for delay",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "provide the information by electronic means",
+          "data_category": null,
+          "condition": "the data subject makes the request by electronic means",
+          "constraint": "where possible",
+          "exceptions": [
+            "unless otherwise requested by the data subject"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "The response period may be extended by two further months where necessary, taking into account the complexity and number of requests.",
+          "applies_to": "obligation 1",
+          "condition": "an extension is necessary",
+          "evidence_quote": "That period may be extended by two further months where necessary, taking into account the complexity and number of the requests."
+        },
+        {
+          "kind": "exception",
+          "text": "Electronic delivery is not required if the data subject requests otherwise.",
+          "applies_to": "obligation 4",
+          "condition": "the request is made by electronic means",
+          "evidence_quote": "unless otherwise requested by the data subject"
+        }
+      ]
+    },
+    {
+      "chunk_id": "gdpr:art25:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "implement appropriate technical and organisational measures designed to implement data-protection principles effectively and integrate necessary safeguards into processing",
+          "data_category": null,
+          "condition": "at the time of determining the means for processing and at the time of processing itself",
+          "constraint": "take into account the state of the art, cost of implementation, nature, scope, context and purposes of processing and risks to rights and freedoms; meet the Regulation’s requirements and protect data subjects’ rights",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "gdpr:art7:p3",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "data subject",
+          "action": "withdraw consent",
+          "data_category": null,
+          "condition": null,
+          "constraint": "at any time",
+          "exceptions": [
+            "withdrawal does not affect the lawfulness of processing based on consent before withdrawal"
+          ]
+        },
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "inform the data subject of the right to withdraw consent",
+          "data_category": null,
+          "condition": "before consent is given",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "make withdrawal as easy as giving consent",
+          "data_category": null,
+          "condition": null,
+          "constraint": "withdrawal must be as easy as giving consent",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "withdrawal is not retroactive: it does not affect lawfulness of processing based on consent before withdrawal",
+          "applies_to": "[1]",
+          "condition": null,
+          "evidence_quote": "The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal"
+        }
+      ]
+    },
+    {
+      "chunk_id": "gdpr:art21:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "data subject",
+          "action": "object to processing of personal data concerning the data subject",
+          "data_category": null,
+          "condition": "grounds relate to the data subject’s particular situation and processing is based on Article 6(1)(e) or (f), including profiling based on those provisions",
+          "constraint": "at any time",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "no longer process the personal data",
+          "data_category": null,
+          "condition": "the data subject objects to the processing",
+          "constraint": null,
+          "exceptions": [
+            "unless the controller demonstrates compelling legitimate grounds overriding the data subject’s interests, rights and freedoms, or grounds for establishment, exercise or defence of legal claims"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "The right to object applies to processing based on Article 6(1)(e) or (f), including profiling based on those provisions.",
+          "applies_to": "obligation 1",
+          "condition": "the processing is based on Article 6(1)(e) or (f)",
+          "evidence_quote": "which is based on point (e) or (f) of Article 6(1), including profiling based on those provisions"
+        },
+        {
+          "kind": "exception",
+          "text": "The controller may continue processing if it demonstrates the specified overriding compelling legitimate grounds or grounds for legal claims.",
+          "applies_to": "obligation 2",
+          "condition": "the controller demonstrates those grounds",
+          "evidence_quote": "unless the controller demonstrates compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject or for the establishment, exercise or defence of legal claims"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp:s4:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "A person",
+          "action": "process the personal data of a Data Principal",
+          "data_category": null,
+          "condition": "the lawful purpose is one for which the Data Principal has given consent or which is a certain legitimate use",
+          "constraint": "only in accordance with the provisions of this Act",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp:s8:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "be responsible for complying with the provisions of the Act and the rules made thereunder in respect of any processing undertaken by it or on its behalf by a Data Processor",
+          "data_category": null,
+          "condition": "processing undertaken by the Data Fiduciary or on its behalf by a Data Processor",
+          "constraint": "irrespective of any agreement to the contrary or failure of a Data Principal to carry out the duties provided under this Act",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "covers processing undertaken by the Data Fiduciary itself or on its behalf by a Data Processor",
+          "applies_to": "[1]",
+          "condition": null,
+          "evidence_quote": "in respect of any processing Fiduciary. undertaken by it or on its behalf by a Data Processor"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp:s8:p3",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the Data Fiduciary processing such personal data",
+          "action": "ensure the completeness, accuracy and consistency of the personal data",
+          "data_category": null,
+          "condition": "the personal data is likely to be used to make a decision that affects the Data Principal or disclosed to another Data Fiduciary",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp:s6:p3",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "present every consent request to the Data Principal in clear and plain language",
+          "data_category": null,
+          "condition": "a request for consent is made under the Act or rules",
+          "constraint": "clear and plain language",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "give the Data Principal the option to access the request in English or an Eighth Schedule language",
+          "data_category": null,
+          "condition": "a request for consent is made under the Act or rules",
+          "constraint": "access in English or any language specified in the Eighth Schedule to the Constitution",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "provide contact details of a Data Protection Officer where applicable, or another person authorised by the Data Fiduciary to respond to communications about exercising the Data Principal’s rights",
+          "data_category": null,
+          "condition": "a request for consent is made under the Act or rules",
+          "constraint": "Data Protection Officer contact details where applicable; otherwise contact details of another person authorised to respond to rights-related communications",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "These requirements apply to every request for consent under the Act or rules.",
+          "applies_to": "obligations 1, 2 and 3",
+          "condition": "a request for consent is made under the Act or rules",
+          "evidence_quote": "Every request for consent under the provisions of this Act or the rules made thereunder"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp_rules:r3:pta",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "present the notice so that it is understandable independently of any other information made available by the Data Fiduciary",
+          "data_category": null,
+          "condition": null,
+          "constraint": "the notice must be presented and understandable independently of any other information that has been, is or may be made available by the Data Fiduciary",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "The requirement applies to the notice given by the Data Fiduciary to the Data Principal.",
+          "applies_to": "obligation 1",
+          "condition": null,
+          "evidence_quote": "The notice given by the Data Fiduciary to the Data Principal"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp_rules:r4:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "A person who fulfils the conditions for registration of Consent Managers set out in Part A of First Schedule",
+          "action": "apply to the Board for registration as a Consent Manager",
+          "data_category": null,
+          "condition": "the person fulfils the registration conditions in Part A of the First Schedule",
+          "constraint": "furnish particulars and other information and documents as the Board may publish on its website",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp_rules:r7:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "intimate each affected Data Principal of the breach and provide (a) its nature, extent and timing, (b) likely relevant consequences, (c) mitigation measures, (d) safety measures the Data Principal may take, and (e) business contact information for queries",
+          "data_category": null,
+          "condition": "on becoming aware of any personal data breach",
+          "constraint": "to the best of its knowledge; in a concise, clear and plain manner; without delay; through her user account or any mode of communication registered by her with the Data Fiduciary",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "The breach intimation duty is owed to each affected Data Principal.",
+          "applies_to": "obligation 1",
+          "condition": "the Data Principal is affected by the personal data breach",
+          "evidence_quote": "each affected Data Principal"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp_rules:r10:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "adopt appropriate technical and organisational measures to ensure that verifiable consent of the parent is obtained",
+          "data_category": "personal data of a child",
+          "condition": "before processing any personal data of a child",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "observe due diligence for checking that the individual identifying herself as the parent is an adult who is identifiable",
+          "data_category": "identity and age details of the individual identifying herself as the parent",
+          "condition": "if required in connection with compliance with any law for the time being in force in India",
+          "constraint": "by reference to reliable identity and age details available with the Data Fiduciary, or details voluntarily provided by the individual or through a virtual token mapped to those details and issued by an authorised entity",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "The consent requirement applies before processing personal data of a child.",
+          "applies_to": "obligation 1",
+          "condition": "processing of a child’s personal data",
+          "evidence_quote": "before the processing of any personal data of a child"
+        }
+      ]
+    },
+    {
+      "chunk_id": "ccpa:s1798.100:pa:pt1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business that controls the collection of a consumer’s personal information",
+          "action": "inform consumers of the categories of personal information to be collected, the purposes for which the categories are collected or used, and whether the information is sold or shared",
+          "data_category": null,
+          "condition": null,
+          "constraint": "at or before the point of collection",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "A business",
+          "action": "collect additional categories of personal information",
+          "data_category": "additional categories of personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "unless the business provides the consumer with notice consistent with this section"
+          ]
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "A business",
+          "action": "use collected personal information for additional purposes incompatible with the disclosed purpose",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": "for additional purposes incompatible with the disclosed purpose",
+          "exceptions": [
+            "unless the business provides the consumer with notice consistent with this section"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "The collection and incompatible-use prohibitions are lifted when notice consistent with this section is provided.",
+          "applies_to": "obligations 2 and 3",
+          "condition": "the business provides notice consistent with this section",
+          "evidence_quote": "without providing the consumer with notice consistent with this section."
+        }
+      ]
+    },
+    {
+      "chunk_id": "ccpa:s1798.105:pb",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business that collects personal information about consumers",
+          "action": "disclose the consumer’s rights to request the deletion of the consumer’s personal information",
+          "data_category": null,
+          "condition": "the business collects personal information about consumers",
+          "constraint": "pursuant to Section 1798.130",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "ccpa:s1798.110:pa",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "consumer",
+          "action": "request that a business collecting the consumer’s personal information disclose (1) categories of personal information collected, (2) categories of sources, (3) business or commercial purpose for collecting, selling or sharing, (4) categories of third parties to whom it is disclosed, and (5) specific pieces of personal information collected",
+          "data_category": "personal information",
+          "condition": "the business collects personal information about the consumer",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "The right is to request disclosure from a business that collects personal information about that consumer.",
+          "applies_to": "obligation 1",
+          "condition": "the business collects personal information about the consumer",
+          "evidence_quote": "a business that collects personal information about the consumer"
+        }
+      ]
+    },
+    {
+      "chunk_id": "ccpa:s1798.135:pa:pt1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A business that sells or shares consumers’ personal information or uses or discloses consumers’ sensitive personal information for purposes other than those authorized by subdivision (a) of Section 1798.121",
+          "action": "provide a clear and conspicuous link on the business’ internet homepages, titled “Do Not Sell or Share My Personal Information,” to an internet web page that enables a consumer, or a person authorized by the consumer, to opt out of the sale or sharing of the consumer’s personal information",
+          "data_category": "consumers’ personal information and sensitive personal information",
+          "condition": "the business sells or shares consumers’ personal information or uses or discloses consumers’ sensitive personal information for purposes other than those authorized by subdivision (a) of Section 1798.121",
+          "constraint": "in a form reasonably accessible to consumers; the link must be clear and conspicuous on the business’ internet homepages, titled “Do Not Sell or Share My Personal Information,” and point to an opt-out page",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    }
+  ]
+}
