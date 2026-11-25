@@ -189,3 +189,25 @@ Artifacts:
 
 These results consume the fresh holdout. Any prompt or validator changes made after reviewing
 them require a new independently labeled held-out set before another final test score is claimed.
+
+## Phase 3 quality holdout v2 (prepared; evaluation pending)
+
+Before selecting this sample, the project agreed to a provisional quality gate for each model:
+
+- Schema-valid rate: at least 0.95.
+- Evidence-grounding rate among schema-valid outputs: at least 0.95.
+- Exact obligation F1: at least 0.80.
+- Every field-level exact-value F1 reported by the evaluator: at least 0.75.
+
+The new packet contains 16 targeted operative provisions, four each from GDPR, DPDP, DPDP Rules,
+and CCPA. Its manifest and two source-only annotation packets are in
+`data/annotations/phase3_quality_holdout_v2_manifest.json` and
+`data/annotations/phase3_quality_holdout_v2_annotator_{a,b}.csv`. The preparation script excludes
+IDs used in both `data/extraction_eval.json` and `data/extraction_eval_fresh_holdout.json`, and
+checks the source against the canonical annotation packet. The sample is diagnostic and is not a
+statistically representative corpus estimate.
+
+Both packets are currently blank. Two annotators must complete them independently, then resolve
+and document disagreements before the adjudicated test labels are built. Do not run either model
+on this sample or use it for extractor tuning before adjudication. No v2 model metrics or gate
+result are available yet.

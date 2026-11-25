@@ -120,7 +120,7 @@ _COORDINATED_ACTION = re.compile(
     r"(?i),?\s+and\s+(?="
     r"(?:notify|inform|delete|erase|retain|store|provide|report|transfer|"
     r"disclose|sell|share|process|publish|appoint|conduct|implement|take|"
-    r"destroy|restrict|communicate|collect|use|return|make)\b"
+    r"destroy|restrict|communicate|collect|use|return|make)\b)"
 )
 
 
