@@ -1,0 +1,389 @@
+{
+  "title": "StatuteRadar Phase 3 adjudicated human annotations",
+  "version": 3,
+  "annotator_count": 2,
+  "annotator_note": "Two independent human annotation packets, with disagreements adjudicated. Fresh held-out diagnostic set; no model predictions were used for adjudication.",
+  "cases": [
+    {
+      "chunk_id": "gdpr:art32:p4",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller and processor",
+          "action": "take steps to ensure that any natural person acting under their authority who has access to personal data does not process them except on instructions from the controller",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "unless he or she is required to do so by Union or Member State law"
+          ]
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "gdpr:art15:p2",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "data subject",
+          "action": "be informed of the appropriate safeguards pursuant to Article 46 relating to the transfer",
+          "data_category": "personal data",
+          "condition": "Where personal data are transferred to a third country or to an international organisation",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "gdpr:art7:p2",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "present the request for consent",
+          "data_category": null,
+          "condition": "If the data subject's consent is given in the context of a written declaration which also concerns other matters",
+          "constraint": "in a manner which is clearly distinguishable from the other matters, in an intelligible and easily accessible form, using clear and plain language",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "Any part of such a declaration which constitutes an infringement of this Regulation shall not be binding",
+          "applies_to": "present the request for consent",
+          "condition": "part of the declaration constitutes an infringement of this Regulation",
+          "evidence_quote": "Any part of such a declaration which constitutes an infringement of this Regulation shall not be binding"
+        }
+      ]
+    },
+    {
+      "chunk_id": "gdpr:art22:p2",
+      "split": "test",
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Paragraph 1 does not apply if the decision is necessary for entering into, or performance of, a contract between the data subject and a data controller",
+          "applies_to": "GDPR Art. 22(1)",
+          "condition": "the decision is necessary for entering into, or performance of, a contract between the data subject and a data controller",
+          "evidence_quote": "is necessary for entering into, or performance of, a contract between the data subject and a data controller"
+        },
+        {
+          "kind": "exception",
+          "text": "Paragraph 1 does not apply if the decision is authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests",
+          "applies_to": "GDPR Art. 22(1)",
+          "condition": "the decision is authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests",
+          "evidence_quote": "is authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests"
+        },
+        {
+          "kind": "exception",
+          "text": "Paragraph 1 does not apply if the decision is based on the data subject's explicit consent",
+          "applies_to": "GDPR Art. 22(1)",
+          "condition": "the decision is based on the data subject's explicit consent",
+          "evidence_quote": "is based on the data subject's explicit consent"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp:s8:p2",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "Data Fiduciary",
+          "action": "engage, appoint, use or otherwise involve a Data Processor to process personal data on its behalf for any activity related to offering of goods or services to Data Principals",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": "only under a valid contract",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp:s11:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "obtain from the Data Fiduciary a summary of personal data being processed and the processing activities undertaken with respect to such personal data",
+          "data_category": "personal data",
+          "condition": "Upon making to the Data Fiduciary a request in such manner as may be prescribed.",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "obtain from the Data Fiduciary the identities of all other Data Fiduciaries and Data Processors with whom the personal data has been shared",
+          "data_category": "personal data",
+          "condition": "Upon making to the Data Fiduciary a request in such manner as may be prescribed.",
+          "constraint": "along with a description of the personal data so shared",
+          "exceptions": []
+        },
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "obtain from the Data Fiduciary any other information related to the personal data of the Data Principal and its processing",
+          "data_category": "personal data",
+          "condition": "Upon making to the Data Fiduciary a request in such manner as may be prescribed.",
+          "constraint": "as may be prescribed",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "Applies to the Data Fiduciary to whom the Data Principal has previously given consent, including consent under section 7(a)",
+          "applies_to": "all three rights (a)-(c)",
+          "condition": null,
+          "evidence_quote": "to whom she has previously given consent"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp:s17:p1:ptc",
+      "split": "test",
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Chapter II (except sub-sections (1) and (5) of section 8), Chapter III and section 16 do not apply where personal data is processed in the interest of prevention, detection, investigation or prosecution of any offence or contravention of any law in force in India",
+          "applies_to": "Chapter II (except s.8(1) and s.8(5)), Chapter III and section 16",
+          "condition": "personal data is processed in the interest of prevention, detection, investigation or prosecution of any offence or contravention of any law for the time being in force in India",
+          "evidence_quote": "shall not apply where— personal data is processed in the interest of prevention, detection, investigation or prosecution of any offence or contravention of any law for the time being in force in India"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp:s3:pta",
+      "split": "test",
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "The Act applies to the processing of digital personal data within the territory of India",
+          "applies_to": "this Act",
+          "condition": "the personal data is collected in digital form, or in non-digital form and digitised subsequently",
+          "evidence_quote": "apply to the processing of digital personal data within the territory of India where the personal data is collected–– (i) in digital form; or (ii) in non-digital form and digitised subsequently"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp_rules:r9",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "publish the contact information on its website or app",
+          "data_category": null,
+          "condition": "if a Data Protection Officer is applicable; otherwise a person able to answer on behalf of the Data Fiduciary",
+          "constraint": "prominently",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "mention the contact information in every response to a communication for the exercise of the rights of a Data Principal under the Act",
+          "data_category": null,
+          "condition": "if a Data Protection Officer is applicable; otherwise a person able to answer on behalf of the Data Fiduciary",
+          "constraint": "in every response",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp_rules:r15",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "Data Fiduciary",
+          "action": "transfer personal data processed under the Act outside the territory of India",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": "subject to the Data Fiduciary meeting the requirements specified by the Central Government",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "meet the requirements specified by the Central Government by general or special order",
+          "data_category": "personal data",
+          "condition": "in respect of making such personal data available to any foreign State, or to any person or entity under the control of or any agency of such a State",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp_rules:r16",
+      "split": "test",
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "The provisions of the Act do not apply to processing of personal data necessary for research, archiving or statistical purposes",
+          "applies_to": "provisions of the Act",
+          "condition": "it is carried on in accordance with the standards specified in Second Schedule",
+          "evidence_quote": "The provisions of the Act shall not apply to the processing of personal data necessary for research, archiving or statistical purposes if it is carried on in accordance with the standards specified in Second Schedule."
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp_rules:r13:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Significant Data Fiduciary",
+          "action": "undertake a Data Protection Impact Assessment",
+          "data_category": null,
+          "condition": null,
+          "constraint": "once in every period of twelve months from the date on which it is notified as such or is included in the class of Data Fiduciaries notified as such",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "Significant Data Fiduciary",
+          "action": "undertake an audit",
+          "data_category": null,
+          "condition": null,
+          "constraint": "once in every period of twelve months from the date on which it is notified as such or is included in the class of Data Fiduciaries notified as such; to ensure effective observance of the provisions of this Act and the rules made thereunder",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "ccpa:s1798.105:pa",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "consumer",
+          "action": "request that a business delete any personal information about the consumer which the business has collected from the consumer",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "ccpa:s1798.100:pd:pt5",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "enter into an agreement with the third party, service provider, or contractor that grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information",
+          "data_category": "personal information",
+          "condition": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor for a business purpose",
+          "constraint": "The right granted must be exercisable upon notice, including under paragraph (4), and the steps must be reasonable and appropriate.",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "ccpa:s1798.135:pf",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "person authorized by the business to collect personal information",
+          "action": "only use that consumer’s personal information for a business purpose specified by the business",
+          "data_category": "personal information",
+          "condition": "A business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information; applies thereafter.",
+          "constraint": null,
+          "exceptions": [
+            "as otherwise permitted by this title"
+          ]
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "person authorized by the business to collect personal information",
+          "action": "sell or share the personal information",
+          "data_category": "personal information",
+          "condition": "A business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information; applies thereafter.",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "person authorized by the business to collect personal information",
+          "action": "retain, use, or disclose that consumer’s personal information for any purpose other than the specific purpose of performing the services offered to the business",
+          "data_category": "personal information",
+          "condition": "A business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information; applies thereafter.",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "person authorized by the business to collect personal information",
+          "action": "retain, use, or disclose that consumer’s personal information outside of the direct business relationship between the person and the business",
+          "data_category": "personal information",
+          "condition": "A business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information; applies thereafter.",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "person authorized by the business to collect personal information",
+          "action": "retain, use, or disclose that consumer’s personal information for a commercial purpose other than providing the services to the business",
+          "data_category": "personal information",
+          "condition": "A business communicates a consumer’s opt-out request to any person authorized by the business to collect personal information; applies thereafter.",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "ccpa:s1798.148:pa:pt3",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "business or other person",
+          "action": "reidentify, or attempt to reidentify, information",
+          "data_category": "information that has met the requirements of paragraph (4) of subdivision (a) of Section 1798.146",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "Research, as defined in Section 164.501 of Title 45 of the Code of Federal Regulations, that is conducted in accordance with Part 46 of Title 45 of the Code of Federal Regulations, the Federal Policy for the Protection of Human Subjects, also known as the Common Rule"
+          ]
+        }
+      ],
+      "qualifiers": []
+    }
+  ]
+}

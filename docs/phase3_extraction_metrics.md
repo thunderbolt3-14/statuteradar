@@ -117,8 +117,8 @@ Llama's development run had exact obligation counts TP=2, FP=22, FN=7 (F1=0.121)
 substantial over-extraction despite 100% quote grounding. Its exact action F1 was 0.182; condition,
 constraint, exception, and qualifier-text F1 were 0.000. Two cases were rejected: a GDPR Art. 17(3)
 carve-out was treated as a prohibition, and one CCPA quote was ungrounded. Neither model's results
-are a quality pass. The current eight-case test split has already been inspected; a new
-independently labeled holdout is still needed before reporting a final test result.
+are a quality pass. The current eight-case test split has already been inspected; the fresh test
+results below are the current diagnostic evaluation.
 
 Fresh development artifacts: `data/extraction_eval_predictions_qwen_dev.json`,
 `data/extraction_eval_report_qwen_dev.json`, `data/extraction_eval_predictions_llama32_dev.json`,
@@ -128,11 +128,8 @@ and `data/extraction_eval_report_llama32_dev.json`.
 
 - The two completed annotation packets cover the same 16 cases only. The other 1,538 rows in
   `data/annotation_packet.csv` remain blank.
-- A fresh 16-case targeted held-out packet is prepared, with four cases per instrument, in
-  `data/annotations/phase3_holdout_annotator_a.csv` and
-  `data/annotations/phase3_holdout_annotator_b.csv`. Both packets must be completed independently
-  and adjudicated before evaluation. The existing eight test cases have already been viewed and
-  scored.
+- The fresh 16-case targeted held-out packet has been completed, independently annotated,
+  adjudicated, and evaluated once per model. It must not be reused for prompt or validator tuning.
 - This 16-case sample is suitable only for a small diagnostic check, not a precise or
   corpus-representative accuracy estimate. Agree with the project guide on a larger final sample
   and pass criteria before making a completion claim.
@@ -145,3 +142,50 @@ and `data/extraction_eval_report_llama32_dev.json`.
   quotes against the provision text.
 - Both local models are installed. No local model package is missing. A paid API comparison is
   optional and would require credentials and approval for spending.
+
+## Fresh adjudicated held-out test
+
+Two annotators independently labeled and adjudicated a new 16-case targeted sample, with four
+cases from each of GDPR, DPDP, DPDP Rules, and CCPA. The cases exclude the earlier evaluation set.
+Both local models were evaluated once against the same adjudicated labels. This is a small
+diagnostic sample, not a representative estimate of corpus-wide accuracy.
+
+| Metric | Qwen 2.5 3B | Llama 3.2 3B |
+|---|---:|---:|
+| Sample size | 16 | 16 |
+| Schema-valid rate | 1.000 | 1.000 |
+| Evidence-grounding rate | 0.9375 | 0.9375 |
+| Pipeline acceptance rate | 0.875 | 0.625 |
+| Outcome accuracy among schema-valid | 0.5625 | 0.8125 |
+| Exact obligation precision | 0.000 | 0.000 |
+| Exact obligation recall | 0.000 | 0.000 |
+| Exact obligation F1 | 0.000 | 0.000 |
+| Exact action F1 | 0.000 | 0.0476 |
+| Exact actor F1 | 0.5455 | 0.4878 |
+| Exact data-category F1 | 0.6400 | 0.3784 |
+| Exact condition F1 | 0.000 | 0.000 |
+| Exact constraint F1 | 0.000 | 0.000 |
+| Exact exception F1 | 0.000 | 0.000 |
+| Exact qualifier-text F1 | 0.000 | 0.000 |
+
+Both models produced schema-valid output for every case, yet neither matched any complete gold
+obligation record. Qwen's exact obligation counts were TP=0, FP=13, FN=21; Llama's were TP=0,
+FP=21, FN=21. Qwen had a higher pipeline acceptance rate, while Llama had higher outcome
+accuracy. These measures do not offset the zero exact obligation score. The models are not ready
+for downstream legal-obligation use.
+
+The evaluator reported Qwen rejections for one missing explicit actor and one ungrounded quote.
+Llama had three missing-explicit-actor rejections, two non-operative-effect rejections, and one
+ungrounded-quote rejection. Action token-overlap F1 was 0.3180 for Qwen and 0.3195 for Llama; this
+is only a wording-overlap diagnostic, not evidence of semantic correctness.
+
+Artifacts:
+
+- Adjudicated labels: `data/extraction_eval_fresh_holdout.json`
+- Qwen predictions/report: `data/extraction_eval_predictions_qwen_fresh_test.json`,
+  `data/extraction_eval_report_qwen_fresh_test.json`
+- Llama predictions/report: `data/extraction_eval_predictions_llama32_fresh_test.json`,
+  `data/extraction_eval_report_llama32_fresh_test.json`
+
+These results consume the fresh holdout. Any prompt or validator changes made after reviewing
+them require a new independently labeled held-out set before another final test score is claimed.

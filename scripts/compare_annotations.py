@@ -18,6 +18,7 @@ MASTER = ROOT / "data" / "annotation_packet.csv"
 DISAGREEMENTS = ROOT / "data" / "annotations" / "annotation_disagreements.csv"
 SUMMARY = ROOT / "data" / "annotations" / "annotation_comparison_summary.json"
 IDENTITY_COLUMNS = {"chunk_id", "source_text", "instrument", "citation", "title"}
+REQUIRED_COLUMNS = {"chunk_id", "source_text"}
 KAPPA_FIELDS = {"outcome"}
 NOTE_FIELD = "uncertainty_notes"
 
@@ -33,7 +34,7 @@ def load_packet(path: Path) -> tuple[list[str], dict[str, dict[str, str]]]:
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         columns = reader.fieldnames or []
-        if not IDENTITY_COLUMNS.issubset(columns):
+        if not REQUIRED_COLUMNS.issubset(columns):
             raise ValueError(f"{path.name} must include chunk_id and source_text columns")
         records: dict[str, dict[str, str]] = {}
         for line_number, row in enumerate(reader, start=2):

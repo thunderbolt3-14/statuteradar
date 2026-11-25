@@ -1,0 +1,601 @@
+{
+  "evaluated_split": "test",
+  "overall": {
+    "sample_size": 16,
+    "annotator_count": 2,
+    "schema_valid_rate": 1.0,
+    "evidence_grounding_rate_among_schema_valid": 0.9375,
+    "pipeline_acceptance_rate": 0.875,
+    "outcome_accuracy_among_schema_valid": 0.5625,
+    "exact_obligation_prf": {
+      "tp": 0,
+      "fp": 13,
+      "fn": 21,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "field_exact_value_prf": {
+      "modality": {
+        "tp": 7,
+        "fp": 6,
+        "fn": 14,
+        "precision": 0.5385,
+        "recall": 0.3333,
+        "f1": 0.4118
+      },
+      "actor": {
+        "tp": 9,
+        "fp": 4,
+        "fn": 11,
+        "precision": 0.6923,
+        "recall": 0.45,
+        "f1": 0.5455
+      },
+      "action": {
+        "tp": 0,
+        "fp": 13,
+        "fn": 21,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "data_category": {
+        "tp": 8,
+        "fp": 1,
+        "fn": 8,
+        "precision": 0.8889,
+        "recall": 0.5,
+        "f1": 0.64
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 14,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "constraint": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "exceptions": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_kind": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_text": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_applies_to": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "field_token_overlap_prf": {
+      "action": {
+        "tp_tokens": 83,
+        "fp_tokens": 79,
+        "fn_tokens": 277,
+        "precision": 0.5123,
+        "recall": 0.2306,
+        "f1": 0.318
+      },
+      "condition": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 293,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "constraint": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 152,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "exceptions": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 69,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_text": {
+        "tp_tokens": 0,
+        "fp_tokens": 45,
+        "fn_tokens": 201,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_applies_to": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 43,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "qualifier_condition": {
+        "tp_tokens": 0,
+        "fp_tokens": 0,
+        "fn_tokens": 134,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "rejections": {
+      "MissingExplicitActorError": 1,
+      "UngroundedEvidenceError": 1
+    },
+    "per_chunk": [
+      {
+        "chunk_id": "gdpr:art32:p4",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "gdpr:art15:p2",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "gdpr:art7:p2",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "gdpr:art22:p2",
+        "split": "test",
+        "gold_outcome": "no_obligation",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s8:p2",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s11:p1",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s17:p1:ptc",
+        "split": "test",
+        "gold_outcome": "no_obligation",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp:s3:pta",
+        "split": "test",
+        "gold_outcome": "no_obligation",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp_rules:r9",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp_rules:r15",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp_rules:r16",
+        "split": "test",
+        "gold_outcome": "no_obligation",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "dpdp_rules:r13:p1",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      },
+      {
+        "chunk_id": "ccpa:s1798.105:pa",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 1 actor does not match the named actor in ccpa:s1798.105:pa: 'A business'"
+      },
+      {
+        "chunk_id": "ccpa:s1798.100:pd:pt5",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "rejected",
+        "predicted_outcome": "obligations",
+        "error": "obligation 1 evidence quote is not present in ccpa:s1798.100:pd:pt5"
+      },
+      {
+        "chunk_id": "ccpa:s1798.135:pf",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "obligations",
+        "error": null
+      },
+      {
+        "chunk_id": "ccpa:s1798.148:pa:pt3",
+        "split": "test",
+        "gold_outcome": "obligations",
+        "prediction_status": "accepted",
+        "predicted_outcome": "no_obligation",
+        "error": null
+      }
+    ]
+  },
+  "splits": {
+    "test": {
+      "sample_size": 16,
+      "annotator_count": 2,
+      "schema_valid_rate": 1.0,
+      "evidence_grounding_rate_among_schema_valid": 0.9375,
+      "pipeline_acceptance_rate": 0.875,
+      "outcome_accuracy_among_schema_valid": 0.5625,
+      "exact_obligation_prf": {
+        "tp": 0,
+        "fp": 13,
+        "fn": 21,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "field_exact_value_prf": {
+        "modality": {
+          "tp": 7,
+          "fp": 6,
+          "fn": 14,
+          "precision": 0.5385,
+          "recall": 0.3333,
+          "f1": 0.4118
+        },
+        "actor": {
+          "tp": 9,
+          "fp": 4,
+          "fn": 11,
+          "precision": 0.6923,
+          "recall": 0.45,
+          "f1": 0.5455
+        },
+        "action": {
+          "tp": 0,
+          "fp": 13,
+          "fn": 21,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "data_category": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 8,
+          "precision": 0.8889,
+          "recall": 0.5,
+          "f1": 0.64
+        },
+        "condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 14,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 10,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_kind": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_text": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_applies_to": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "field_token_overlap_prf": {
+        "action": {
+          "tp_tokens": 83,
+          "fp_tokens": 79,
+          "fn_tokens": 277,
+          "precision": 0.5123,
+          "recall": 0.2306,
+          "f1": 0.318
+        },
+        "condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 293,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "constraint": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 152,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "exceptions": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 69,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_text": {
+          "tp_tokens": 0,
+          "fp_tokens": 45,
+          "fn_tokens": 201,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_applies_to": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 43,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "qualifier_condition": {
+          "tp_tokens": 0,
+          "fp_tokens": 0,
+          "fn_tokens": 134,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "rejections": {
+        "MissingExplicitActorError": 1,
+        "UngroundedEvidenceError": 1
+      },
+      "per_chunk": [
+        {
+          "chunk_id": "gdpr:art32:p4",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "gdpr:art15:p2",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "gdpr:art7:p2",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "gdpr:art22:p2",
+          "split": "test",
+          "gold_outcome": "no_obligation",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s8:p2",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s11:p1",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s17:p1:ptc",
+          "split": "test",
+          "gold_outcome": "no_obligation",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp:s3:pta",
+          "split": "test",
+          "gold_outcome": "no_obligation",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp_rules:r9",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp_rules:r15",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp_rules:r16",
+          "split": "test",
+          "gold_outcome": "no_obligation",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "dpdp_rules:r13:p1",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        },
+        {
+          "chunk_id": "ccpa:s1798.105:pa",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 1 actor does not match the named actor in ccpa:s1798.105:pa: 'A business'"
+        },
+        {
+          "chunk_id": "ccpa:s1798.100:pd:pt5",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "rejected",
+          "predicted_outcome": "obligations",
+          "error": "obligation 1 evidence quote is not present in ccpa:s1798.100:pd:pt5"
+        },
+        {
+          "chunk_id": "ccpa:s1798.135:pf",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "obligations",
+          "error": null
+        },
+        {
+          "chunk_id": "ccpa:s1798.148:pa:pt3",
+          "split": "test",
+          "gold_outcome": "obligations",
+          "prediction_status": "accepted",
+          "predicted_outcome": "no_obligation",
+          "error": null
+        }
+      ]
+    }
+  }
+}
