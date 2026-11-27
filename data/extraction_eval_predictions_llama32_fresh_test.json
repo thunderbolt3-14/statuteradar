@@ -1,0 +1,1129 @@
+[
+  {
+    "chunk_id": "gdpr:art32:p4",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "take steps to ensure",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "Union or Member State law"
+          ],
+          "evidence_quote": "The controller and processor shall take steps to ensure",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller or processor",
+          "action": "take steps to ensure",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "Union or Member State law"
+          ],
+          "evidence_quote": "The controller and processor shall take steps to ensure",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "MissingExplicitActorError",
+    "error": "obligation 1 actor does not match the named actor in gdpr:art32:p4: 'controller or processor'"
+  },
+  {
+    "chunk_id": "gdpr:art15:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the controller or processor",
+          "action": "transfer",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Where personal data are transferred to a third country or to an international organisation, the data subject shall have the right to be informed of the appropriate safeguards pursuant to Article 46 relating to the transfer.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the controller or processor",
+          "action": "transferred to a third country or to an international organisation, the data subject shall have the right to be informed of the appropriate safeguards pursuant to Article 46 relating to the transfer.",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Where personal data are transferred to a third country or to an international organisation, the data subject shall have the right to be informed of the appropriate safeguards pursuant to Article 46 relating to the transfer.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "MissingExplicitActorError",
+    "error": "obligation 1 actor does not match the named actor in gdpr:art15:p2: 'the controller or processor'"
+  },
+  {
+    "chunk_id": "gdpr:art7:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the controller",
+          "action": "present the request for consent",
+          "data_category": "null",
+          "condition": "given in the context of a written declaration which also concerns other matters",
+          "constraint": "in an intelligible and easily accessible form, using clear and plain language",
+          "exceptions": [],
+          "evidence_quote": "the request for consent shall be presented",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "the controller",
+          "action": "bind",
+          "data_category": "null",
+          "condition": "constitutes an infringement of this Regulation",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Any part of such a declaration which constitutes an infringement of this Regulation shall not be binding",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the controller",
+          "action": "present the request for consent",
+          "data_category": "null",
+          "condition": "given in the context of a written declaration which also concerns other matters",
+          "constraint": "in an intelligible and easily accessible form, using clear and plain language",
+          "exceptions": [],
+          "evidence_quote": "the request for consent shall be presented",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "the controller",
+          "action": "binding",
+          "data_category": "null",
+          "condition": "constitutes an infringement of this Regulation",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Any part of such a declaration which constitutes an infringement of this Regulation shall not be binding",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "gdpr:art7:p2",
+      "citation": "GDPR Art. 7(2)",
+      "instrument": "GDPR",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the controller",
+          "action": "present the request for consent",
+          "data_category": "null",
+          "condition": "given in the context of a written declaration which also concerns other matters",
+          "constraint": "in an intelligible and easily accessible form, using clear and plain language",
+          "exceptions": [],
+          "evidence_quote": "the request for consent shall be presented",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art7:p2:obl:1",
+          "source_chunk_id": "gdpr:art7:p2",
+          "citation": "GDPR Art. 7(2)",
+          "instrument": "GDPR"
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "the controller",
+          "action": "binding",
+          "data_category": "null",
+          "condition": "constitutes an infringement of this Regulation",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Any part of such a declaration which constitutes an infringement of this Regulation shall not be binding",
+          "extraction_confidence": 100,
+          "predicate_id": "gdpr:art7:p2:obl:2",
+          "source_chunk_id": "gdpr:art7:p2",
+          "citation": "GDPR Art. 7(2)",
+          "instrument": "GDPR"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "gdpr:art22:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "null",
+          "condition": "decision is necessary for entering into, or performance of, a contract between the data subject and a data controller",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraph 1 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "null",
+          "condition": "decision is authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraph 1 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "null",
+          "condition": "decision is based on the data subject's explicit consent",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraph 1 shall not apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "null",
+          "condition": "decision is necessary for entering into, or performance of, a contract between the data subject and a data controller",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraph 1 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "null",
+          "condition": "decision is authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraph 1 shall not apply",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST_NOT",
+          "actor": "controller",
+          "action": "apply",
+          "data_category": "null",
+          "condition": "decision is based on the data subject's explicit consent",
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Paragraph 1 shall not apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "NonOperativeEffectError",
+    "error": "obligation 1 treats a carve-out as a prohibition in gdpr:art22:p2"
+  },
+  {
+    "chunk_id": "dpdp:s8:p2",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Data Fiduciary",
+          "action": "engage, appoint, use or otherwise involve a Data Processor",
+          "data_category": "null",
+          "condition": "under a valid contract",
+          "constraint": "for any activity related to offering of goods or services to Data Principals",
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary may engage, appoint, use or otherwise involve a Data Processor",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Data Fiduciary",
+          "action": "engage, appoint, use or otherwise involve a Data Processor",
+          "data_category": "null",
+          "condition": "under a valid contract",
+          "constraint": "for any activity related to offering of goods or services to Data Principals",
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary may engage, appoint, use or otherwise involve a Data Processor",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s8:p2",
+      "citation": "DPDP s.8(2)",
+      "instrument": "DPDP",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "A Data Fiduciary",
+          "action": "engage, appoint, use or otherwise involve a Data Processor",
+          "data_category": "null",
+          "condition": "under a valid contract",
+          "constraint": "for any activity related to offering of goods or services to Data Principals",
+          "exceptions": [],
+          "evidence_quote": "A Data Fiduciary may engage, appoint, use or otherwise involve a Data Processor",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp:s8:p2:obl:1",
+          "source_chunk_id": "dpdp:s8:p2",
+          "citation": "DPDP s.8(2)",
+          "instrument": "DPDP"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp:s11:p1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "have the right to obtain",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "consent as referred to in clause (a) of access information section 7"
+          ],
+          "evidence_quote": "The Data Principal shall have the right to obtain",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "have the right to obtain",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "consent as referred to in clause (a) of access information section 7"
+          ],
+          "evidence_quote": "The Data Principal shall have the right to obtain",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp:s11:p1",
+      "citation": "DPDP s.11(1)",
+      "instrument": "DPDP",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "have the right to obtain",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "consent as referred to in clause (a) of access information section 7"
+          ],
+          "evidence_quote": "The Data Principal shall have the right to obtain",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp:s11:p1:obl:1",
+          "source_chunk_id": "dpdp:s11:p1",
+          "citation": "DPDP s.11(1)",
+          "instrument": "DPDP"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp:s17:p1:ptc",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "the provisions of Chapter II, except sub-sections (1) and (5) of section 8, and Exemptions",
+          "action": "apply",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "those of Chapter III and section 16 shall not apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "the provisions of Chapter II, except sub-sections (1) and (5) of section 8, and Exemptions",
+          "action": "apply",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "those of Chapter III and section 16 shall not apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "NonOperativeEffectError",
+    "error": "obligation 1 treats a carve-out as a prohibition in dpdp:s17:p1:ptc"
+  },
+  {
+    "chunk_id": "dpdp:s3:pta",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "it",
+          "action": "apply",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "Subject to the provisions of this Act"
+          ],
+          "evidence_quote": "it shall apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "it",
+          "action": "apply",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "Subject to the provisions of this Act"
+          ],
+          "evidence_quote": "it shall apply",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": false,
+    "status": "rejected",
+    "error_type": "UngroundedEvidenceError",
+    "error": "obligation 1 evidence quote is not present in dpdp:s3:pta"
+  },
+  {
+    "chunk_id": "dpdp_rules:r9",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "publish",
+          "data_category": "publish business contact information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Every Data Fiduciary shall prominently publish on its website or app",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "mention",
+          "data_category": "mention business contact information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "and mention in every response to a communication",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "answer",
+          "data_category": "answer questions about processing personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "or a person who is able to answer on behalf of the Data Fiduciary",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "publish on its website or app",
+          "data_category": "publish business contact information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Every Data Fiduciary shall prominently publish on its website or app",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "mention in every response to a communication",
+          "data_category": "mention business contact information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "and mention in every response to a communication",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "answer on behalf of the Data Fiduciary",
+          "data_category": "answer questions about processing personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "or a person who is able to answer on behalf of the Data Fiduciary",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r9",
+      "citation": "DPDP-Rules r.9",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "publish on its website or app",
+          "data_category": "publish business contact information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "Every Data Fiduciary shall prominently publish on its website or app",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r9:obl:1",
+          "source_chunk_id": "dpdp_rules:r9",
+          "citation": "DPDP-Rules r.9",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "mention in every response to a communication",
+          "data_category": "mention business contact information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "and mention in every response to a communication",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r9:obl:2",
+          "source_chunk_id": "dpdp_rules:r9",
+          "citation": "DPDP-Rules r.9",
+          "instrument": "DPDP-Rules"
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "answer on behalf of the Data Fiduciary",
+          "data_category": "answer questions about processing personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "or a person who is able to answer on behalf of the Data Fiduciary",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r9:obl:3",
+          "source_chunk_id": "dpdp_rules:r9",
+          "citation": "DPDP-Rules r.9",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r15",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "meet such requirements",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "the Central Government may, by general or special order, specify"
+          ],
+          "evidence_quote": "the Data Fiduciary shall meet such requirements",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "meet such requirements",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "the Central Government may, by general or special order, specify"
+          ],
+          "evidence_quote": "the Data Fiduciary shall meet such requirements",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r15",
+      "citation": "DPDP-Rules r.15",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "meet such requirements",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "the Central Government may, by general or special order, specify"
+          ],
+          "evidence_quote": "the Data Fiduciary shall meet such requirements",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r15:obl:1",
+          "source_chunk_id": "dpdp_rules:r15",
+          "citation": "DPDP-Rules r.15",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r16",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "if it is carried on in accordance with the standards specified in Second Schedule",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "The provisions of the Act shall not apply to the processing of personal data necessary for research, archiving or statistical purposes if it is carried on in accordance with the standards specified in Second Schedule.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": "No explicit obligation or prohibition found in the clause."
+    },
+    "draft_payload": {
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "if it is carried on in accordance with the standards specified in Second Schedule",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "The provisions of the Act shall not apply to the processing of personal data necessary for research, archiving or statistical purposes if it is carried on in accordance with the standards specified in Second Schedule.",
+          "extraction_confidence": 100
+        }
+      ],
+      "no_obligation_reason": "No explicit obligation or prohibition found in the clause."
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r16",
+      "citation": "DPDP-Rules r.16",
+      "instrument": "DPDP-Rules",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "if it is carried on in accordance with the standards specified in Second Schedule",
+          "applies_to": null,
+          "condition": null,
+          "evidence_quote": "The provisions of the Act shall not apply to the processing of personal data necessary for research, archiving or statistical purposes if it is carried on in accordance with the standards specified in Second Schedule.",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r16:qualifier:1",
+          "source_chunk_id": "dpdp_rules:r16",
+          "citation": "DPDP-Rules r.16",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "no_obligation_reason": "No explicit obligation or prohibition found in the clause."
+    }
+  },
+  {
+    "chunk_id": "dpdp_rules:r13:p1",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Significant Data Fiduciary",
+          "action": "undertake a Data Protection Impact Assessment and an audit",
+          "data_category": "Data Protection Impact Assessment and audit",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "once in every period of twelve months from the date on which it is notified as such or is included in the class of Data Fiduciaries notified as such, undertake a Data Protection Impact Assessment and an audit to ensure effective observance of the provisions of this Act and the rules made thereunder.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Significant Data Fiduciary",
+          "action": "undertake a Data Protection Impact Assessment and an audit to ensure effective observance of the provisions of this Act and the rules made thereunder.",
+          "data_category": "Data Protection Impact Assessment and audit",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "once in every period of twelve months from the date on which it is notified as such or is included in the class of Data Fiduciaries notified as such, undertake a Data Protection Impact Assessment and an audit to ensure effective observance of the provisions of this Act and the rules made thereunder.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "dpdp_rules:r13:p1",
+      "citation": "DPDP-Rules r.13(1)",
+      "instrument": "DPDP-Rules",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "A Significant Data Fiduciary",
+          "action": "undertake a Data Protection Impact Assessment and an audit to ensure effective observance of the provisions of this Act and the rules made thereunder.",
+          "data_category": "Data Protection Impact Assessment and audit",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "once in every period of twelve months from the date on which it is notified as such or is included in the class of Data Fiduciaries notified as such, undertake a Data Protection Impact Assessment and an audit to ensure effective observance of the provisions of this Act and the rules made thereunder.",
+          "extraction_confidence": 100,
+          "predicate_id": "dpdp_rules:r13:p1:obl:1",
+          "source_chunk_id": "dpdp_rules:r13:p1",
+          "citation": "DPDP-Rules r.13(1)",
+          "instrument": "DPDP-Rules"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.105:pa",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "consumer",
+          "action": "request",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A consumer shall have the right to request",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "consumer",
+          "action": "request",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A consumer shall have the right to request",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "ccpa:s1798.105:pa",
+      "citation": "CCPA §1798.105(a)",
+      "instrument": "CCPA",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "consumer",
+          "action": "request",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A consumer shall have the right to request",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.105:pa:obl:1",
+          "source_chunk_id": "ccpa:s1798.105:pa",
+          "citation": "CCPA §1798.105(a)",
+          "instrument": "CCPA"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.100:pd:pt5",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "enter into an agreement",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor for a business purpose shall enter into an agreement with the third party, service provider, or contractor, that: Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "take reasonable and appropriate steps to stop and remediate unauthorized use of personal information",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor for a business purpose shall enter into an agreement with the third party, service provider, or contractor, that: Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "enter into an agreement with the third party, service provider, or contractor, that: Grants the business the right",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor for a business purpose shall enter into an agreement with the third party, service provider, or contractor, that: Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [],
+          "evidence_quote": "A business that collects a consumer’s personal information and that sells that personal information to, or shares it with, a third party or that discloses it to a service provider or contractor for a business purpose shall enter into an agreement with the third party, service provider, or contractor, that: Grants the business the right, upon notice, including under paragraph (4), to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "rejected",
+    "error_type": "MissingExplicitActorError",
+    "error": "obligation 1 actor does not match the named actor in ccpa:s1798.100:pd:pt5: 'business'"
+  },
+  {
+    "chunk_id": "ccpa:s1798.135:pf",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the person",
+          "action": "use",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "MUST_NOT",
+            "MUST_NOT",
+            "MUST_NOT",
+            "MUST_NOT"
+          ],
+          "evidence_quote": "the person shall thereafter only use",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the person",
+          "action": "use",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "MUST_NOT",
+            "MUST_NOT",
+            "MUST_NOT",
+            "MUST_NOT"
+          ],
+          "evidence_quote": "the person shall thereafter only use",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "ccpa:s1798.135:pf",
+      "citation": "CCPA §1798.135(f)",
+      "instrument": "CCPA",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "the person",
+          "action": "use",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": null,
+          "exceptions": [
+            "MUST_NOT",
+            "MUST_NOT",
+            "MUST_NOT",
+            "MUST_NOT"
+          ],
+          "evidence_quote": "the person shall thereafter only use",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.135:pf:obl:1",
+          "source_chunk_id": "ccpa:s1798.135:pf",
+          "citation": "CCPA §1798.135(f)",
+          "instrument": "CCPA"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  },
+  {
+    "chunk_id": "ccpa:s1798.148:pa:pt3",
+    "schema_valid": true,
+    "raw_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "business or other person",
+          "action": "reidentify, or attempt to reidentify",
+          "data_category": "null",
+          "condition": "one or more of the following purposes",
+          "constraint": "Research, as defined in Section 164.501 of Title 45 of the Code of Federal Regulations, that is conducted in accordance with Part 46 of Title 45 of the Code of Federal Regulations, the Federal Policy for the Protection of Human Subjects, also known as the Common Rule",
+          "exceptions": [],
+          "evidence_quote": "A business or other person shall not reidentify, or attempt to reidentify",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "draft_payload": {
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "business or other person",
+          "action": "reidentify, or attempt to reidentify",
+          "data_category": "null",
+          "condition": "one or more of the following purposes",
+          "constraint": "Research, as defined in Section 164.501 of Title 45 of the Code of Federal Regulations, that is conducted in accordance with Part 46 of Title 45 of the Code of Federal Regulations, the Federal Policy for the Protection of Human Subjects, also known as the Common Rule",
+          "exceptions": [],
+          "evidence_quote": "A business or other person shall not reidentify, or attempt to reidentify",
+          "extraction_confidence": 100
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    },
+    "all_quotes_grounded": true,
+    "status": "accepted",
+    "result": {
+      "source_chunk_id": "ccpa:s1798.148:pa:pt3",
+      "citation": "CCPA §1798.148(a)(3)",
+      "instrument": "CCPA",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "business or other person",
+          "action": "reidentify, or attempt to reidentify",
+          "data_category": "null",
+          "condition": "one or more of the following purposes",
+          "constraint": "Research, as defined in Section 164.501 of Title 45 of the Code of Federal Regulations, that is conducted in accordance with Part 46 of Title 45 of the Code of Federal Regulations, the Federal Policy for the Protection of Human Subjects, also known as the Common Rule",
+          "exceptions": [],
+          "evidence_quote": "A business or other person shall not reidentify, or attempt to reidentify",
+          "extraction_confidence": 100,
+          "predicate_id": "ccpa:s1798.148:pa:pt3:obl:1",
+          "source_chunk_id": "ccpa:s1798.148:pa:pt3",
+          "citation": "CCPA §1798.148(a)(3)",
+          "instrument": "CCPA"
+        }
+      ],
+      "qualifiers": [],
+      "no_obligation_reason": null
+    }
+  }
+]

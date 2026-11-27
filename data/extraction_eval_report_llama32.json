@@ -1,0 +1,136 @@
+{
+  "sample_size": 8,
+  "annotator_count": 1,
+  "schema_valid_rate": 1.0,
+  "evidence_grounding_rate_among_schema_valid": 0.875,
+  "pipeline_acceptance_rate": 0.625,
+  "outcome_accuracy_among_schema_valid": 0.875,
+  "exact_obligation_prf": {
+    "tp": 2,
+    "fp": 14,
+    "fn": 7,
+    "precision": 0.125,
+    "recall": 0.2222,
+    "f1": 0.16
+  },
+  "field_exact_value_prf": {
+    "modality": {
+      "tp": 7,
+      "fp": 9,
+      "fn": 2,
+      "precision": 0.4375,
+      "recall": 0.7778,
+      "f1": 0.56
+    },
+    "actor": {
+      "tp": 9,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.5625,
+      "recall": 1.0,
+      "f1": 0.72
+    },
+    "action": {
+      "tp": 3,
+      "fp": 13,
+      "fn": 6,
+      "precision": 0.1875,
+      "recall": 0.3333,
+      "f1": 0.24
+    },
+    "data_category": {
+      "tp": 8,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.5333,
+      "recall": 1.0,
+      "f1": 0.6957
+    },
+    "condition": {
+      "tp": 0,
+      "fp": 4,
+      "fn": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "constraint": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "exceptions": {
+      "tp": 0,
+      "fp": 6,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "rejections": {
+    "NonOperativeEffectError": 1,
+    "ModalityGroundingError": 2
+  },
+  "per_chunk": [
+    {
+      "chunk_id": "gdpr:art17:p3",
+      "gold_outcome": "no_obligation",
+      "prediction_status": "rejected",
+      "predicted_outcome": "obligations",
+      "error": "obligation 1 treats a carve-out as a prohibition in gdpr:art17:p3"
+    },
+    {
+      "chunk_id": "gdpr:art46:p1",
+      "gold_outcome": "obligations",
+      "prediction_status": "rejected",
+      "predicted_outcome": "obligations",
+      "error": "obligation 1 modality MUST conflicts with nearby operative wording (may) in gdpr:art46:p1"
+    },
+    {
+      "chunk_id": "gdpr:art6:p4:pta",
+      "gold_outcome": "obligations",
+      "prediction_status": "accepted",
+      "predicted_outcome": "obligations",
+      "error": null
+    },
+    {
+      "chunk_id": "dpdp:s8:p7:pta",
+      "gold_outcome": "obligations",
+      "prediction_status": "accepted",
+      "predicted_outcome": "obligations",
+      "error": null
+    },
+    {
+      "chunk_id": "dpdp:s6:p7",
+      "gold_outcome": "obligations",
+      "prediction_status": "rejected",
+      "predicted_outcome": "obligations",
+      "error": "obligation 1 modality MUST conflicts with nearby operative wording (may) in dpdp:s6:p7"
+    },
+    {
+      "chunk_id": "dpdp_rules:r8:p1",
+      "gold_outcome": "obligations",
+      "prediction_status": "accepted",
+      "predicted_outcome": "obligations",
+      "error": null
+    },
+    {
+      "chunk_id": "ccpa:s1798.105:pc:pt1",
+      "gold_outcome": "obligations",
+      "prediction_status": "accepted",
+      "predicted_outcome": "obligations",
+      "error": null
+    },
+    {
+      "chunk_id": "ccpa:s1798.120:pc",
+      "gold_outcome": "obligations",
+      "prediction_status": "accepted",
+      "predicted_outcome": "obligations",
+      "error": null
+    }
+  ]
+}

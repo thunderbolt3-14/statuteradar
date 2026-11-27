@@ -1,0 +1,89 @@
+{
+  "annotator_a_file": "data\\annotations\\annotation_packet_filled_nagasai.csv",
+  "annotator_b_file": "data\\annotations\\annotation_packet_rahul.csv",
+  "total_chunks_in_packet": 1554,
+  "chunks_with_annotations_a": 16,
+  "chunks_with_annotations_b": 16,
+  "chunks_annotated_by_both": 16,
+  "normalization": "trim/collapse whitespace and casefold; punctuation is preserved",
+  "fields": {
+    "outcome": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 16,
+      "different_or_one_sided": 0,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 1.0,
+      "cohen_kappa": 1.0
+    },
+    "modality": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 12,
+      "different_or_one_sided": 4,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 0.75
+    },
+    "actor": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 12,
+      "different_or_one_sided": 4,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 0.75
+    },
+    "action": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 9,
+      "different_or_one_sided": 7,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 0.5625
+    },
+    "data_category": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 12,
+      "different_or_one_sided": 4,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 0.75
+    },
+    "condition_constraint_exception": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 1,
+      "different_or_one_sided": 15,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 0.0625
+    },
+    "scope_qualifier": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 7,
+      "different_or_one_sided": 9,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 0.4375
+    },
+    "evidence_quote": {
+      "both_blank": 1538,
+      "both_filled": 16,
+      "exact_match_when_both_filled": 3,
+      "different_or_one_sided": 13,
+      "annotator_a_only": 0,
+      "annotator_b_only": 0,
+      "exact_agreement_rate_when_both_filled": 0.1875
+    }
+  },
+  "cohen_kappa": {
+    "outcome": 1.0
+  },
+  "uncertainty_note_differences_not_counted_as_label_disagreements": 16,
+  "disagreement_count": 56
+}

@@ -1,0 +1,434 @@
+{
+  "title": "StatuteRadar Phase 3 adjudicated human annotations",
+  "version": 3,
+  "annotator_count": 2,
+  "annotator_note": "Two independent human annotation packets, with field disagreements adjudicated. This is a 16-case diagnostic set, not a fresh held-out test set or legal opinion.",
+  "cases": [
+    {
+      "chunk_id": "gdpr:art17:p3",
+      "split": "dev",
+      "outcome": "no_obligation",
+      "obligations": [],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Paragraphs 1 and 2 do not apply to processing necessary to exercise freedom of expression and information.",
+          "applies_to": "GDPR Art. 17(1)-(2)",
+          "condition": "Processing is necessary for this purpose.",
+          "evidence_quote": "for exercising the right of freedom of expression and information"
+        },
+        {
+          "kind": "exception",
+          "text": "Paragraphs 1 and 2 do not apply to processing necessary for a legal obligation, public-interest task, or official authority.",
+          "applies_to": "GDPR Art. 17(1)-(2)",
+          "condition": "Processing is necessary for one of the stated legal/public-task grounds.",
+          "evidence_quote": "for compliance with a legal obligation which requires processing by Union or Member State law to which the controller is subject or for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller"
+        },
+        {
+          "kind": "exception",
+          "text": "Paragraphs 1 and 2 do not apply to qualifying public-health processing.",
+          "applies_to": "GDPR Art. 17(1)-(2)",
+          "condition": "Processing is necessary for public interest in public health under the cited Article 9 provisions.",
+          "evidence_quote": "for reasons of public interest in the area of public health in accordance with points (h) and (i) of Article 9(2) as well as Article 9(3)"
+        },
+        {
+          "kind": "exception",
+          "text": "Paragraphs 1 and 2 do not apply to qualifying archiving, research, or statistical processing when erasure would likely make its objectives impossible or seriously impair them.",
+          "applies_to": "GDPR Art. 17(1)-(2)",
+          "condition": "Processing meets Article 89(1), and the right in paragraph 1 is likely to render the processing objectives impossible or seriously impair them.",
+          "evidence_quote": "for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) in so far as the right referred to in paragraph 1 is likely to render impossible or seriously impair the achievement of the objectives of that processing"
+        },
+        {
+          "kind": "exception",
+          "text": "Paragraphs 1 and 2 do not apply to processing necessary for legal claims.",
+          "applies_to": "GDPR Art. 17(1)-(2)",
+          "condition": "Processing is necessary for establishing, exercising, or defending legal claims.",
+          "evidence_quote": "for the establishment, exercise or defence of legal claims"
+        }
+      ]
+    },
+    {
+      "chunk_id": "gdpr:art46:p1",
+      "split": "dev",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "controller or processor",
+          "action": "transfer personal data to a third country or an international organisation",
+          "data_category": "personal data",
+          "condition": "There is no decision pursuant to Article 45(3).",
+          "constraint": "Transfer only if appropriate safeguards have been provided and enforceable data subject rights and effective legal remedies are available.",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "gdpr:art6:p4:pta",
+      "split": "dev",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "take into account any link between the purposes for which the personal data have been collected and the purposes of the intended further processing",
+          "data_category": "personal data",
+          "condition": "Further-purpose processing is not based on the data subject’s consent or on qualifying Union or Member State law.",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp:s8:p7:pta",
+      "split": "dev",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase personal data",
+          "data_category": "personal data",
+          "condition": "The Data Principal withdraws consent or it is reasonable to assume the specified purpose is no longer being served, whichever is earlier.",
+          "constraint": null,
+          "exceptions": [
+            "retention is necessary for compliance with any law for the time being in force"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Erasure is not required where retention is necessary to comply with a law in force.",
+          "applies_to": "erase personal data",
+          "condition": "Retention is necessary for compliance with any law for the time being in force.",
+          "evidence_quote": "unless retention is necessary for compliance with any law for the time being in force"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp:s6:p7",
+      "split": "dev",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "give, manage, review or withdraw consent to the Data Fiduciary through a Consent Manager",
+          "data_category": null,
+          "condition": null,
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp_rules:r8:p1",
+      "split": "dev",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase personal data",
+          "data_category": "personal data",
+          "condition": "The Data Fiduciary is of the class and processes personal data for the corresponding purposes specified in the Third Schedule; the Data Principal neither approaches it for that purpose nor exercises rights for the corresponding period.",
+          "constraint": "The corresponding time period is specified in the Third Schedule.",
+          "exceptions": [
+            "retention is necessary for compliance with any law for the time being in force"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "Applies to a Data Fiduciary in the specified class processing for corresponding Third Schedule purposes.",
+          "applies_to": "erase personal data",
+          "condition": "The fiduciary class and corresponding purposes are specified in the Third Schedule.",
+          "evidence_quote": "A Data Fiduciary, who is of such class and is processing personal data for such corresponding purposes as are specified in Third Schedule"
+        },
+        {
+          "kind": "exception",
+          "text": "Erasure is not required where retention is necessary to comply with a law in force.",
+          "applies_to": "erase personal data",
+          "condition": "Retention is necessary for compliance with any law for the time being in force.",
+          "evidence_quote": "unless its retention is necessary for compliance with any law for the time being in force"
+        }
+      ]
+    },
+    {
+      "chunk_id": "ccpa:s1798.105:pc:pt1",
+      "split": "dev",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "delete the consumer's personal information from its records",
+          "data_category": "personal information",
+          "condition": "The business receives a verifiable consumer request to delete the consumer’s personal information.",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify service providers or contractors to delete the consumer's personal information from their records",
+          "data_category": "personal information",
+          "condition": "The business receives a verifiable consumer request to delete the consumer’s personal information.",
+          "constraint": null,
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "notify third parties to whom it sold or shared the personal information to delete it",
+          "data_category": "personal information",
+          "condition": "The business receives a verifiable consumer request to delete the consumer’s personal information.",
+          "constraint": null,
+          "exceptions": [
+            "unless notification proves impossible or involves disproportionate effort"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Third-party deletion notification is not required if it proves impossible or involves disproportionate effort.",
+          "applies_to": "notify third parties to delete the consumer’s personal information",
+          "condition": "Notification proves impossible or involves disproportionate effort.",
+          "evidence_quote": "unless this proves impossible or involves disproportionate effort"
+        }
+      ]
+    },
+    {
+      "chunk_id": "ccpa:s1798.120:pc",
+      "split": "dev",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST_NOT",
+          "actor": "business",
+          "action": "sell or share consumers' personal information",
+          "data_category": "personal information",
+          "condition": "The business has actual knowledge that the consumer is under 16; willful disregard of the consumer’s age is deemed actual knowledge.",
+          "constraint": null,
+          "exceptions": [
+            "affirmative authorization by the consumer if at least 13 and under 16, or by the parent or guardian if under 13"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "The prohibition has an age-specific affirmative-authorization exception.",
+          "applies_to": "sell or share consumers’ personal information",
+          "condition": "The consumer or, for a child under 13, the parent or guardian affirmatively authorizes the sale or sharing.",
+          "evidence_quote": "unless the consumer, in the case of consumers at least 13 years of age and less than 16 years of age, or the consumer’s parent or guardian, in the case of consumers who are less than 13 years of age, has affirmatively authorized the sale or sharing of the consumer’s personal information"
+        }
+      ]
+    },
+    {
+      "chunk_id": "gdpr:art33:p1",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "notify the personal data breach to the competent supervisory authority",
+          "data_category": "personal data",
+          "condition": "A personal data breach occurs.",
+          "constraint": "Notify without undue delay and, where feasible, no later than 72 hours after awareness.",
+          "exceptions": [
+            "the breach is unlikely to result in a risk to natural persons’ rights and freedoms"
+          ]
+        },
+        {
+          "modality": "MUST",
+          "actor": "controller",
+          "action": "accompany the notification with reasons for the delay",
+          "data_category": null,
+          "condition": "The notification is not made within 72 hours.",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Supervisory-authority notification is not required if the breach is unlikely to risk natural persons’ rights and freedoms.",
+          "applies_to": "notify the personal data breach to the competent supervisory authority",
+          "condition": "The breach is unlikely to result in such risk.",
+          "evidence_quote": "unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons"
+        }
+      ]
+    },
+    {
+      "chunk_id": "gdpr:art5:p1:pta",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": null,
+          "action": "process personal data lawfully, fairly and transparently in relation to the data subject",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp:s6:p4",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "Data Principal",
+          "action": "withdraw consent",
+          "data_category": "personal data",
+          "condition": "Consent given by the Data Principal is the basis of processing of personal data.",
+          "constraint": "The Data Principal may withdraw at any time, with ease comparable to giving consent.",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "dpdp:s12:p3",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Principal",
+          "action": "make a request to the Data Fiduciary for erasure of her personal data",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": "The request must be made in the prescribed manner.",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "erase the Data Principal's personal data",
+          "data_category": "personal data",
+          "condition": "Upon receipt of an erasure request.",
+          "constraint": null,
+          "exceptions": [
+            "retention is necessary for the specified purpose or for compliance with any law in force"
+          ]
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Erasure is not required when retention is necessary for the specified purpose or to comply with a law in force.",
+          "applies_to": "erase the Data Principal’s personal data",
+          "condition": "Retention is necessary for the specified purpose or for compliance with any law in force.",
+          "evidence_quote": "unless retention of the same is necessary for the specified purpose or for compliance with any law for the time being in force"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp_rules:r6:p1:pta",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "protect personal data by taking reasonable security safeguards to prevent a personal data breach",
+          "data_category": "personal data",
+          "condition": "The personal data is in the Data Fiduciary’s possession or under its control, including processing undertaken by it or on its behalf by a Data Processor.",
+          "constraint": "Take reasonable safeguards, including at least appropriate measures such as encryption, obfuscation, masking or virtual tokens.",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "scope",
+          "text": "Covers personal data in the Data Fiduciary’s possession or control, including processing by a Data Processor on its behalf.",
+          "applies_to": "protect personal data by taking reasonable security safeguards",
+          "condition": null,
+          "evidence_quote": "personal data in its possession or under its control, including in respect of any processing undertaken by it or on its behalf by a Data Processor"
+        }
+      ]
+    },
+    {
+      "chunk_id": "dpdp_rules:r8:p2",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "Data Fiduciary",
+          "action": "inform the Data Principal that personal data will be erased upon completion of the period",
+          "data_category": "personal data",
+          "condition": null,
+          "constraint": "Inform the Data Principal at least 48 hours before completion of the erasure period.",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": [
+        {
+          "kind": "exception",
+          "text": "Erasure upon period completion does not occur if the Data Principal logs in, contacts the Data Fiduciary for the specified purpose, or exercises rights.",
+          "applies_to": "erase personal data upon completion of the period",
+          "condition": "The Data Principal logs in, initiates contact for the specified purpose, or exercises rights.",
+          "evidence_quote": "unless she logs into her user account or otherwise initiates contact with the Data Fiduciary for the performance of the specified purpose or exercises her rights in relation to the processing of such personal data"
+        }
+      ]
+    },
+    {
+      "chunk_id": "ccpa:s1798.100:pe",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "implement reasonable security procedures and practices to protect personal information from unauthorized or illegal access, destruction, use, modification, or disclosure",
+          "data_category": "personal information",
+          "condition": "A business collects a consumer’s personal information.",
+          "constraint": "Use reasonable security procedures and practices appropriate to the nature of the information to protect it from unauthorized or illegal access, destruction, use, modification, or disclosure, in accordance with Section 1798.81.5.",
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    },
+    {
+      "chunk_id": "ccpa:s1798.120:pa",
+      "split": "test",
+      "outcome": "obligations",
+      "obligations": [
+        {
+          "modality": "MAY",
+          "actor": "consumer",
+          "action": "direct a business not to sell or share the consumer’s personal information",
+          "data_category": "personal information",
+          "condition": null,
+          "constraint": "At any time.",
+          "exceptions": []
+        },
+        {
+          "modality": "MUST",
+          "actor": "business",
+          "action": "comply with a consumer’s direction to the transferor not to sell or share",
+          "data_category": "personal information",
+          "condition": "The business receives the consumer’s personal information in a covered asset transfer and the consumer directed the transferor not to sell or share.",
+          "constraint": null,
+          "exceptions": []
+        }
+      ],
+      "qualifiers": []
+    }
+  ]
+}
