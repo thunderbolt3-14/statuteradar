@@ -31,7 +31,7 @@ def test_unreviewed_conflict_candidate_stays_unlabeled():
 def test_labeled_case_requires_scenario_date(tmp_path):
     case = {
         "case_id": "case-x",
-        "status": "reviewed",
+        "status": "adjudicated",
         "split": None,
         "scenario": "Example",
         "profile": {
@@ -47,9 +47,10 @@ def test_labeled_case_requires_scenario_date(tmp_path):
         "cited_provisions": [{"instrument": "X", "citation": "Section 1"}],
         "gold_predicates": [],
         "label": "COMPATIBLE",
-        "annotator_labels": [],
-        "adjudicated_label": None,
+        "annotator_labels": ["COMPATIBLE", "COMPATIBLE"],
+        "adjudicated_label": "COMPATIBLE",
         "rationale": "Example rationale",
+        "adjudication_rationale": "The example labels agree.",
         "missing_facts": [],
         "scenario_as_of_date": None,
     }
