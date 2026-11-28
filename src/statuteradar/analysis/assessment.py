@@ -67,6 +67,35 @@ class ConflictPair:
 
 
 @dataclass(frozen=True)
+class EvidenceRecord:
+    rule_id: str
+    instrument: str
+    jurisdiction: str
+    citation: str
+    source_chunk_id: str
+    evidence_quote: str
+    modality: Modality
+    actor_key: str | None
+    action_key: str
+    target_key: str
+    operation_key: str
+    condition_key: str | None
+    applicability: Applicability
+    applicability_rationale: str
+    applicability_reviewer: str | None
+    exceptions: tuple[str, ...]
+    exceptions_reviewed: bool
+
+
+@dataclass(frozen=True)
+class ScopeEvidenceRecord:
+    relation: ScopeRelation
+    rationale: str
+    evidence_quote: str
+    reviewed_by: str
+
+
+@dataclass(frozen=True)
 class AssessmentResult:
     case_id: str
     as_of_date: str
@@ -75,6 +104,8 @@ class AssessmentResult:
     requires_human_review: bool
     conflict_pairs: tuple[ConflictPair, ...] = ()
     evidence_rule_ids: tuple[str, ...] = ()
+    evidence: tuple[EvidenceRecord, ...] = ()
+    scope_evidence: ScopeEvidenceRecord | None = None
     limitations: tuple[str, ...] = field(
         default=(
             "This result validates supplied structured findings; it does not determine legal applicability.",
@@ -98,7 +129,9 @@ def _valid_obligation(item: ObligationEvidence) -> bool:
         item.operation_key,
         item.applicability_rationale,
     )
-    required_text = all(isinstance(value, str) and value.strip() for value in required_text_values)
+    required_text = all(
+        isinstance(value, str) and value.strip() for value in required_text_values
+    )
     valid_enums = (
         isinstance(item.modality, str)
         and item.modality in {"MUST", "MUST_NOT", "MAY"}
@@ -106,18 +139,26 @@ def _valid_obligation(item: ObligationEvidence) -> bool:
         and item.applicability in {"applies", "does_not_apply", "unknown"}
     )
     valid_optional_text = (
-        (item.actor_key is None or (isinstance(item.actor_key, str) and bool(item.actor_key.strip())))
-        and (item.condition_key is None or (isinstance(item.condition_key, str) and bool(item.condition_key.strip())))
+        item.actor_key is None
+        or (isinstance(item.actor_key, str) and bool(item.actor_key.strip()))
+    ) and (
+        item.condition_key is None
+        or (isinstance(item.condition_key, str) and bool(item.condition_key.strip()))
     )
     valid_reviewer = item.applicability_reviewer is None or (
-        isinstance(item.applicability_reviewer, str) and bool(item.applicability_reviewer.strip())
+        isinstance(item.applicability_reviewer, str)
+        and bool(item.applicability_reviewer.strip())
     )
     valid_exceptions = isinstance(item.exceptions, (list, tuple)) and all(
         isinstance(value, str) and value.strip() for value in item.exceptions
     )
     return (
-        required_text and valid_enums and valid_optional_text and valid_reviewer
-        and valid_exceptions and isinstance(item.exceptions_reviewed, bool)
+        required_text
+        and valid_enums
+        and valid_optional_text
+        and valid_reviewer
+        and valid_exceptions
+        and isinstance(item.exceptions_reviewed, bool)
     )
 
 
@@ -131,12 +172,50 @@ def _result(
     evidence_ids: tuple[str, ...] | None = None,
 ) -> AssessmentResult:
     case_id = request.case_id if isinstance(request.case_id, str) else ""
-    as_of_date = request.as_of_date.isoformat() if isinstance(request.as_of_date, date) else ""
-    default_evidence_ids = tuple(
-        item.rule_id
-        for item in request.obligations
-        if isinstance(item, ObligationEvidence) and isinstance(item.rule_id, str)
+    as_of_date = (
+        request.as_of_date.isoformat() if isinstance(request.as_of_date, date) else ""
     )
+    evidence = tuple(
+        EvidenceRecord(
+            rule_id=item.rule_id,
+            instrument=item.instrument,
+            jurisdiction=item.jurisdiction,
+            citation=item.citation,
+            source_chunk_id=item.source_chunk_id,
+            evidence_quote=item.evidence_quote,
+            modality=item.modality,
+            actor_key=item.actor_key,
+            action_key=item.action_key,
+            target_key=item.target_key,
+            operation_key=item.operation_key,
+            condition_key=item.condition_key,
+            applicability=item.applicability,
+            applicability_rationale=item.applicability_rationale,
+            applicability_reviewer=item.applicability_reviewer,
+            exceptions=tuple(item.exceptions),
+            exceptions_reviewed=item.exceptions_reviewed,
+        )
+        for item in request.obligations
+        if _valid_obligation(item)
+    )
+    default_evidence_ids = tuple(item.rule_id for item in evidence)
+    scope_evidence = None
+    if (
+        isinstance(request.scope_relation, str)
+        and request.scope_relation in {"same_operation", "disjoint", "unknown"}
+        and isinstance(request.scope_rationale, str)
+        and request.scope_rationale.strip()
+        and isinstance(request.scope_evidence_quote, str)
+        and request.scope_evidence_quote.strip()
+        and isinstance(request.scope_reviewed_by, str)
+        and request.scope_reviewed_by.strip()
+    ):
+        scope_evidence = ScopeEvidenceRecord(
+            relation=request.scope_relation,
+            rationale=request.scope_rationale,
+            evidence_quote=request.scope_evidence_quote,
+            reviewed_by=request.scope_reviewed_by,
+        )
     return AssessmentResult(
         case_id=case_id,
         as_of_date=as_of_date,
@@ -144,7 +223,11 @@ def _result(
         rationale=rationale,
         requires_human_review=review,
         conflict_pairs=conflict_pairs,
-        evidence_rule_ids=evidence_ids if evidence_ids is not None else default_evidence_ids,
+        evidence_rule_ids=(
+            evidence_ids if evidence_ids is not None else default_evidence_ids
+        ),
+        evidence=evidence,
+        scope_evidence=scope_evidence,
     )
 
 
@@ -159,33 +242,72 @@ def assess_case(request: AssessmentRequest) -> AssessmentResult:
         or not isinstance(request.obligations, (tuple, list))
         or not request.obligations
     ):
-        return _result(request, "NEEDS_REVIEW", "Case ID and obligation evidence are required.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "Case ID and obligation evidence are required.",
+            review=True,
+        )
 
-    if not isinstance(request.scope_relation, str) or request.scope_relation not in {"same_operation", "disjoint", "unknown"}:
-        return _result(request, "NEEDS_REVIEW", "Scope relation has an unsupported value.", review=True)
+    if not isinstance(request.scope_relation, str) or request.scope_relation not in {
+        "same_operation",
+        "disjoint",
+        "unknown",
+    }:
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "Scope relation has an unsupported value.",
+            review=True,
+        )
 
     if not all(_valid_obligation(item) for item in request.obligations):
-        return _result(request, "NEEDS_REVIEW", "Evidence is incomplete or contains duplicate rule IDs.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "Evidence is incomplete or contains duplicate rule IDs.",
+            review=True,
+        )
     rule_ids = [item.rule_id for item in request.obligations]
     if len(set(rule_ids)) != len(rule_ids):
-        return _result(request, "NEEDS_REVIEW", "Evidence is incomplete or contains duplicate rule IDs.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "Evidence is incomplete or contains duplicate rule IDs.",
+            review=True,
+        )
 
     if len({item.jurisdiction for item in request.obligations}) < 2:
-        return _result(request, "NEEDS_REVIEW", "Cross-jurisdiction evidence from at least two jurisdictions is required.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "Cross-jurisdiction evidence from at least two jurisdictions is required.",
+            review=True,
+        )
 
     if (
         request.scope_relation == "unknown"
         or not isinstance(request.scope_rationale, str)
         or not request.scope_rationale.strip()
     ):
-        return _result(request, "NEEDS_REVIEW", "The case's operational overlap has not been established.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "The case's operational overlap has not been established.",
+            review=True,
+        )
     if (
         not isinstance(request.scope_evidence_quote, str)
         or not request.scope_evidence_quote.strip()
         or not isinstance(request.scope_reviewed_by, str)
         or not request.scope_reviewed_by.strip()
     ):
-        return _result(request, "NEEDS_REVIEW", "Scope findings need a supporting quote and reviewer identity.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "Scope findings need a supporting quote and reviewer identity.",
+            review=True,
+        )
 
     if request.scope_relation == "disjoint":
         return _result(
@@ -197,15 +319,23 @@ def assess_case(request: AssessmentRequest) -> AssessmentResult:
         )
 
     unresolved = [
-        item for item in request.obligations
+        item
+        for item in request.obligations
         if item.applicability == "unknown"
         or not isinstance(item.applicability_reviewer, str)
         or not item.applicability_reviewer.strip()
     ]
     if unresolved:
-        return _result(request, "NEEDS_REVIEW", "Applicability is unknown or unreviewed for one or more rules.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "Applicability is unknown or unreviewed for one or more rules.",
+            review=True,
+        )
 
-    applicable = [item for item in request.obligations if item.applicability == "applies"]
+    applicable = [
+        item for item in request.obligations if item.applicability == "applies"
+    ]
     if len(applicable) < 2:
         return _result(
             request,
@@ -226,7 +356,12 @@ def assess_case(request: AssessmentRequest) -> AssessmentResult:
     option = request.compatible_option
     if option is not None:
         if not isinstance(option, CompatibleOption):
-            return _result(request, "NEEDS_REVIEW", "The proposed compatible option is malformed.", review=True)
+            return _result(
+                request,
+                "NEEDS_REVIEW",
+                "The proposed compatible option is malformed.",
+                review=True,
+            )
         if (
             isinstance(option.description, str)
             and option.description.strip()
@@ -235,11 +370,19 @@ def assess_case(request: AssessmentRequest) -> AssessmentResult:
             and isinstance(option.reviewed_by, str)
             and option.reviewed_by.strip()
             and isinstance(option.supporting_rule_ids, (list, tuple))
-            and all(isinstance(value, str) and value.strip() for value in option.supporting_rule_ids)
+            and all(
+                isinstance(value, str) and value.strip()
+                for value in option.supporting_rule_ids
+            )
+            and len(set(option.supporting_rule_ids)) == len(option.supporting_rule_ids)
             and set(option.supporting_rule_ids) == {item.rule_id for item in applicable}
             and isinstance(option.evidence_quotes, (list, tuple))
-            and option.evidence_quotes
-            and all(isinstance(quote, str) and quote.strip() for quote in option.evidence_quotes)
+            and len(option.evidence_quotes) == len(option.supporting_rule_ids)
+            and all(
+                isinstance(quote, str) and quote.strip()
+                for quote in option.evidence_quotes
+            )
+            and all(item.exceptions_reviewed for item in applicable)
         ):
             return _result(
                 request,
@@ -248,7 +391,12 @@ def assess_case(request: AssessmentRequest) -> AssessmentResult:
                 review=False,
                 evidence_ids=tuple(rule_ids),
             )
-        return _result(request, "NEEDS_REVIEW", "The proposed compatible option lacks review or evidence for every rule.", review=True)
+        return _result(
+            request,
+            "NEEDS_REVIEW",
+            "The proposed compatible option lacks review or evidence for every rule.",
+            review=True,
+        )
 
     conflicts: list[ConflictPair] = []
     for index, left in enumerate(applicable):
@@ -262,7 +410,10 @@ def assess_case(request: AssessmentRequest) -> AssessmentResult:
                 and left.operation_key == right.operation_key
                 and left.condition_key == right.condition_key
             )
-            opposite_modalities = {left.modality, right.modality} == {"MUST", "MUST_NOT"}
+            opposite_modalities = {left.modality, right.modality} == {
+                "MUST",
+                "MUST_NOT",
+            }
             exceptions_cleared = (
                 left.exceptions_reviewed
                 and right.exceptions_reviewed

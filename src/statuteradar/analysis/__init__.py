@@ -3,8 +3,21 @@
 from .assessment import (
     AssessmentRequest,
     AssessmentResult,
+    CompatibleOption,
+    ConflictPair,
+    EvidenceRecord,
     ObligationEvidence,
+    ScopeEvidenceRecord,
     assess_case,
 )
 
-__all__ = ["AssessmentRequest", "AssessmentResult", "ObligationEvidence", "assess_case"]
+__all__ = [
+    "AssessmentRequest",
+    "AssessmentResult",
+    "CompatibleOption",
+    "ConflictPair",
+    "EvidenceRecord",
+    "ObligationEvidence",
+    "ScopeEvidenceRecord",
+    "assess_case",
+]

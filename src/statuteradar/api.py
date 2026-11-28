@@ -47,8 +47,14 @@ class CompatibleOptionInput(BaseModel):
 
     description: str = Field(min_length=1)
     rationale: str = Field(min_length=1)
-    supporting_rule_ids: list[str] = Field(min_length=1)
-    evidence_quotes: list[str] = Field(min_length=1)
+    supporting_rule_ids: list[str] = Field(
+        min_length=1,
+        description="Every applicable rule ID, each exactly once.",
+    )
+    evidence_quotes: list[str] = Field(
+        min_length=1,
+        description="One quote per supporting_rule_id, in the same order.",
+    )
     reviewed_by: str | None = None
 
     def to_core(self) -> CompatibleOption:
@@ -79,8 +85,37 @@ class AssessmentRequestInput(BaseModel):
             scope_rationale=self.scope_rationale,
             scope_evidence_quote=self.scope_evidence_quote,
             scope_reviewed_by=self.scope_reviewed_by,
-            compatible_option=self.compatible_option.to_core() if self.compatible_option else None,
+            compatible_option=(
+                self.compatible_option.to_core() if self.compatible_option else None
+            ),
         )
+
+
+class EvidenceResponse(BaseModel):
+    rule_id: str
+    instrument: str
+    jurisdiction: str
+    citation: str
+    source_chunk_id: str
+    evidence_quote: str
+    modality: Literal["MUST", "MUST_NOT", "MAY"]
+    actor_key: str | None
+    action_key: str
+    target_key: str
+    operation_key: str
+    condition_key: str | None
+    applicability: Literal["applies", "does_not_apply", "unknown"]
+    applicability_rationale: str
+    applicability_reviewer: str | None
+    exceptions: list[str]
+    exceptions_reviewed: bool
+
+
+class ScopeEvidenceResponse(BaseModel):
+    relation: Literal["same_operation", "disjoint", "unknown"]
+    rationale: str
+    evidence_quote: str
+    reviewed_by: str
 
 
 class AssessmentResponse(BaseModel):
@@ -91,6 +126,8 @@ class AssessmentResponse(BaseModel):
     requires_human_review: bool
     conflict_pairs: list[dict[str, str]]
     evidence_rule_ids: list[str]
+    evidence: list[EvidenceResponse]
+    scope_evidence: ScopeEvidenceResponse | None
     limitations: list[str]
 
 

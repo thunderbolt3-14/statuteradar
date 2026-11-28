@@ -2,7 +2,7 @@
 
 ## Scope
 
-Phase 6 exposes the Phase 5 triage contract as a versioned local FastAPI service and command-line runner. The API validates request shapes, calls the same deterministic engine as the CLI, and returns the label, rationale, evidence rule IDs, conflict pairs, and human-review flag.
+Phase 6 exposes the Phase 5 triage contract as a versioned local FastAPI service and command-line runner. The API validates request shapes, calls the same deterministic engine as the CLI, and returns the label, rationale, evidence rule IDs and full reviewed evidence records, scope evidence, conflict pairs, and human-review flag.
 
 Routes:
 

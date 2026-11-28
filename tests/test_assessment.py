@@ -54,7 +54,18 @@ def test_exact_reviewed_opposite_modalities_are_flagged_for_human_review():
 
     assert result.label == "CONFLICT"
     assert result.requires_human_review is True
-    assert [(pair.rule_id_a, pair.rule_id_b) for pair in result.conflict_pairs] == [("a", "b")]
+    assert [(pair.rule_id_a, pair.rule_id_b) for pair in result.conflict_pairs] == [
+        ("a", "b")
+    ]
+    assert [item.rule_id for item in result.evidence] == ["a", "b"]
+    assert result.evidence[0].source_chunk_id == "synthetic:a"
+    assert result.evidence[0].evidence_quote == "Synthetic quote for a."
+    assert result.scope_evidence is not None
+    assert result.scope_evidence.relation == "same_operation"
+    assert (
+        result.scope_evidence.evidence_quote
+        == "The synthetic case states the same operation."
+    )
 
 
 def test_unreviewed_exceptions_fail_closed():
@@ -123,6 +134,44 @@ def test_compatible_requires_reviewed_option_covering_every_rule():
 
     assert result.label == "COMPATIBLE"
     assert result.requires_human_review is False
+
+
+def test_compatible_fails_closed_when_applicable_exceptions_are_unreviewed():
+    option = CompatibleOption(
+        description="Use the synthetic alternative operation.",
+        rationale="Synthetic reviewer supplies a jointly satisfying path.",
+        supporting_rule_ids=("a", "b"),
+        evidence_quotes=("Synthetic quote A.", "Synthetic quote B."),
+        reviewed_by="synthetic-reviewer",
+    )
+    result = assess_case(
+        request(
+            obligation("a", "EU-X", "MUST", exceptions_reviewed=False),
+            obligation("b", "IN-X", "MUST_NOT"),
+            compatible_option=option,
+        )
+    )
+
+    assert result.label == "NEEDS_REVIEW"
+
+
+def test_compatible_requires_one_evidence_quote_per_supported_rule():
+    option = CompatibleOption(
+        description="Use the synthetic alternative operation.",
+        rationale="Synthetic reviewer supplies a jointly satisfying path.",
+        supporting_rule_ids=("a", "b"),
+        evidence_quotes=("Only one rule is evidenced.",),
+        reviewed_by="synthetic-reviewer",
+    )
+    result = assess_case(
+        request(
+            obligation("a", "EU-X", "MUST"),
+            obligation("b", "IN-X", "MUST_NOT"),
+            compatible_option=option,
+        )
+    )
+
+    assert result.label == "NEEDS_REVIEW"
 
 
 def test_nonidentical_structured_predicates_return_needs_review():
