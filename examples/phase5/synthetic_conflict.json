@@ -1,0 +1,48 @@
+{
+  "case_id": "synthetic-conflict-001",
+  "as_of_date": "2026-11-28",
+  "scope_relation": "same_operation",
+  "scope_rationale": "Synthetic fixture explicitly says both rules govern the same record and operation.",
+  "scope_evidence_quote": "Both synthetic rules govern the same record and deletion operation.",
+  "scope_reviewed_by": "synthetic-fixture",
+  "obligations": [
+    {
+      "rule_id": "fictional-rule-a",
+      "instrument": "Fictional EU rule",
+      "jurisdiction": "Fictional-EU",
+      "citation": "Synthetic Rule A, section 1",
+      "source_chunk_id": "synthetic:a:1",
+      "evidence_quote": "The fictional service shall delete the sample record.",
+      "modality": "MUST",
+      "actor_key": "fictional-service",
+      "action_key": "delete-record",
+      "target_key": "sample-record",
+      "operation_key": "close-account",
+      "condition_key": "account-closed",
+      "applicability": "applies",
+      "applicability_rationale": "The synthetic fixture states the rule applies.",
+      "applicability_reviewer": "synthetic-fixture",
+      "exceptions": [],
+      "exceptions_reviewed": true
+    },
+    {
+      "rule_id": "fictional-rule-b",
+      "instrument": "Fictional IN rule",
+      "jurisdiction": "Fictional-IN",
+      "citation": "Synthetic Rule B, section 9",
+      "source_chunk_id": "synthetic:b:9",
+      "evidence_quote": "The fictional service must not delete the sample record.",
+      "modality": "MUST_NOT",
+      "actor_key": "fictional-service",
+      "action_key": "delete-record",
+      "target_key": "sample-record",
+      "operation_key": "close-account",
+      "condition_key": "account-closed",
+      "applicability": "applies",
+      "applicability_rationale": "The synthetic fixture states the rule applies.",
+      "applicability_reviewer": "synthetic-fixture",
+      "exceptions": [],
+      "exceptions_reviewed": true
+    }
+  ]
+}
