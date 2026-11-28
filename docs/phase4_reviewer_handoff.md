@@ -4,9 +4,9 @@ Prepared 2026-11-28. This is a source and workflow checklist, not legal advice, 
 
 ## Current packet state
 
-- `data/golden/cases.jsonl` contains 10 structurally valid draft cases. All labels are null and all scenario dates are null.
+- `data/golden/cases.jsonl` contains 10 structurally valid draft cases. All labels are null. Its scenario date now matches the shared date already present in both packets: `2026-11-28`.
 - `data/golden/annotations/annotator_a.csv` and `annotator_b.csv` each contain 10 rows. Labels and rationales are blank in both packets.
-- Both packets currently show `2026-11-28` as the scenario date, while the canonical cases file leaves the date null. The reviewers should agree on and freeze the date; after that, update the canonical file to match before finalization.
+- The shared date is still marked provisional in the review memo. The reviewer and both annotators must ratify/freeze it before finalization; if they choose another date, update the canonical file and both packet contexts together.
 - The project has 1,554 processed provision chunks. The DPDP Act and Rules PDFs have been restored under `data/raw/dpdp/` and their SHA-256 hashes match `data/raw/dpdp/SOURCES.md`.
 - The GDPR and California source snapshots are not present under `data/raw/`. Their official URLs and hashes are recorded in `data/raw/gdpr/SOURCES.md` and `data/raw/ccpa/SOURCES.md`. The official sites did not return downloadable content through this environment; reviewers can use the linked official sources directly.
 
