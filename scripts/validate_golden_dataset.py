@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CASES = ROOT / "data" / "golden" / "cases.jsonl"
 DEFAULT_CONFLICTS = ROOT / "data" / "golden" / "conflicts_golden.json"
 ALLOWED_LABELS = {"CONFLICT", "COMPATIBLE", "INDEPENDENT", "NEEDS_REVIEW"}
+ALLOWED_STATUSES = {"draft", "needs_review", "adjudicated"}
 PROFILE_KEYS = {
     "organization_established_in",
     "data_subject_locations",
@@ -51,6 +52,11 @@ def validate_cases(path: Path) -> list[dict[str, Any]]:
                     "gold_predicates", "label", "annotator_labels", "adjudicated_label",
                     "rationale", "missing_facts", "scenario_as_of_date"):
             _expect(key in case, f"{case_id}: missing required key {key}")
+
+        _expect(isinstance(case["status"], str) and case["status"] in ALLOWED_STATUSES,
+                f"{case_id}: unsupported status {case['status']!r}")
+        _expect(case["split"] is None or (isinstance(case["split"], str) and case["split"] in {"dev", "test"}),
+                f"{case_id}: split must be dev, test, or null")
 
         _expect(isinstance(case["scenario"], str) and case["scenario"].strip(),
                 f"{case_id}: scenario must be non-empty text")
@@ -94,6 +100,38 @@ def validate_cases(path: Path) -> list[dict[str, Any]]:
             _expect(case["label"] is None and case["adjudicated_label"] is None,
                     f"{case_id}: draft case cannot carry a gold/adjudicated label")
             _expect(case["split"] is None, f"{case_id}: draft case cannot be assigned to a scored split")
+        elif case["status"] == "needs_review":
+            _expect(case["label"] == "NEEDS_REVIEW" and case["adjudicated_label"] == "NEEDS_REVIEW",
+                    f"{case_id}: needs_review case must carry NEEDS_REVIEW labels")
+            _expect(bool(case["missing_facts"]),
+                    f"{case_id}: needs_review case must list missing facts")
+            _expect(isinstance(case["rationale"], str) and case["rationale"].strip(),
+                    f"{case_id}: needs_review case must include a rationale")
+            _expect(isinstance(case["adjudication_rationale"], str)
+                    and case["adjudication_rationale"].strip(),
+                    f"{case_id}: needs_review case must include an adjudication rationale")
+            _expect(isinstance(case["annotator_labels"], list) and len(case["annotator_labels"]) == 2
+                    and all(isinstance(label, str) and label in ALLOWED_LABELS
+                            for label in case["annotator_labels"]),
+                    f"{case_id}: needs_review case must preserve both annotator labels")
+            _expect(case["split"] is None,
+                    f"{case_id}: needs_review case cannot be assigned to a scored split")
+        elif case["status"] == "adjudicated":
+            _expect(case["adjudicated_label"] in {"CONFLICT", "COMPATIBLE", "INDEPENDENT"},
+                    f"{case_id}: adjudicated case needs a final outcome label")
+            _expect(case["label"] == case["adjudicated_label"],
+                    f"{case_id}: label must match adjudicated_label")
+            _expect(not case["missing_facts"],
+                    f"{case_id}: adjudicated outcome cannot retain unresolved missing facts")
+            _expect(isinstance(case["rationale"], str) and case["rationale"].strip(),
+                    f"{case_id}: adjudicated case must include a rationale")
+            _expect(isinstance(case["adjudication_rationale"], str)
+                    and case["adjudication_rationale"].strip(),
+                    f"{case_id}: adjudicated case must include an adjudication rationale")
+            _expect(isinstance(case["annotator_labels"], list) and len(case["annotator_labels"]) == 2
+                    and all(isinstance(label, str) and label in ALLOWED_LABELS
+                            for label in case["annotator_labels"]),
+                    f"{case_id}: adjudicated case must preserve both annotator labels")
         records.append(case)
 
     _expect(records, f"{path}: no case records found")

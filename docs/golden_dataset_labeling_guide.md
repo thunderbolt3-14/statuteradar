@@ -10,7 +10,7 @@ Every case must also have a `scenario_as_of_date`. A rule's publication or enact
 
 ### Temporal scope requiring review
 
-The Digital Personal Data Protection Act, 2023 and the Digital Personal Data Protection Rules, 2025 use staged commencement. The commencement notification dated 13 November 2025 schedules sections 3–17 of the Act—including sections 8, 9, and 16—and rules 3, 5–16, 22, and 23 for eighteen months after Gazette publication. Those provisions are not yet in force as of 27 November 2026. Cases citing them must set an explicit scenario date and review the applicable commencement schedule before labeling. See the [official commencement notification](https://egazette.gov.in/WriteReadData/2025/267647.pdf) and [official Rules 2025 notification](https://egazette.gov.in/WriteReadData/2025/267650.pdf).
+The Digital Personal Data Protection Act, 2023 and the Digital Personal Data Protection Rules, 2025 use staged commencement. The commencement notification dated 13 November 2025 schedules sections 3–17 of the Act—including sections 8, 9, and 16—and rules 3, 5–16, 22, and 23 for eighteen months after Gazette publication. On the working scenario date 28 November 2026, those provisions are scheduled for commencement on 13 May 2027 and are not yet in force. Recheck the Gazette for later amendments before using this date in a final legal annotation. See the [official commencement notification](https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf) and [official Rules 2025 notification](https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf?v=20261027115856).
 
 The seed scenarios also need review for jurisdictional scope facts, such as GDPR territorial scope, California business coverage, applicable actors and processing, and (for the child-consent case) the child's age and relevant Member State threshold. A reviewer must add the facts or mark the case `NEEDS_REVIEW`; annotators must not infer them.
 
@@ -22,7 +22,7 @@ The earlier `data/golden/conflicts_golden.json` contains one unreviewed hypothes
 - `COMPATIBLE`: Both obligations apply to the same operation, and at least one concrete operating choice satisfies both. State that choice and any conditions it depends on.
 - `INDEPENDENT`: The cited rules do not constrain the same actor, data, purpose, operation, or time period in this profile, so the pair creates no joint constraint to solve. Do not use this label merely because no conflict was found; use `COMPATIBLE` when both obligations apply and can coexist.
 
-If facts or legal interpretation are missing, mark the annotation `NEEDS_REVIEW`, record the missing fact, and do not force one of the three labels. These are research labels for a student prototype, not legal advice.
+If facts or legal interpretation are missing, mark the annotation `NEEDS_REVIEW`, record the missing fact, and do not force one of the three substantive labels. `NEEDS_REVIEW` is an unresolved workflow state, not a scored gold outcome. These are research labels for a student prototype, not legal advice.
 
 ## Annotation workflow
 
@@ -47,7 +47,18 @@ python scripts/compare_golden_annotations.py \
   --adjudication-template data/golden/annotations/adjudication.csv
 ```
 
-Review each disagreement and fill `adjudicated_label` and `adjudication_rationale` in the generated template. Do not overwrite either original annotator packet. `scripts/validate_golden_dataset.py` checks the canonical draft file; it does not certify legal correctness or adjudication.
+Review each disagreement and fill `adjudicated_label` and `adjudication_rationale` in the generated template. Do not overwrite either original annotator packet. If an annotator listed missing facts but the adjudicator believes a substantive label is now justified, add an adjudication row for that case and explain how those facts were resolved. Once packet rows and decisions are complete, write a new candidate file (never overwrite the original cases file):
+
+```bash
+python scripts/finalize_golden_annotations.py \
+  --packet-a data/golden/annotations/annotator_a.csv \
+  --packet-b data/golden/annotations/annotator_b.csv \
+  --adjudication data/golden/annotations/adjudication.csv \
+  --output data/golden/cases_reviewed_candidate.jsonl
+python scripts/validate_golden_dataset.py --cases data/golden/cases_reviewed_candidate.jsonl
+```
+
+The finalizer requires an explicit scenario date, matching case IDs and locked context, completed independent labels, and adjudication for disagreements. It preserves both annotator labels and writes `needs_review` records without placing them in a scored split. It does not certify legal correctness or adjudication. Only after independent review should the candidate replace the canonical file in a reviewed change.
 
 ## Case record format
 
@@ -83,7 +94,7 @@ One JSON object per line. Keep fields stable so evaluation code can consume the 
 }
 ```
 
-Allowed final labels are `CONFLICT`, `COMPATIBLE`, and `INDEPENDENT`. Draft status and null labels are intentional. Do not populate gold predicates until their agreed field names and meanings are stable.
+Substantive final labels are `CONFLICT`, `COMPATIBLE`, and `INDEPENDENT`. `NEEDS_REVIEW` records remain unresolved and must not be scored. Draft status and null labels are intentional. Do not populate gold predicates until their agreed field names and meanings are stable.
 
 ## Seed cases
 
