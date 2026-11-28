@@ -8,7 +8,7 @@ Prepared 2026-11-28. This is a source and workflow checklist, not legal advice, 
 - `data/golden/annotations/annotator_a.csv` and `annotator_b.csv` each contain 10 rows. Labels and rationales are blank in both packets.
 - Both blank packets currently carry `2026-11-28` as a provisional working date, while the canonical cases file keeps dates unset. This preserves the draft workflow. The reviewer and both annotators must ratify/freeze the date before finalization; if they choose another date, update the canonical file and both packet contexts together.
 - The project has 1,554 processed provision chunks. The DPDP Act and Rules PDFs have been restored under `data/raw/dpdp/` and their SHA-256 hashes match `data/raw/dpdp/SOURCES.md`.
-- The GDPR and California source snapshots are not present under `data/raw/`. Their official URLs and hashes are recorded in `data/raw/gdpr/SOURCES.md` and `data/raw/ccpa/SOURCES.md`. The official sites did not return downloadable content through this environment; reviewers can use the linked official sources directly.
+- The original GDPR and California LegInfo HTML snapshots are not present under `data/raw/`. The official GDPR URL and original hash are recorded in `data/raw/gdpr/SOURCES.md`. A current California statute PDF, effective 2026-01-01, has been restored from the California Privacy Protection Agency site; its SHA-256 is recorded in `data/raw/ccpa/SOURCES.md`. Reviewers should use that current statute and separately verify current regulations.
 
 ## Case review questions
 
@@ -31,7 +31,18 @@ Resolve these facts before either annotator assigns a substantive label. If a fa
 
 The citations resolve to text in `data/processed/chunks.jsonl`, with one citation-granularity exception: cases 002 and 004 cite `GDPR Art. 17(3)(b)`, while the corpus chunk is labeled `GDPR Art. 17(3)` and contains the full paragraph. Review the text of that parent chunk and confirm the subparagraph citation before locking the annotation context.
 
-The processed chunks preserve source hashes, but the project should restore or otherwise make the original GDPR and California source snapshots available to the reviewers. The DPDP source documents are the Gazette of India notifications for the Act and the 2025 Rules. The commencement schedule in those notifications must be checked against any later Gazette notice before labels are finalized.
+The processed chunks preserve source hashes. The original GDPR HTML snapshot is still missing; reviewers can use the official EUR-Lex text. The current California statute PDF is available locally, but its implementing regulations must be checked separately. The DPDP source documents are the Gazette of India notifications for the Act and the 2025 Rules. Their commencement schedule must be checked against any later Gazette notice before labels are finalized.
+
+## Source-backed legal review flags
+
+These points identify what the reviewers should verify; they are not case labels or a legal opinion.
+
+- The 13 November 2025 DPDP commencement notification schedules sections 7–10 and 11–17 eighteen months after publication. The Rules notification schedules rules 5–16 on the same timetable. On the current provisional date, 2026-11-28, those provisions are not yet at their scheduled commencement under these notices. Verify the Gazette for any later notification before treating this as final.
+- GDPR Article 3 requires an EU establishment or, for a non-EU controller/processor, processing related to offering goods/services to people in the Union or monitoring their behavior there. EU residence alone does not resolve scope.
+- GDPR Article 17(3)(b) refers to a legal obligation under Union or Member State law to which the controller is subject. Cases 002 and 004 need the retention law's jurisdiction, the exact record and purpose, and a check of necessity. The processed corpus stores the enclosing text as `GDPR Art. 17(3)`; the cited letter (b) is within that paragraph.
+- GDPR Articles 44 and 46 concern an actual transfer to a third country and the conditions/safeguards for it. Cases 006–008 need the exporter, processing roles, data flow, and actual mechanism or restriction; a safeguard does not itself require a transfer.
+- GDPR Article 8 applies in the specific context of an information society service offered directly to a child when consent is the basis. It sets a default age of 16, with Member States able to lower it no further than 13. Case 009 needs the child's age, country, service facts, and consent basis.
+- The current California statute PDF is the CPPA's version effective 2026-01-01. Sections 1798.105 and 1798.120 address deletion and opt-out rights, with statutory scope and exceptions that need checking against the exact operation. The CPPA lists a $26,625,000 gross-revenue threshold effective 2025-01-01; the statutory definition also has consumer-volume and revenue-from-sale/sharing alternatives. Check all definition elements and the entity's facts; a California consumer alone is insufficient.
 
 Official reference links:
 
@@ -39,6 +50,8 @@ Official reference links:
 - [DPDP Act commencement notification, G.S.R. 843(E)](https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf)
 - [DPDP Rules notification, G.S.R. 846(E)](https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf)
 - [California Civil Code, official Legislature site](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.5.&part=4.&chapter=&article=)
+- [California Consumer Privacy Act statute effective 2026-01-01, CPPA](https://cppa.ca.gov/pdf/20260101_ccpa_statute.pdf)
+- [CPPA laws and regulations, including regulations effective 2026-01-01](https://cppa.ca.gov/regulations/)
 - [CCPA threshold update, California Privacy Protection Agency](https://cppa.ca.gov/regulations/cpi_adjustment.html)
 
 ## After review
